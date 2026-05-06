@@ -1,6 +1,7 @@
 package org.wikipedia
 
 import androidx.core.content.FileProvider
+import work.czzzz.anywiki.R
 
 /**
  * According to the documentation:

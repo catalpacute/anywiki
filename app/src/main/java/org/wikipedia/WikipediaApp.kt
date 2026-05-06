@@ -39,6 +39,8 @@ import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.imageservice.CoilImageServiceLoader
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 import java.util.UUID
 
 class WikipediaApp : Application() {

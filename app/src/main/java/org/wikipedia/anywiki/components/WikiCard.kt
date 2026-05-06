@@ -30,7 +30,7 @@ fun WikiCard(
     onRemove: () -> Unit
 ) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = WikipediaTheme.colors.baseColor),
+        colors = CardDefaults.cardColors(containerColor = WikipediaTheme.colors.paperColor),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(12.dp)) {

@@ -36,11 +36,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'org.wikipedia'
+        applicationId 'work.czzzz.anywiki'
         minSdk = 23
         targetSdk = 36
         versionCode 50584
-        testApplicationId 'org.wikipedia.test'
+        testApplicationId 'work.czzzz.anywiki.test'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         testInstrumentationRunnerArguments clearPackageData: 'true'
 
@@ -154,7 +154,7 @@ android {
             enableSplit = false
         }
     }
-    namespace = 'org.wikipedia'
+    namespace = 'work.czzzz.anywiki'
 }
 
 ksp {

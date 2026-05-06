@@ -1,4 +1,4 @@
-{
+﻿{
   "project_info": {
     "project_number": "296120793014",
     "firebase_url": "https://pushnotifications-73c5e.firebaseio.com",
@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:296120793014:android:34d2ba8d355ca9259a7317",
         "android_client_info": {
-          "package_name": "org.wikipedia"
+          "package_name": "work.czzzz.anywiki"
         }
       },
       "oauth_client": [
@@ -39,7 +39,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:296120793014:android:91392873d51c3eec9a7317",
         "android_client_info": {
-          "package_name": "org.wikipedia.alpha"
+          "package_name": "work.czzzz.anywiki.alpha"
         }
       },
       "oauth_client": [
@@ -68,7 +68,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:296120793014:android:66d972b42a3781d19a7317",
         "android_client_info": {
-          "package_name": "org.wikipedia.beta"
+          "package_name": "work.czzzz.anywiki.beta"
         }
       },
       "oauth_client": [
@@ -97,7 +97,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:296120793014:android:d276194befc88f1e9a7317",
         "android_client_info": {
-          "package_name": "org.wikipedia.dev"
+          "package_name": "work.czzzz.anywiki.dev"
         }
       },
       "oauth_client": [

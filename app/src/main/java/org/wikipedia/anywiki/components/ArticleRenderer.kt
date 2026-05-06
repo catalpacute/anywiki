@@ -95,7 +95,7 @@ private fun wrapArticleHtml(content: String, fontScale: Float, darkMode: Boolean
                     padding: 16px;
                     background: $background;
                     color: $text;
-                    font-size: ${scaledPercent}%;
+                    font-size: $scaledPercent%;
                     line-height: 1.6;
                     word-break: break-word;
                 }

@@ -1,9 +1,9 @@
-package org.wikipedia.util.log
+﻿package org.wikipedia.util.log
 
 import android.util.Log
-import org.wikipedia.BuildConfig
 import org.wikipedia.WikipediaApp
 import org.wikipedia.util.ReleaseUtil
+import work.czzzz.anywiki.BuildConfig
 
 /** Logging utility like [Log] but with implied tags.  */
 object L {

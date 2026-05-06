@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -15,11 +15,11 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.page.PageTitle
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class MoveToReadingListDialog : AddToReadingListDialog() {
     private var sourceReadingList: ReadingList? = null

@@ -1,4 +1,4 @@
-package org.wikipedia.talk.template
+﻿package org.wikipedia.talk.template
 
 import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
@@ -27,9 +27,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
-import org.wikipedia.databinding.FragmentTalkTemplatesBinding
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.page.PageActivity
@@ -47,6 +45,8 @@ import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.MultiSelectActionModeCallback
 import org.wikipedia.views.SwipeableItemTouchHelperCallback
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentTalkTemplatesBinding
 
 class TalkTemplatesFragment : Fragment() {
     private var _binding: FragmentTalkTemplatesBinding? = null

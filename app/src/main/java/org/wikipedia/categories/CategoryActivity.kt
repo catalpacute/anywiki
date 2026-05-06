@@ -1,4 +1,4 @@
-package org.wikipedia.categories
+﻿package org.wikipedia.categories
 
 import android.content.Context
 import android.content.Intent
@@ -23,10 +23,8 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
-import org.wikipedia.databinding.ActivityCategoryBinding
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.ExclusiveBottomSheetPresenter
 import org.wikipedia.page.Namespace
@@ -38,6 +36,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.PageItemView
 import org.wikipedia.views.WikiErrorView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityCategoryBinding
 
 class CategoryActivity : BaseActivity() {
     private lateinit var binding: ActivityCategoryBinding

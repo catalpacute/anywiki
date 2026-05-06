@@ -1,13 +1,13 @@
-package org.wikipedia.feed.onboarding
+﻿package org.wikipedia.feed.onboarding
 
 import android.content.Context
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.announcement.Announcement
 import org.wikipedia.feed.dataclient.FeedClient
 import org.wikipedia.feed.model.Card
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 class OnboardingClient : FeedClient {
 

@@ -1,9 +1,9 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit.DAYS

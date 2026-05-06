@@ -1,4 +1,4 @@
-package org.wikipedia.analytics.testkitchen
+﻿package org.wikipedia.analytics.testkitchen
 
 import android.os.Build
 import org.wikimedia.testkitchen.EventSender
@@ -11,7 +11,6 @@ import org.wikimedia.testkitchen.context.PageData
 import org.wikimedia.testkitchen.context.PerformerData
 import org.wikimedia.testkitchen.event.Event
 import org.wikimedia.testkitchen.instrument.ExperimentImpl
-import org.wikipedia.BuildConfig
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.ABTest
 import org.wikipedia.auth.AccountUtil
@@ -23,6 +22,7 @@ import org.wikipedia.page.PageTitle
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.BuildConfig
 
 object TestKitchenAdapter : ClientDataCallback, EventSender {
     const val FLUSH_DELAY_MILLIS = 30000L

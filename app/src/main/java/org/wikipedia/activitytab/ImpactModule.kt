@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -28,7 +28,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.compose.components.LineChart
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
@@ -39,6 +38,7 @@ import org.wikipedia.dataclient.growthtasks.GrowthUserImpact
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 import java.text.NumberFormat
 import java.util.Date
 import java.util.Locale

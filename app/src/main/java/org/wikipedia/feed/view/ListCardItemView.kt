@@ -1,4 +1,4 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.VisibleForTesting
 import androidx.constraintlayout.widget.ConstraintLayout
-import org.wikipedia.databinding.ViewListCardItemBinding
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.coroutineScope
 import org.wikipedia.feed.model.Card
@@ -22,6 +21,7 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.TransitionUtil
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.databinding.ViewListCardItemBinding
 
 class ListCardItemView(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {
     interface Callback {

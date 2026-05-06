@@ -1,13 +1,13 @@
-package org.wikipedia.analytics.eventplatform
+﻿package org.wikipedia.analytics.eventplatform
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
+import work.czzzz.anywiki.R
 
 @Suppress("unused")
 @Serializable

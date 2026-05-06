@@ -1,4 +1,4 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.content.Context
 import android.net.Uri
@@ -11,11 +11,11 @@ import android.view.LayoutInflater
 import android.widget.ScrollView
 import androidx.core.text.buildSpannedString
 import androidx.core.text.inSpans
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewDescriptionEditRevertHelpBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewDescriptionEditRevertHelpBinding
 
 class DescriptionEditRevertHelpView constructor(context: Context, attrs: AttributeSet? = null) : ScrollView(context, attrs) {
 

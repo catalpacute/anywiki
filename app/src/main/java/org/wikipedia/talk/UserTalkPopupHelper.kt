@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -14,7 +14,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.ServiceFactory
@@ -32,6 +31,7 @@ import org.wikipedia.usercontrib.UserContribListActivity
 import org.wikipedia.usercontrib.UserInformationDialog
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 @SuppressLint("RestrictedApi")
 object UserTalkPopupHelper {

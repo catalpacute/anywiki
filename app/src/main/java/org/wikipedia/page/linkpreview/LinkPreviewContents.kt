@@ -1,9 +1,9 @@
-package org.wikipedia.page.linkpreview
+﻿package org.wikipedia.page.linkpreview
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class LinkPreviewContents(pageSummary: PageSummary, wiki: WikiSite) {
     val title = pageSummary.getPageTitle(wiki)

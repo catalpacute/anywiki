@@ -1,4 +1,4 @@
-package org.wikipedia.search
+﻿package org.wikipedia.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,7 +19,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
@@ -35,6 +34,7 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UiState
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 class SearchResultsFragment : Fragment() {
 

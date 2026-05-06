@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist.recommended
+﻿package org.wikipedia.readinglist.recommended
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -45,7 +45,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.WikiTopAppBar
 import org.wikipedia.compose.components.WikipediaAlertDialog
@@ -56,6 +55,7 @@ import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.Resource
+import work.czzzz.anywiki.R
 
 @Composable
 fun RecommendedReadingListSettingsScreen(

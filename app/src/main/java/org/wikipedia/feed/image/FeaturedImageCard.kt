@@ -1,13 +1,13 @@
-package org.wikipedia.feed.image
+﻿package org.wikipedia.feed.image
 
 import android.net.Uri
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.feed.model.WikiSiteCard
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class FeaturedImageCard(
     private val featuredImage: FeaturedImage,

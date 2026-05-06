@@ -1,4 +1,4 @@
-package org.wikipedia.talk.template
+﻿package org.wikipedia.talk.template
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.page.PageTitle
 import org.wikipedia.talk.TalkReplyActivity
@@ -16,6 +15,7 @@ import org.wikipedia.talk.TalkReplyActivity.Companion.EXTRA_TEMPLATE_MANAGEMENT
 import org.wikipedia.talk.db.TalkTemplate
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.Resource
+import work.czzzz.anywiki.R
 import java.util.Collections
 
 class TalkTemplatesViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {

@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.content.pm.ActivityInfo
 import android.graphics.drawable.GradientDrawable
@@ -29,13 +29,11 @@ import androidx.palette.graphics.Palette
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.FragmentSuggestedEditsImageRecsItemBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.diff.ArticleEditDetailsActivity
 import org.wikipedia.edit.EditHandler
@@ -57,6 +55,8 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.ImageZoomHelper
 import org.wikipedia.views.imageservice.ImageLoadListener
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsImageRecsItemBinding
 
 class SuggestedEditsImageRecsFragment : SuggestedEditsItemFragment(), MenuProvider, SuggestedEditsImageRecsDialog.Callback {
     private var _binding: FragmentSuggestedEditsImageRecsItemBinding? = null

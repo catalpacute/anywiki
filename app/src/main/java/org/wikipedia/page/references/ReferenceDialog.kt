@@ -1,4 +1,4 @@
-package org.wikipedia.page.references
+﻿package org.wikipedia.page.references
 
 import android.app.Dialog
 import android.os.Bundle
@@ -11,16 +11,16 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.tabs.TabLayoutMediator
 import org.jsoup.Jsoup
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil.getCallback
-import org.wikipedia.databinding.FragmentReferencesPagerBinding
-import org.wikipedia.databinding.ViewReferencePagerItemBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.page.LinkHandler
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentReferencesPagerBinding
+import work.czzzz.anywiki.databinding.ViewReferencePagerItemBinding
 import java.util.Locale
 
 class ReferenceDialog : ExtendedBottomSheetDialogFragment() {

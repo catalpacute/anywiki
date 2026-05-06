@@ -1,10 +1,10 @@
-package org.wikipedia.robots
+﻿package org.wikipedia.robots
 
 import BaseRobot
 import android.content.Context
 import android.util.Log
 import androidx.test.espresso.NoMatchingViewException
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 class DialogRobot : BaseRobot() {
 

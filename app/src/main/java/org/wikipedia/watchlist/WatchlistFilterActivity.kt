@@ -1,4 +1,4 @@
-package org.wikipedia.watchlist
+﻿package org.wikipedia.watchlist
 
 import android.content.Context
 import android.content.Intent
@@ -12,14 +12,14 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.WatchlistAnalyticsHelper
-import org.wikipedia.databinding.ActivityWatchlistFiltersBinding
 import org.wikipedia.settings.Prefs
 import org.wikipedia.settings.languages.WikipediaLanguagesActivity
 import org.wikipedia.views.DefaultViewHolder
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityWatchlistFiltersBinding
 
 class WatchlistFilterActivity : BaseActivity() {
 

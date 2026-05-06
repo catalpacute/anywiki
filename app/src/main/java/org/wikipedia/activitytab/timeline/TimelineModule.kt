@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab.timeline
+﻿package org.wikipedia.activitytab.timeline
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -33,7 +33,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
@@ -43,6 +42,7 @@ import org.wikipedia.extensions.isYesterday
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DateUtil
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 import java.util.Date
 
 @Composable

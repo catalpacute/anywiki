@@ -1,8 +1,8 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.content.Intent
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 class NotificationSettingsActivity : BaseSettingsActivity<NotificationSettingsFragment>() {
     override val title = R.string.notification_preferences_title

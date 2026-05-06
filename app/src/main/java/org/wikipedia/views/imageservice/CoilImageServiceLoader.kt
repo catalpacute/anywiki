@@ -1,4 +1,4 @@
-package org.wikipedia.views.imageservice
+﻿package org.wikipedia.views.imageservice
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -21,11 +21,11 @@ import coil3.request.placeholder
 import coil3.request.target
 import coil3.request.transformations
 import coil3.toBitmap
-import org.wikipedia.R
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.ImageUrlUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class CoilImageServiceLoader : ImageServiceLoader {
     private var factory = SingletonImageLoader.Factory { context ->

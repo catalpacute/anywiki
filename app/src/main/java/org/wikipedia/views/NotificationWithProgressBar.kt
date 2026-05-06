@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -12,9 +12,9 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.PendingIntentCompat
 import androidx.core.content.getSystemService
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.notifications.NotificationCategory
 import org.wikipedia.util.MathUtil.percentage
+import work.czzzz.anywiki.R
 
 class NotificationWithProgressBar {
     lateinit var notificationCategory: NotificationCategory

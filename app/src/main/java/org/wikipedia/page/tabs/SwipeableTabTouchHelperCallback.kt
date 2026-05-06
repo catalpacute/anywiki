@@ -1,12 +1,12 @@
-package org.wikipedia.page.tabs
+﻿package org.wikipedia.page.tabs
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 import kotlin.math.abs
 
 class SwipeableTabTouchHelperCallback(context: Context) : ItemTouchHelper.Callback() {

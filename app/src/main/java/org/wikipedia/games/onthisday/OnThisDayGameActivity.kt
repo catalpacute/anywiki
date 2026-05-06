@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -20,10 +20,8 @@ import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
-import org.wikipedia.databinding.ActivityOnThisDayGameBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.games.db.DailyGameHistory
 import org.wikipedia.main.MainActivity
@@ -32,6 +30,8 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityOnThisDayGameBinding
 import java.time.LocalDate
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter

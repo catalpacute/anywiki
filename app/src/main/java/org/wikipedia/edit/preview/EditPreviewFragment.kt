@@ -1,4 +1,4 @@
-package org.wikipedia.edit.preview
+﻿package org.wikipedia.edit.preview
 
 import android.content.Context
 import android.net.Uri
@@ -15,12 +15,10 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.bridge.CommunicationBridge
 import org.wikipedia.bridge.CommunicationBridge.CommunicationBridgeListener
 import org.wikipedia.bridge.JavaScriptActionHandler
-import org.wikipedia.databinding.FragmentPreviewEditBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.okhttp.OkHttpWebViewClient
@@ -41,6 +39,8 @@ import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentPreviewEditBinding
 
 class EditPreviewFragment : Fragment(), CommunicationBridgeListener, ReferenceDialog.Callback {
 

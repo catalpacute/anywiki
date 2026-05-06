@@ -1,12 +1,12 @@
-package org.wikipedia.feed.suggestededits
+﻿package org.wikipedia.feed.suggestededits
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.feed.model.WikiSiteCard
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class SuggestedEditsCard(
     val cardTypes: List<DescriptionEditActivity.Action>,

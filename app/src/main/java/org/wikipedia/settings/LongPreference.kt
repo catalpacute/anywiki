@@ -1,9 +1,9 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.withStyledAttributes
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 open class LongPreference @JvmOverloads constructor(context: Context,
                                                     attrs: AttributeSet? = null,

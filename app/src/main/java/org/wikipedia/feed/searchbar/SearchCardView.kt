@@ -1,17 +1,17 @@
-package org.wikipedia.feed.searchbar
+﻿package org.wikipedia.feed.searchbar
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewSearchBarBinding
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.search.HybridSearchAbCTest
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewSearchBarBinding
 
 class SearchCardView(context: Context) : DefaultFeedCardView<SearchCard>(context) {
     interface Callback {

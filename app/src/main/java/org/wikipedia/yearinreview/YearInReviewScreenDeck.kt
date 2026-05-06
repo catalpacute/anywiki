@@ -1,4 +1,4 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.background
@@ -57,7 +57,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.components.HtmlText
@@ -69,6 +68,7 @@ import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalMaterial3Api::class)

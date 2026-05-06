@@ -1,4 +1,4 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -37,8 +37,6 @@ import androidx.compose.ui.text.TextLinkStyles
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.LicenseLinkText
@@ -49,6 +47,8 @@ import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 
 class AboutActivity : BaseActivity() {
     private val credits = listOf(

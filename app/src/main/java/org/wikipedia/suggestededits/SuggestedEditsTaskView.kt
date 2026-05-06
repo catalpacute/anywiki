@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -6,12 +6,12 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
 import org.wikipedia.Constants.MIN_LANGUAGES_TO_UNLOCK_TRANSLATION
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewSuggestedEditsTaskItemBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewSuggestedEditsTaskItemBinding
 
 internal class SuggestedEditsTaskView(context: Context, attrs: AttributeSet? = null) : WikiCardView(context, attrs) {
     private val binding = ViewSuggestedEditsTaskItemBinding.inflate(LayoutInflater.from(context), this)

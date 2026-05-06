@@ -1,9 +1,8 @@
-package org.wikipedia.page.campaign
+﻿package org.wikipedia.page.campaign
 
 import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
@@ -13,6 +12,7 @@ import org.wikipedia.donate.donationreminder.DonationReminderHelper
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.CustomTabsUtil
 import org.wikipedia.util.FeedbackUtil
+import work.czzzz.anywiki.R
 import java.time.Duration
 import java.time.Instant
 import java.time.LocalDateTime

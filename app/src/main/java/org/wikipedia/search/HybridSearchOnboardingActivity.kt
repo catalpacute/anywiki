@@ -1,4 +1,4 @@
-package org.wikipedia.search
+﻿package org.wikipedia.search
 
 import android.content.Context
 import android.content.Intent
@@ -45,7 +45,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
@@ -59,6 +58,7 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 private val onboardingItems = listOf(
     OnboardingItem(

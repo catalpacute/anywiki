@@ -1,12 +1,10 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewEditHistoryStatsBinding
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.page.PageActivity
@@ -16,6 +14,8 @@ import org.wikipedia.util.DateUtil
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewEditHistoryStatsBinding
 import java.time.LocalDateTime
 
 class EditHistoryStatsView constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {

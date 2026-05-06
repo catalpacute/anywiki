@@ -1,4 +1,4 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,13 +7,13 @@ import android.widget.LinearLayout
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
 import androidx.core.widget.TextViewCompat
-import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ViewDescriptionEditLicenseBinding
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewDescriptionEditLicenseBinding
 
 class DescriptionEditLicenseView constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
     fun interface Callback {

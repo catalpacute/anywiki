@@ -1,11 +1,10 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
 import org.json.JSONException
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.createaccount.CreateAccountException
 import org.wikipedia.dataclient.ServiceFactory
@@ -14,6 +13,7 @@ import org.wikipedia.dataclient.mwapi.MwException
 import org.wikipedia.dataclient.mwapi.MwServiceError
 import org.wikipedia.dataclient.okhttp.HttpStatusException
 import org.wikipedia.login.LoginFailedException
+import work.czzzz.anywiki.R
 import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException

@@ -1,12 +1,12 @@
-package org.wikipedia.feed.becauseyouread
+﻿package org.wikipedia.feed.becauseyouread
 
 import android.net.Uri
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.feed.model.ListCard
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class BecauseYouReadCard(
     val pageTitle: PageTitle,

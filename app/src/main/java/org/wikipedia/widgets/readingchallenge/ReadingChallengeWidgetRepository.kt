@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
@@ -11,10 +11,10 @@ import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 import java.time.temporal.ChronoUnit
 
@@ -77,7 +77,7 @@ class ReadingChallengeWidgetRepository(private val context: Context) {
             return ReadingChallengeState.ChallengeCompleted
         }
 
-        // Past end date with a broken streak — challenge is concluded and cannot restart.
+        // Past end date with a broken streak 鈥?challenge is concluded and cannot restart.
         // Active streaks past end date fall through and continue toward completion (buffer period)
         if (userData.currentDate.isAfter(END_DATE) && !userData.hasActiveStreak) {
             return if (userData.currentStreak > 0) {

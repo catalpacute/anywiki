@@ -1,4 +1,4 @@
-package org.wikipedia.page
+﻿package org.wikipedia.page
 
 import android.content.Context
 import android.graphics.Typeface
@@ -8,13 +8,13 @@ import android.util.TypedValue
 import android.view.Gravity
 import androidx.core.widget.TextViewCompat
 import com.google.android.material.textview.MaterialTextView
-import org.wikipedia.R
 import org.wikipedia.page.action.PageActionItem
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.ConfigurableTabLayout
+import work.czzzz.anywiki.R
 
 class PageActionTabLayout constructor(context: Context, attrs: AttributeSet? = null) : ConfigurableTabLayout(context, attrs) {
 

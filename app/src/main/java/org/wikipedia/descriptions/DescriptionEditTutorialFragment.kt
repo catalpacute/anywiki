@@ -1,4 +1,4 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.MachineGeneratedArticleDescriptionsAnalyticsHelper
 import org.wikipedia.onboarding.OnboardingFragment
 import org.wikipedia.onboarding.OnboardingPageView
+import work.czzzz.anywiki.R
 
 class DescriptionEditTutorialFragment : OnboardingFragment() {
     override val doneButtonText = R.string.description_edit_tutorial_button_label_start_editing

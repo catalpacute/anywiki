@@ -1,4 +1,4 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.util.AttributeSet
@@ -11,11 +11,11 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.appcompat.widget.PopupMenu
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewCardHeaderBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.feed.model.Card
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardHeaderBinding
 
 class CardHeaderView(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
 

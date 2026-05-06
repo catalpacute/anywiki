@@ -1,4 +1,4 @@
-package org.wikipedia.auth
+﻿package org.wikipedia.auth
 
 import android.accounts.Account
 import android.accounts.AccountAuthenticatorResponse
@@ -6,7 +6,6 @@ import android.accounts.AccountManager
 import android.app.Activity
 import androidx.core.os.bundleOf
 import androidx.core.text.isDigitsOnly
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.json.JsonUtil
@@ -16,6 +15,7 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L.d
 import org.wikipedia.util.log.L.logRemoteErrorIfProd
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 import java.util.Collections
 import kotlin.math.max

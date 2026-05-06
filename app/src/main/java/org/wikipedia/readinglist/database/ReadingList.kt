@@ -1,11 +1,11 @@
-package org.wikipedia.readinglist.database
+﻿package org.wikipedia.readinglist.database
 
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import org.apache.commons.lang3.StringUtils
-import org.wikipedia.R
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 import java.io.Serializable
 
 // TODO: create default reading list upon initial DB creation.

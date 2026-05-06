@@ -1,4 +1,4 @@
-package org.wikipedia.page.linkpreview
+﻿package org.wikipedia.page.linkpreview
 
 import android.content.DialogInterface
 import android.location.Location
@@ -20,14 +20,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.analytics.eventplatform.ArticleLinkPreviewInteractionEvent
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.JavaScriptActionHandler
-import org.wikipedia.databinding.DialogLinkPreviewBinding
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.edit.EditHandler
 import org.wikipedia.edit.EditSectionActivity
@@ -53,6 +51,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.watchlist.WatchlistViewModel
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogLinkPreviewBinding
 import java.util.Locale
 
 class LinkPreviewDialog : ExtendedBottomSheetDialogFragment(), LinkPreviewErrorView.Callback, DialogInterface.OnDismissListener {

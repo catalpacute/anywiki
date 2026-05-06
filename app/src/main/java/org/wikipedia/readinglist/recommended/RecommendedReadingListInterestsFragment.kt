@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist.recommended
+﻿package org.wikipedia.readinglist.recommended
 
 import android.app.Activity.RESULT_OK
 import android.os.Bundle
@@ -76,7 +76,6 @@ import androidx.lifecycle.lifecycleScope
 import coil3.compose.AsyncImage
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.WikiCard
@@ -96,6 +95,7 @@ import org.wikipedia.theme.Theme
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 
 class RecommendedReadingListInterestsFragment : Fragment() {
     private val viewModel: RecommendedReadingListInterestsViewModel by viewModels()

@@ -1,4 +1,4 @@
-package org.wikipedia.feed.wikigames
+﻿package org.wikipedia.feed.wikigames
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -13,16 +13,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.components.PageIndicator
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.databinding.ViewWikiGamesCardBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.feed.view.CardFooterView
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewWikiGamesCardBinding
 
 class WikiGamesCardView(context: Context) : DefaultFeedCardView<WikiGamesCard>(context), CardFooterView.Callback {
     interface Callback {

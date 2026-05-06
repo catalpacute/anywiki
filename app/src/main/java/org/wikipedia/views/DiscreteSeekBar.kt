@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,7 +8,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.AppCompatSeekBar
 import androidx.core.content.withStyledAttributes
 import androidx.core.graphics.withSave
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 class DiscreteSeekBar(context: Context, attrs: AttributeSet? = null) : AppCompatSeekBar(context, attrs) {
     private var minNumber = 0

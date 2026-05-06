@@ -1,8 +1,8 @@
-package org.wikipedia.watchlist
+﻿package org.wikipedia.watchlist
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 enum class WatchlistExpiry(val expiry: String,
                            @StringRes val stringId: Int,

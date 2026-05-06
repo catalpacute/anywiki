@@ -1,14 +1,14 @@
-package org.wikipedia.navtab
+﻿package org.wikipedia.navtab
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
-import org.wikipedia.R
 import org.wikipedia.activitytab.ActivityTabFragment
 import org.wikipedia.feed.FeedFragment
 import org.wikipedia.history.HistoryFragment
 import org.wikipedia.model.EnumCode
 import org.wikipedia.readinglist.ReadingListsFragment
+import work.czzzz.anywiki.R
 
 enum class NavTab(@StringRes val text: Int, val id: Int, @DrawableRes val icon: Int) : EnumCode {
 

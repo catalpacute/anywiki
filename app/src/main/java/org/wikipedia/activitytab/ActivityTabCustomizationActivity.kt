@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import android.content.Context
 import android.content.Intent
@@ -25,7 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.ActivityTabEvent
@@ -36,6 +35,7 @@ import org.wikipedia.games.WikiGames
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
+import work.czzzz.anywiki.R
 
 class ActivityTabCustomizationActivity : BaseActivity() {
 

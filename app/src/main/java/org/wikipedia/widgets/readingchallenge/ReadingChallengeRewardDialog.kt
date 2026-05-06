@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,7 +35,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.AppButton
 import org.wikipedia.compose.theme.BaseTheme
@@ -44,6 +43,7 @@ import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 class ReadingChallengeRewardDialog : ExtendedBottomSheetDialogFragment(startExpanded = true) {
     private val instrument = TestKitchenAdapter.client.getInstrument("apps-widgetchallenge")

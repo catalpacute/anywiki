@@ -1,4 +1,4 @@
-package org.wikipedia.commons
+﻿package org.wikipedia.commons
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
@@ -23,9 +23,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
-import org.wikipedia.databinding.FragmentFilePageBinding
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.descriptions.DescriptionEditActivity.Action
@@ -40,6 +38,8 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.util.ShareUtil.shareImage
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentFilePageBinding
 import java.io.File
 
 class FilePageFragment : Fragment(), FilePageView.Callback, MenuProvider {

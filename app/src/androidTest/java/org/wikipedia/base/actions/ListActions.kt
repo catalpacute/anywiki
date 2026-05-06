@@ -1,4 +1,4 @@
-package org.wikipedia.base.actions
+﻿package org.wikipedia.base.actions
 
 import android.util.Log
 import android.view.View
@@ -36,8 +36,8 @@ import org.hamcrest.Matchers.containsString
 import org.hamcrest.Matchers.hasToString
 import org.hamcrest.Matchers.not
 import org.junit.Assert.assertEquals
-import org.wikipedia.R
 import org.wikipedia.views.DefaultViewHolder
+import work.czzzz.anywiki.R
 import java.util.concurrent.atomic.AtomicInteger
 
 class ListActions {

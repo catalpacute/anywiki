@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.content.Context
 import android.os.Bundle
@@ -32,13 +32,9 @@ import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.adapter.PagingDataAdapterPatched
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.FragmentSuggestedEditsRecentEditsBinding
-import org.wikipedia.databinding.ViewEditHistoryEmptyMessagesBinding
-import org.wikipedia.databinding.ViewEditHistorySearchBarBinding
 import org.wikipedia.dataclient.mwapi.MwQueryResult
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.history.HistoryEntry
@@ -56,6 +52,10 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.views.NotificationButtonView
 import org.wikipedia.views.SearchAndFilterActionProvider
 import org.wikipedia.views.WikiErrorView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsRecentEditsBinding
+import work.czzzz.anywiki.databinding.ViewEditHistoryEmptyMessagesBinding
+import work.czzzz.anywiki.databinding.ViewEditHistorySearchBarBinding
 
 class SuggestedEditsRecentEditsFragment : Fragment(), MenuProvider {
     private var _binding: FragmentSuggestedEditsRecentEditsBinding? = null

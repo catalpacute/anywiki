@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.content.Context
 import android.content.Intent
@@ -18,11 +18,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.ActivityTalkTopicBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.discussiontools.ThreadItem
 import org.wikipedia.diff.ArticleEditDetailsActivity
@@ -45,6 +43,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.SearchActionProvider
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityTalkTopicBinding
 
 class TalkTopicActivity : BaseActivity() {
     private lateinit var binding: ActivityTalkTopicBinding

@@ -1,4 +1,4 @@
-package org.wikipedia.games
+﻿package org.wikipedia.games
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +13,6 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.theme.BaseTheme
@@ -24,6 +23,7 @@ import org.wikipedia.games.onthisday.OnThisDayGameActivity
 import org.wikipedia.games.onthisday.OnThisDayGameArchiveCalendarHelper
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 class GamesHubFragment : Fragment() {
     private lateinit var onThisDayGameArchiveCalendarHelper: OnThisDayGameArchiveCalendarHelper

@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,8 +12,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
-import org.wikipedia.R
-import org.wikipedia.databinding.FragmentSuggestedEditsCardsItemBinding
 import org.wikipedia.descriptions.DescriptionEditActivity.Action.ADD_DESCRIPTION
 import org.wikipedia.descriptions.DescriptionEditActivity.Action.TRANSLATE_DESCRIPTION
 import org.wikipedia.extensions.setLayoutDirectionByLang
@@ -24,6 +22,8 @@ import org.wikipedia.util.Resource
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ImageZoomHelper
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsCardsItemBinding
 
 class SuggestedEditsCardsItemFragment : SuggestedEditsItemFragment() {
     private var _binding: FragmentSuggestedEditsCardsItemBinding? = null

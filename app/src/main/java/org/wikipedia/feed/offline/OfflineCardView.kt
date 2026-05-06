@@ -1,12 +1,12 @@
-package org.wikipedia.feed.offline
+﻿package org.wikipedia.feed.offline
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.widget.LinearLayout
-import org.wikipedia.databinding.ViewCardOfflineBinding
 import org.wikipedia.feed.model.Card
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.feed.view.FeedCardView
+import work.czzzz.anywiki.databinding.ViewCardOfflineBinding
 
 class OfflineCardView(context: Context) : LinearLayout(context), FeedCardView<Card> {
 

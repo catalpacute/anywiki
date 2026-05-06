@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import androidx.core.widget.TextViewCompat
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewTabsCountBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewTabsCountBinding
 
 class TabCountsView(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
 

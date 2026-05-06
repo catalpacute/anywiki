@@ -1,4 +1,4 @@
-package org.wikipedia.notifications
+﻿package org.wikipedia.notifications
 
 import android.Manifest
 import android.app.PendingIntent
@@ -20,7 +20,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.applyCanvas
 import androidx.core.graphics.createBitmap
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.dataclient.WikiSite
@@ -33,6 +32,7 @@ import org.wikipedia.talk.TalkTopicsActivity
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.*
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 

@@ -1,4 +1,4 @@
-package org.wikipedia.commons
+﻿package org.wikipedia.commons
 
 import android.content.Context
 import android.icu.text.ListFormatter
@@ -12,9 +12,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import org.wikipedia.Constants
 import org.wikipedia.Constants.PREFERRED_GALLERY_IMAGE_SIZE
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewFilePageBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.descriptions.DescriptionEditActivity
@@ -30,6 +28,8 @@ import org.wikipedia.util.UriUtil
 import org.wikipedia.views.ImageDetailView
 import org.wikipedia.views.ImageZoomHelper
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewFilePageBinding
 import java.util.Locale
 
 class FilePageView(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {

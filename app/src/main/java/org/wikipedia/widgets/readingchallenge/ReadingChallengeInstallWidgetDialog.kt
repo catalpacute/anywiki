@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -45,7 +45,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import org.wikipedia.R
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.compose.components.TwoButtonBottomBar
 import org.wikipedia.compose.theme.BaseTheme
@@ -53,6 +52,7 @@ import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class ReadingChallengeInstallWidgetDialog : ExtendedBottomSheetDialogFragment(startExpanded = true) {
 

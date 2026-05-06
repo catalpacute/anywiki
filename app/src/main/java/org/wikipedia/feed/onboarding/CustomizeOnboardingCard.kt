@@ -1,9 +1,9 @@
-package org.wikipedia.feed.onboarding
+﻿package org.wikipedia.feed.onboarding
 
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.feed.announcement.Announcement
 import org.wikipedia.feed.model.CardType
+import work.czzzz.anywiki.R
 
 class CustomizeOnboardingCard(announcement: Announcement) : OnboardingCard(announcement) {
 

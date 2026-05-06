@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -81,7 +81,6 @@ import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
@@ -126,6 +125,7 @@ import org.wikipedia.util.UiState
 import org.wikipedia.util.UriUtil
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeRewardDialog
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
+import work.czzzz.anywiki.R
 import java.time.LocalDateTime
 
 class ActivityTabFragment : Fragment() {

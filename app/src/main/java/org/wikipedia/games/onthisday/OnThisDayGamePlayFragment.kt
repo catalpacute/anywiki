@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
@@ -24,9 +24,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
-import org.wikipedia.databinding.FragmentOnThisDayGamePlayBinding
 import org.wikipedia.feed.onthisday.OnThisDay
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DimenUtil
@@ -35,6 +33,8 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentOnThisDayGamePlayBinding
 import java.time.LocalDate
 import java.time.MonthDay
 import java.time.format.DateTimeFormatter

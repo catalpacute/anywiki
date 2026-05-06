@@ -1,11 +1,11 @@
-package org.wikipedia.feed.news
+﻿package org.wikipedia.feed.news
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.feed.model.UtcDate
 import org.wikipedia.feed.model.WikiSiteCard
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 import java.util.concurrent.TimeUnit
 
 class NewsCard(

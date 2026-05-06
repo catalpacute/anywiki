@@ -1,4 +1,4 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -39,12 +39,12 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

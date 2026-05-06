@@ -1,14 +1,14 @@
-package org.wikipedia.feed.image
+﻿package org.wikipedia.feed.image
 
 import android.content.Context
 import android.view.LayoutInflater
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewCardFeaturedImageBinding
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.richtext.RichTextUtil
 import org.wikipedia.views.ImageZoomHelper
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardFeaturedImageBinding
 
 class FeaturedImageCardView(context: Context) : DefaultFeedCardView<FeaturedImageCard>(context) {
 

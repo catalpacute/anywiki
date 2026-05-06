@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
@@ -30,13 +30,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 
 @Composable
 fun RecommendedReadingListDiscoverCardView(

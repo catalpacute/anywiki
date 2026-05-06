@@ -1,11 +1,10 @@
-package org.wikipedia.readinglist.recommended
+﻿package org.wikipedia.readinglist.recommended
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.notifications.NotificationCategory
 import org.wikipedia.notifications.NotificationPollBroadcastReceiver
@@ -13,6 +12,7 @@ import org.wikipedia.notifications.NotificationPresenter
 import org.wikipedia.readinglist.ReadingListActivity
 import org.wikipedia.readinglist.ReadingListMode
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.time.DayOfWeek
 import java.time.Duration
 import java.time.LocalDateTime

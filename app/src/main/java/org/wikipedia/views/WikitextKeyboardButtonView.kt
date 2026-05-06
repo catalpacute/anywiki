@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewWikitextKeyboardButtonBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil.setButtonTooltip
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewWikitextKeyboardButtonBinding
 
 class WikitextKeyboardButtonView constructor(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {
     val binding = ViewWikitextKeyboardButtonBinding.inflate(LayoutInflater.from(context), this)

@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Canvas
@@ -10,8 +10,8 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.size
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import org.wikipedia.R
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 // todo: replace with DividerItemDecoration once it supports headers and footers
 class DrawableItemDecoration(

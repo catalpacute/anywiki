@@ -1,4 +1,4 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -12,10 +12,10 @@ import android.location.Location
 import android.net.Uri
 import android.os.Build
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.feed.announcement.GeoIPCookieUnmarshaller
 import org.wikipedia.history.db.HistoryEntryWithImage
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.text.DecimalFormat
 import java.util.Locale
 import kotlin.math.abs

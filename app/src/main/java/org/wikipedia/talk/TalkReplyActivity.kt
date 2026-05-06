@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.content.Context
 import android.content.Intent
@@ -16,13 +16,11 @@ import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.ActivityTalkReplyBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.discussiontools.ThreadItem
 import org.wikipedia.edit.SyntaxHighlightViewAdapter
@@ -51,6 +49,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.UserMentionInputView
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityTalkReplyBinding
 
 class TalkReplyActivity : BaseActivity(), UserMentionInputView.Listener, EditPreviewFragment.Callback, LinkPreviewDialog.DismissCallback {
     private lateinit var binding: ActivityTalkReplyBinding

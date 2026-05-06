@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -36,8 +36,8 @@ import androidx.glance.layout.width
 import androidx.glance.text.FontWeight
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
-import org.wikipedia.R
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 
 class ReadingChallengeWidget : GlanceAppWidget() {

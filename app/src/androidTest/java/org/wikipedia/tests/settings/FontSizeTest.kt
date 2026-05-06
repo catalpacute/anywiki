@@ -1,4 +1,4 @@
-package org.wikipedia.tests.settings
+﻿package org.wikipedia.tests.settings
 
 import android.widget.TextView
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -6,12 +6,12 @@ import androidx.test.filters.LargeTest
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.wikipedia.R
 import org.wikipedia.base.BaseTest
 import org.wikipedia.robots.AppThemeRobot
 import org.wikipedia.robots.SystemRobot
 import org.wikipedia.theme.ThemeFittingRoomActivity
 import org.wikipedia.theme.ThemeFittingRoomFragment
+import work.czzzz.anywiki.R
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)

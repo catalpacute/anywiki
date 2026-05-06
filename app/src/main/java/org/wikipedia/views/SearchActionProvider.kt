@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Color
@@ -7,10 +7,10 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ActionProvider
-import org.wikipedia.R
-import org.wikipedia.databinding.GroupSearchBinding
 import org.wikipedia.util.DeviceUtil.showSoftKeyboard
 import org.wikipedia.util.ResourceUtil.getThemedColor
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.GroupSearchBinding
 
 class SearchActionProvider(context: Context,
                            private val searchHintString: String,

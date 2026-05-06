@@ -1,11 +1,11 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class TabsRobot : BaseRobot() {
     fun removeTab(position: Int) = apply {

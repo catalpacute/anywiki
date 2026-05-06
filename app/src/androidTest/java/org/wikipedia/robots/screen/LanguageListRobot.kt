@@ -1,4 +1,4 @@
-package org.wikipedia.robots.screen
+﻿package org.wikipedia.robots.screen
 
 import BaseRobot
 import android.content.Context
@@ -14,13 +14,13 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
 import org.wikipedia.base.utils.ColorAssertions
 import org.wikipedia.base.utils.assertTextColor
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class LanguageListRobot : BaseRobot() {
 

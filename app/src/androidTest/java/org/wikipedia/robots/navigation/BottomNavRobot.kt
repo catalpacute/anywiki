@@ -1,4 +1,4 @@
-package org.wikipedia.robots.navigation
+﻿package org.wikipedia.robots.navigation
 
 import BaseRobot
 import android.util.Log
@@ -10,9 +10,9 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.TestUtil.childAtPosition
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.R
 
 class BottomNavRobot : BaseRobot() {
     fun navigateToExploreFeed() = apply {

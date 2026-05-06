@@ -1,4 +1,4 @@
-package org.wikipedia.page.tabs
+﻿package org.wikipedia.page.tabs
 
 import android.content.Context
 import android.content.Intent
@@ -14,11 +14,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ActivityTabsBinding
 import org.wikipedia.main.MainActivity
 import org.wikipedia.navtab.NavTab
 import org.wikipedia.notifications.NotificationActivity
@@ -32,6 +30,8 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityTabsBinding
 
 class TabActivity : BaseActivity() {
     private lateinit var binding: ActivityTabsBinding

@@ -1,14 +1,14 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
-import org.wikipedia.databinding.ViewDescriptionEditReadArticleBarBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.suggestededits.PageSummaryForEdit
 import org.wikipedia.util.StringUtil
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.databinding.ViewDescriptionEditReadArticleBarBinding
 
 class DescriptionEditBottomBarView constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {
     private val binding = ViewDescriptionEditReadArticleBarBinding.inflate(LayoutInflater.from(context), this)

@@ -1,7 +1,7 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import androidx.compose.ui.graphics.Color
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 object WidgetColors {
     val challengeNotOptInBackground = Color(0xFFFFE49C)

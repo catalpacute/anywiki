@@ -1,11 +1,11 @@
-package org.wikipedia.activity
+﻿package org.wikipedia.activity
 
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import org.wikipedia.R
 import org.wikipedia.util.DeviceUtil
+import work.czzzz.anywiki.R
 
 /**
  * Boilerplate for a FragmentActivity containing a single stack of Fragments.

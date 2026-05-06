@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -22,7 +22,7 @@ import androidx.glance.layout.fillMaxWidth
 import androidx.glance.layout.height
 import androidx.glance.layout.size
 import androidx.glance.layout.width
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 @Composable
 fun StreakProgressBar(

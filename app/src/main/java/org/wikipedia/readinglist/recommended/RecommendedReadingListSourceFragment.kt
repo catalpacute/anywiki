@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist.recommended
+﻿package org.wikipedia.readinglist.recommended
 
 import android.app.Activity.RESULT_OK
 import android.os.Bundle
@@ -10,13 +10,13 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.readinglist.ReadingListActivity
 import org.wikipedia.readinglist.ReadingListMode
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 
 class RecommendedReadingListSourceFragment : Fragment() {
 

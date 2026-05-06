@@ -1,10 +1,10 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.res.use
 import androidx.preference.EditTextPreference
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 open class EditTextAutoSummarizePreference @JvmOverloads constructor(context: Context,
                                                                      attrs: AttributeSet?,

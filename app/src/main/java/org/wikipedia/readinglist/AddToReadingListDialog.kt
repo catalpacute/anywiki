@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -18,9 +18,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
-import org.wikipedia.databinding.DialogAddToReadingListBinding
 import org.wikipedia.extensions.parcelableArrayList
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.page.PageTitle
@@ -31,6 +29,8 @@ import org.wikipedia.util.DimenUtil.getDimension
 import org.wikipedia.util.DimenUtil.roundedDpToPx
 import org.wikipedia.util.FeedbackUtil.makeSnackbar
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogAddToReadingListBinding
 
 open class AddToReadingListDialog : ExtendedBottomSheetDialogFragment() {
     private var _binding: DialogAddToReadingListBinding? = null

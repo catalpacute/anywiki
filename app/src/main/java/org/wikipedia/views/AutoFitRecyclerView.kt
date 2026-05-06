@@ -1,12 +1,12 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
 import androidx.core.content.res.use
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import org.wikipedia.R
 import org.wikipedia.util.log.L.logRemoteErrorIfProd
+import work.czzzz.anywiki.R
 
 /** [RecyclerView] that invokes a callback when the number of columns should be updated.  */
 open class AutoFitRecyclerView(context: Context, attrs: AttributeSet? = null) :

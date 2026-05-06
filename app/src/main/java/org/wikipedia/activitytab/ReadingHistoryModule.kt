@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import android.text.format.DateFormat
 import androidx.compose.foundation.BorderStroke
@@ -44,7 +44,6 @@ import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import org.wikipedia.R
 import org.wikipedia.categories.db.Category
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.components.TinyBarChart
@@ -59,6 +58,7 @@ import org.wikipedia.theme.Theme
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UiState
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

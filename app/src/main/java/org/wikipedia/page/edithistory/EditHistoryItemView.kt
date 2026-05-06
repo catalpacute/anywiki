@@ -1,4 +1,4 @@
-package org.wikipedia.page.edithistory
+﻿package org.wikipedia.page.edithistory
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -11,12 +11,12 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemEditHistoryBinding
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemEditHistoryBinding
 
 class EditHistoryItemView(context: Context) : FrameLayout(context) {
     interface Listener {

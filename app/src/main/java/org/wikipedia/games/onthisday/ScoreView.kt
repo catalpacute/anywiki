@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.ShapeAppearanceModel
-import org.wikipedia.R
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class ScoreView(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.feed.onthisday
+﻿package org.wikipedia.feed.onthisday
 
 import android.app.Activity
 import android.app.ActivityOptions
@@ -7,8 +7,6 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewCardOnThisDayBinding
 import org.wikipedia.feed.view.CardFooterView
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
@@ -20,6 +18,8 @@ import org.wikipedia.util.DateUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.TransitionUtil
 import org.wikipedia.views.ImageZoomHelper
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardOnThisDayBinding
 
 class OnThisDayCardView(context: Context) : DefaultFeedCardView<OnThisDayCard>(context), CardFooterView.Callback {
 

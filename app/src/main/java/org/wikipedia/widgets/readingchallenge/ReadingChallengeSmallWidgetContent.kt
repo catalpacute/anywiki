@@ -1,4 +1,4 @@
-package org.wikipedia.widgets.readingchallenge
+﻿package org.wikipedia.widgets.readingchallenge
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -23,8 +23,8 @@ import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.preview.ExperimentalGlancePreviewApi
 import androidx.glance.preview.Preview
-import org.wikipedia.R
 import org.wikipedia.widgets.readingchallenge.WidgetCombinations.forToday
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 
 @Composable

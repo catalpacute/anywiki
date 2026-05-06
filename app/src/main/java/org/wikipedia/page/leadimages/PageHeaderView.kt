@@ -1,4 +1,4 @@
-package org.wikipedia.page.leadimages
+﻿package org.wikipedia.page.leadimages
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.net.toUri
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
-import org.wikipedia.databinding.ViewPageHeaderBinding
 import org.wikipedia.donate.DonateUtil
 import org.wikipedia.donate.donationreminder.DonationReminderConfig
 import org.wikipedia.donate.donationreminder.DonationReminderHelper
@@ -20,6 +18,8 @@ import org.wikipedia.util.GradientUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.LinearLayoutOverWebView
 import org.wikipedia.views.ObservableWebView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewPageHeaderBinding
 import java.util.Date
 
 class PageHeaderView(context: Context, attrs: AttributeSet? = null) : LinearLayoutOverWebView(context, attrs), ObservableWebView.OnScrollChangeListener {

@@ -1,4 +1,4 @@
-package org.wikipedia.edit
+﻿package org.wikipedia.edit
 
 import android.view.MenuItem
 import android.view.View
@@ -8,13 +8,13 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonPrimitive
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.bridge.CommunicationBridge
 import org.wikipedia.bridge.CommunicationBridge.JSEventListener
 import org.wikipedia.descriptions.DescriptionEditUtil
 import org.wikipedia.page.Page
 import org.wikipedia.page.PageFragment
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class EditHandler(private val fragment: PageFragment, bridge: CommunicationBridge) : JSEventListener {
 

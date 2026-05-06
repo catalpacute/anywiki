@@ -1,4 +1,4 @@
-package org.wikipedia.main
+﻿package org.wikipedia.main
 
 import android.content.Context
 import android.content.Intent
@@ -15,11 +15,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
-import org.wikipedia.databinding.ActivityMainBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.FeedFragment
 import org.wikipedia.navtab.NavTab
@@ -33,6 +31,8 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeInstallWidgetDialog
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityMainBinding
 
 class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callback {
 

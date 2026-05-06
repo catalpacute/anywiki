@@ -1,4 +1,4 @@
-package org.wikipedia.usercontrib
+﻿package org.wikipedia.usercontrib
 
 import android.content.Context
 import android.graphics.Typeface
@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemUserContribBinding
 import org.wikipedia.dataclient.mwapi.UserContribution
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemUserContribBinding
 
 class UserContribItemView(context: Context) : FrameLayout(context) {
     interface Listener {

@@ -1,4 +1,4 @@
-package org.wikipedia.page
+﻿package org.wikipedia.page
 
 import android.annotation.SuppressLint
 import android.graphics.Typeface
@@ -18,7 +18,6 @@ import androidx.core.view.updateLayoutParams
 import androidx.drawerlayout.widget.DrawerLayout
 import org.json.JSONException
 import org.json.JSONObject
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.ArticleTocInteractionEvent
 import org.wikipedia.bridge.CommunicationBridge
 import org.wikipedia.bridge.JavaScriptActionHandler
@@ -32,6 +31,7 @@ import org.wikipedia.views.ObservableWebView
 import org.wikipedia.views.ObservableWebView.OnContentHeightChangedListener
 import org.wikipedia.views.PageScrollerView
 import org.wikipedia.views.SwipeableListView.OnSwipeOutListener
+import work.czzzz.anywiki.R
 
 class SidePanelHandler internal constructor(private val fragment: PageFragment,
                                             private val bridge: CommunicationBridge) :

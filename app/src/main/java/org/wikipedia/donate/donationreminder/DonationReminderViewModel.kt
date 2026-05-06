@@ -1,4 +1,4 @@
-package org.wikipedia.donate.donationreminder
+﻿package org.wikipedia.donate.donationreminder
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.dataclient.donate.DonationConfigHelper
@@ -18,6 +17,7 @@ import org.wikipedia.donate.GooglePayComponent
 import org.wikipedia.readinglist.recommended.RecommendedReadingListOnboardingActivity
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class DonationReminderViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
     private val preSelectedArticleFrequency = 15

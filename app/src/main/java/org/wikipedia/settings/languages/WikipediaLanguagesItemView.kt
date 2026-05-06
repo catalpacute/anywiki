@@ -1,4 +1,4 @@
-package org.wikipedia.settings.languages
+﻿package org.wikipedia.settings.languages
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.appcompat.content.res.AppCompatResources
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemWikipediaLanguageBinding
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemWikipediaLanguageBinding
 
 class WikipediaLanguagesItemView : LinearLayout {
     interface Callback {

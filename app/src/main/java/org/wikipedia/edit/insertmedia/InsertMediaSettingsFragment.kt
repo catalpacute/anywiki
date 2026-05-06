@@ -1,4 +1,4 @@
-package org.wikipedia.edit.insertmedia
+﻿package org.wikipedia.edit.insertmedia
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -14,11 +14,9 @@ import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.commons.ImagePreviewDialog
-import org.wikipedia.databinding.FragmentInsertMediaSettingsBinding
 import org.wikipedia.page.ExclusiveBottomSheetPresenter
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.richtext.RichTextUtil
@@ -29,6 +27,8 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.views.AppTextViewWithImages
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentInsertMediaSettingsBinding
 
 class InsertMediaSettingsFragment : Fragment() {
 

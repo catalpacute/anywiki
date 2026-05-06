@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.content.Context
@@ -24,13 +24,13 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import junit.framework.AssertionFailedError
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
 import org.wikipedia.base.utils.assertTextColor
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class SearchRobot : BaseRobot() {
     fun tapSearchView() = apply {

@@ -1,4 +1,4 @@
-package org.wikipedia.diff
+﻿package org.wikipedia.diff
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,10 +6,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.doOnTextChanged
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
-import org.wikipedia.databinding.DialogUndoEditBinding
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogUndoEditBinding
 
 class UndoEditDialog(
     context: Context,

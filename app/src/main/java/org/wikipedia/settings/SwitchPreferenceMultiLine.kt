@@ -1,4 +1,4 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.graphics.Typeface
@@ -6,9 +6,9 @@ import android.util.AttributeSet
 import android.widget.TextView
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.SwitchPreferenceCompat
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.util.DimenUtil
+import work.czzzz.anywiki.R
 
 open class SwitchPreferenceMultiLine : SwitchPreferenceCompat {
     constructor(ctx: Context, attrs: AttributeSet?, defStyle: Int) : super(ctx, attrs, defStyle)

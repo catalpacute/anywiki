@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.util.Log
@@ -18,7 +18,6 @@ import androidx.test.uiautomator.UiScrollable
 import androidx.test.uiautomator.UiSelector
 import com.google.android.material.imageview.ShapeableImageView
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.TestConstants
 import org.wikipedia.TestConstants.SUGGESTED_EDITS
 import org.wikipedia.base.TestConfig
@@ -26,6 +25,7 @@ import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
 import org.wikipedia.base.utils.ColorAssertions
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class ExploreFeedRobot : BaseRobot() {
     fun clickOnFeaturedArticle(position: Int = 0) = apply {

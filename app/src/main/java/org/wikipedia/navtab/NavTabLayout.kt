@@ -1,4 +1,4 @@
-package org.wikipedia.navtab
+﻿package org.wikipedia.navtab
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -11,9 +11,9 @@ import android.widget.ImageView
 import androidx.core.view.isVisible
 import androidx.core.view.updateMarginsRelative
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.wikipedia.R
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class NavTabLayout(context: Context, attrs: AttributeSet) : BottomNavigationView(context, attrs) {
     init {

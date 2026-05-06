@@ -1,4 +1,4 @@
-package org.wikipedia.page
+﻿package org.wikipedia.page
 
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
@@ -6,7 +6,6 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.ArticleLinkPreviewInteractionEvent
 import org.wikipedia.auth.AccountUtil
@@ -29,6 +28,7 @@ import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ObservableWebView
 import retrofit2.Response
+import work.czzzz.anywiki.R
 import java.io.IOException
 import java.time.Instant
 import java.time.LocalDate

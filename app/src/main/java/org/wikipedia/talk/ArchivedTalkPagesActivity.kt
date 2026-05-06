@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.content.Context
 import android.content.Intent
@@ -21,10 +21,8 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
-import org.wikipedia.databinding.ActivityArchivedTalkPagesBinding
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.page.PageActivity
@@ -36,6 +34,8 @@ import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.PageItemView
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.WikiErrorView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityArchivedTalkPagesBinding
 
 class ArchivedTalkPagesActivity : BaseActivity() {
     private lateinit var binding: ActivityArchivedTalkPagesBinding

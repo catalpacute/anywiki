@@ -1,4 +1,4 @@
-package org.wikipedia.feed.news
+﻿package org.wikipedia.feed.news
 
 import android.content.Context
 import android.graphics.Typeface
@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.core.text.getSpans
-import org.wikipedia.databinding.ViewHorizontalScrollListItemCardBinding
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.richtext.RichTextUtil
 import org.wikipedia.util.DimenUtil
@@ -16,6 +15,7 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ImageZoomHelper
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.databinding.ViewHorizontalScrollListItemCardBinding
 
 class NewsItemView(context: Context) : WikiCardView(context) {
 

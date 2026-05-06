@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.content.Context
 import android.graphics.Typeface
@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.annotation.DrawableRes
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemSuggestedEditsRecentEditsBinding
 import org.wikipedia.dataclient.mwapi.MwQueryResult
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemSuggestedEditsRecentEditsBinding
 
 class SuggestedEditsRecentEditsItemView(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
     val binding = ItemSuggestedEditsRecentEditsBinding.inflate(LayoutInflater.from(context), this, true)

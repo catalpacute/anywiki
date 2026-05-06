@@ -1,4 +1,4 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,14 +11,14 @@ import com.google.android.flexbox.AlignItems
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.appshortcuts.AppShortcuts
-import org.wikipedia.databinding.DialogAppIconBinding
-import org.wikipedia.databinding.ItemAppIconBinding
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogAppIconBinding
+import work.czzzz.anywiki.databinding.ItemAppIconBinding
 
 class AppIconDialog : ExtendedBottomSheetDialogFragment() {
     private var _binding: DialogAppIconBinding? = null

@@ -1,4 +1,4 @@
-package org.wikipedia.gallery
+﻿package org.wikipedia.gallery
 
 import android.app.DownloadManager
 import android.content.BroadcastReceiver
@@ -14,10 +14,10 @@ import androidx.core.content.contentValuesOf
 import androidx.core.content.getSystemService
 import androidx.core.net.toUri
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.feed.image.FeaturedImage
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.FileUtil
+import work.czzzz.anywiki.R
 import java.io.File
 
 class MediaDownloadReceiver : BroadcastReceiver() {

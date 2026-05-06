@@ -1,4 +1,4 @@
-package org.wikipedia.tests.search
+﻿package org.wikipedia.tests.search
 
 import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
@@ -19,9 +19,9 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.TestUtil
 import org.wikipedia.search.SearchActivity
+import work.czzzz.anywiki.R
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)
@@ -97,8 +97,8 @@ class SearchExternalIntentTest {
 
         TestUtil.delay(5)
 
-        onView(allOf(withId(R.id.page_list_item_title), withText("Белый гриб"), isDisplayed()))
-            .check(matches(withText("Белый гриб")))
+        onView(allOf(withId(R.id.page_list_item_title), withText("袘械谢褘泄 谐褉懈斜"), isDisplayed()))
+            .check(matches(withText("袘械谢褘泄 谐褉懈斜")))
 
         TestUtil.delay(2)
     }

@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.content.ContextWrapper
 import android.icu.text.ListFormatter
@@ -10,7 +10,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.database.AppDatabase
@@ -23,6 +22,7 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.GeoUtil
 import org.wikipedia.util.ShareUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
 
 class LongPressMenu(
     private val anchorView: View,

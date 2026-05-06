@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.app.Activity
@@ -6,11 +6,11 @@ import android.app.Instrumentation
 import android.content.Intent
 import androidx.test.espresso.intent.Intents.intending
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.TestThemeColorType
 import org.wikipedia.base.TestWikipediaColors
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 class PageActionItemRobot : BaseRobot() {
 

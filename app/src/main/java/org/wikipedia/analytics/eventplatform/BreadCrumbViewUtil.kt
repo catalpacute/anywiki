@@ -1,4 +1,4 @@
-package org.wikipedia.analytics.eventplatform
+﻿package org.wikipedia.analytics.eventplatform
 
 import android.content.Context
 import android.view.ContextThemeWrapper
@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.feed.view.ListCardItemView
 import org.wikipedia.feed.view.ListCardView
@@ -22,6 +21,7 @@ import org.wikipedia.onboarding.InitialOnboardingActivity
 import org.wikipedia.onboarding.InitialOnboardingFragment
 import org.wikipedia.onboarding.InitialOnboardingFragment.OnboardingPage
 import org.wikipedia.page.ExclusiveBottomSheetPresenter
+import work.czzzz.anywiki.R
 
 object BreadCrumbViewUtil {
     private const val VIEW_UNNAMED = "unnamed"

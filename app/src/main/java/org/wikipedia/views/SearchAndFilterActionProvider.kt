@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Color
@@ -8,11 +8,11 @@ import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ActionProvider
 import androidx.core.widget.ImageViewCompat
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewSearchAndFilterBinding
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewSearchAndFilterBinding
 
 class SearchAndFilterActionProvider(context: Context,
                                     private val searchHintString: String,

@@ -1,12 +1,12 @@
-package org.wikipedia.edit.richtext
+﻿package org.wikipedia.edit.richtext
 
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Build
 import androidx.annotation.RequiresApi
-import org.wikipedia.R
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 enum class SyntaxRuleStyle {
     PRE_TEMPLATE {

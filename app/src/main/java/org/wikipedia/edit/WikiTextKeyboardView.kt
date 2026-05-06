@@ -1,4 +1,4 @@
-package org.wikipedia.edit
+﻿package org.wikipedia.edit
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,10 +8,10 @@ import android.widget.EditText
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewWikitextKeyboardBinding
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewWikitextKeyboardBinding
 
 class WikiTextKeyboardView constructor(context: Context, attrs: AttributeSet?) : FrameLayout(context, attrs) {
     interface Callback {

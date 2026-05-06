@@ -66,6 +66,9 @@ jobs:
       - name: Build APK (alpha release)
         run: ./gradlew clean assembleAlphaRelease --no-daemon
 
+      - name: List unsigned APK outputs
+        run: ls -al app/build/outputs/apk/alpha/release
+
       - name: Sign APK
         id: sign_apk
         uses: kevin-david/zipalign-sign-android-release@v2
@@ -78,16 +81,50 @@ jobs:
         env:
           BUILD_TOOLS_VERSION: "35.0.0"
 
+      - name: List signed APK outputs
+        run: ls -al app/build/outputs/apk/alpha/release
+
       - name: Prepare release artifacts
         id: files
         run: |
           TAG="${{ steps.tag.outputs.tag_name }}"
-          SIGNED_APK="app/build/outputs/apk/alpha/release/anywiki-${TAG}-alpha-signed.apk"
-          SHA_FILE="app/build/outputs/apk/alpha/release/anywiki-${TAG}-alpha-signed.sha256"
-          cp "${{ steps.sign_apk.outputs.signedReleaseFile }}" "${SIGNED_APK}"
-          sha256sum "${SIGNED_APK}" > "${SHA_FILE}"
-          echo "signed_apk=${SIGNED_APK}" >> "$GITHUB_OUTPUT"
-          echo "sha_file=${SHA_FILE}" >> "$GITHUB_OUTPUT"
+          RELEASE_DIR="app/build/outputs/apk/alpha/release"
+          mapfile -t SIGNED_INPUTS < <(find "${RELEASE_DIR}" -maxdepth 1 -type f -name '*signed.apk' | sort)
+
+          if [ "${#SIGNED_INPUTS[@]}" -ne 3 ]; then
+            echo "::error::Expected exactly 3 signed ABI APKs, found ${#SIGNED_INPUTS[@]}"
+            printf '%s\n' "${SIGNED_INPUTS[@]}"
+            exit 1
+          fi
+
+          ARTIFACTS=()
+          for INPUT_APK in "${SIGNED_INPUTS[@]}"; do
+            BASENAME="$(basename "${INPUT_APK}")"
+            case "${BASENAME}" in
+              *arm64-v8a*) ABI="arm64-v8a" ;;
+              *armeabi-v7a*) ABI="armeabi-v7a" ;;
+              *x86_64*) ABI="x86_64" ;;
+              *)
+                echo "::error::Unable to infer ABI from ${BASENAME}"
+                exit 1
+                ;;
+            esac
+
+            OUTPUT_APK="${RELEASE_DIR}/anywiki-${TAG}-alpha-${ABI}-signed.apk"
+            SHA_FILE="${OUTPUT_APK}.sha256"
+            cp "${INPUT_APK}" "${OUTPUT_APK}"
+            sha256sum "${OUTPUT_APK}" > "${SHA_FILE}"
+            ARTIFACTS+=("${OUTPUT_APK}" "${SHA_FILE}")
+          done
+
+          ARTIFACTS_CSV="$(printf '%s,' "${ARTIFACTS[@]}")"
+          ARTIFACTS_CSV="${ARTIFACTS_CSV%,}"
+
+          {
+            echo "artifacts<<EOF"
+            echo "${ARTIFACTS_CSV}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Ensure tag exists for manual dispatch
         if: ${{ github.event_name == 'workflow_dispatch' }}
@@ -105,6 +142,7 @@ jobs:
           prerelease: true
           body: |
             Automated AnyWiki Reader signed APK release.
+            Artifacts: arm64-v8a, armeabi-v7a, x86_64.
             Commit: ${{ github.sha }}
-          artifacts: ${{ steps.files.outputs.signed_apk }},${{ steps.files.outputs.sha_file }}
+          artifacts: ${{ steps.files.outputs.artifacts }}
           token: ${{ secrets.GITHUB_TOKEN }}

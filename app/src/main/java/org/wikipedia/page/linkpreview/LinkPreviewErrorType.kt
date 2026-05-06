@@ -1,11 +1,11 @@
-package org.wikipedia.page.linkpreview
+﻿package org.wikipedia.page.linkpreview
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import org.wikipedia.R
 import org.wikipedia.page.Namespace
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.ThrowableUtil
+import work.czzzz.anywiki.R
 
 enum class LinkPreviewErrorType(@DrawableRes val icon: Int,
                                 @StringRes val text: Int,

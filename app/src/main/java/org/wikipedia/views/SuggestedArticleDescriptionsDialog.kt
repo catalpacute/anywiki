@@ -1,12 +1,12 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.app.Activity
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.analytics.eventplatform.MachineGeneratedArticleDescriptionsAnalyticsHelper
-import org.wikipedia.databinding.DialogArticleDescriptionsBinding
 import org.wikipedia.page.PageTitle
+import work.czzzz.anywiki.databinding.DialogArticleDescriptionsBinding
 
 class SuggestedArticleDescriptionsDialog(
     activity: Activity,

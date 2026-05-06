@@ -1,4 +1,4 @@
-package org.wikipedia.analytics.eventplatform
+﻿package org.wikipedia.analytics.eventplatform
 
 import android.widget.Toast
 import androidx.core.os.postDelayed
@@ -12,7 +12,6 @@ import kotlinx.coroutines.withContext
 import org.wikimedia.testkitchen.config.DestinationEventService
 import org.wikimedia.testkitchen.config.StreamConfig
 import org.wikimedia.testkitchen.config.sampling.SampleConfig
-import org.wikipedia.BuildConfig
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
 import org.wikipedia.dataclient.ServiceFactory
@@ -21,6 +20,7 @@ import org.wikipedia.dataclient.okhttp.HttpStatusException
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.BuildConfig
 import java.net.HttpURLConnection
 import java.util.Random
 import java.util.UUID

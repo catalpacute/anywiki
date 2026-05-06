@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -11,11 +11,11 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import org.wikipedia.R
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.DimenUtil.densityScalar
 import org.wikipedia.util.ResourceUtil.bitmapFromVectorDrawable
 import org.wikipedia.util.ResourceUtil.getThemedColor
+import work.czzzz.anywiki.R
 
 class SwipeableItemTouchHelperCallback(
     context: Context,

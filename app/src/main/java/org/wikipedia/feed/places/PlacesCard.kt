@@ -1,12 +1,12 @@
-package org.wikipedia.feed.places
+﻿package org.wikipedia.feed.places
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.NearbyPage
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.feed.model.WikiSiteCard
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class PlacesCard(
     wiki: WikiSite,

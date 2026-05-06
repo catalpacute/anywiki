@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.Manifest
 import android.app.NotificationManager
@@ -17,7 +17,6 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.csrf.CsrfTokenClient
 import org.wikipedia.dataclient.ServiceFactory
@@ -25,6 +24,7 @@ import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 object NotificationDirectReplyHelper {
     private const val DIRECT_REPLY_EDIT_COMMENT = "#directreply-1.0"

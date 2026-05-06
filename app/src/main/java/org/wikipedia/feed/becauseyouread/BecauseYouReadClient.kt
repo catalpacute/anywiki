@@ -1,4 +1,4 @@
-package org.wikipedia.feed.becauseyouread
+﻿package org.wikipedia.feed.becauseyouread
 
 import android.content.Context
 import kotlinx.coroutines.CoroutineExceptionHandler
@@ -6,7 +6,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.dataclient.ServiceFactory
@@ -17,6 +16,7 @@ import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class BecauseYouReadClient(
     private val coroutineScope: CoroutineScope

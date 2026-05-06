@@ -1,4 +1,4 @@
-package org.wikipedia.wiktionary
+﻿package org.wikipedia.wiktionary
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -32,13 +32,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.dataclient.restbase.RbDefinition
 import org.wikipedia.util.Resource
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
 
 @Composable
 fun WiktionaryDialogScreen(

@@ -1,4 +1,4 @@
-package org.wikipedia.history
+﻿package org.wikipedia.history
 
 import android.content.Context
 import android.graphics.Typeface
@@ -28,11 +28,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.database.AppDatabase
-import org.wikipedia.databinding.FragmentHistoryBinding
 import org.wikipedia.main.MainActivity
 import org.wikipedia.main.MainFragment
 import org.wikipedia.page.PageAvailableOfflineHandler
@@ -48,6 +46,8 @@ import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.PageItemView
 import org.wikipedia.views.SwipeableItemTouchHelperCallback
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentHistoryBinding
 
 class HistoryFragment : Fragment(), BackPressedHandler {
     interface Callback {

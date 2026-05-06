@@ -1,8 +1,8 @@
-package org.wikipedia.base
+﻿package org.wikipedia.base
 
 import androidx.annotation.ColorRes
-import org.wikipedia.R
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 /**
  * Each type represents a specific use case for colors across different themes

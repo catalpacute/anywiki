@@ -1,4 +1,4 @@
-package org.wikipedia.settings.dev
+﻿package org.wikipedia.settings.dev
 
 import android.content.Context
 import android.os.Bundle
@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ActionMode
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
-import org.wikipedia.R
 import org.wikipedia.history.SearchActionModeCallback
 import org.wikipedia.settings.PreferenceLoaderFragment
+import work.czzzz.anywiki.R
 
 class DeveloperSettingsFragment : PreferenceLoaderFragment(), MenuProvider {
 

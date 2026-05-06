@@ -1,4 +1,4 @@
-package org.wikipedia.theme
+﻿package org.wikipedia.theme
 
 import android.content.DialogInterface
 import android.content.res.ColorStateList
@@ -21,18 +21,18 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.AppearanceSettingInteractionEvent
 import org.wikipedia.concurrency.FlowEventBus
-import org.wikipedia.databinding.DialogThemeChooserBinding
 import org.wikipedia.events.WebViewInvalidateEvent
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogThemeChooserBinding
 
 class ThemeChooserDialog : ExtendedBottomSheetDialogFragment() {
     private var _binding: DialogThemeChooserBinding? = null

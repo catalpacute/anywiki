@@ -1,4 +1,4 @@
-package org.wikipedia.diff
+﻿package org.wikipedia.diff
 
 import android.content.Context
 import android.content.Intent
@@ -7,9 +7,9 @@ import androidx.fragment.app.commit
 import org.wikipedia.Constants.INTENT_EXTRA_INVOKE_SOURCE
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.activity.BaseActivity
-import org.wikipedia.databinding.ActivityArticleEditDetailsBinding
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.page.PageTitle
+import work.czzzz.anywiki.databinding.ActivityArticleEditDetailsBinding
 
 class ArticleEditDetailsActivity : BaseActivity() {
     private lateinit var binding: ActivityArticleEditDetailsBinding

@@ -1,15 +1,15 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import android.icu.text.RelativeDateTimeFormatter
 import android.os.Build
 import android.text.format.DateFormat
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.extensions.getResources
 import org.wikipedia.extensions.getString
 import org.wikipedia.extensions.toLocalDate
 import org.wikipedia.feed.model.UtcDate
+import work.czzzz.anywiki.R
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.time.LocalDate

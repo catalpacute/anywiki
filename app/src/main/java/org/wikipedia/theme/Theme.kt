@@ -1,9 +1,9 @@
-package org.wikipedia.theme
+﻿package org.wikipedia.theme
 
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
-import org.wikipedia.R
 import org.wikipedia.model.EnumCode
+import work.czzzz.anywiki.R
 
 enum class Theme(val marshallingId: Int, val tag: String, @field:StyleRes @get:StyleRes
 @param:StyleRes val resourceId: Int, @field:StringRes @get:StringRes @param:StringRes val nameId: Int) : EnumCode {

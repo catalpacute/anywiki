@@ -1,4 +1,4 @@
-package org.wikipedia.notifications
+﻿package org.wikipedia.notifications
 
 import android.content.Context
 import androidx.annotation.AttrRes
@@ -8,9 +8,9 @@ import androidx.core.app.NotificationChannelCompat
 import androidx.core.app.NotificationChannelGroupCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
-import org.wikipedia.R
 import org.wikipedia.model.EnumCode
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 private const val GROUP_WIKIPEDIA_NOTIFICATIONS: String = "WIKIPEDIA_NOTIFICATIONS"
 private const val GROUP_OTHER: String = "WIKIPEDIA_NOTIFICATIONS_OTHER"

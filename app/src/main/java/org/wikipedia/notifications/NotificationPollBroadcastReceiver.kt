@@ -1,4 +1,4 @@
-package org.wikipedia.notifications
+﻿package org.wikipedia.notifications
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -15,7 +15,6 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
@@ -37,6 +36,7 @@ import org.wikipedia.talk.NotificationDirectReplyHelper
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import java.util.concurrent.TimeUnit
 
 class NotificationPollBroadcastReceiver : BroadcastReceiver() {

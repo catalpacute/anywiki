@@ -1,4 +1,4 @@
-package org.wikipedia.games
+﻿package org.wikipedia.games
 
 import android.content.Context
 import android.content.Intent
@@ -7,12 +7,10 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.core.net.toUri
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ActivityGamesHubBinding
 import org.wikipedia.main.MainActivity
 import org.wikipedia.navtab.NavTab
 import org.wikipedia.notifications.NotificationActivity
@@ -20,6 +18,8 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.NotificationButtonView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityGamesHubBinding
 
 class GamesHubActivity : SingleFragmentActivity<GamesHubFragment>() {
 

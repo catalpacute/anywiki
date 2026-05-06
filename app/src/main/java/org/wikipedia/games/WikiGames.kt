@@ -1,7 +1,7 @@
-package org.wikipedia.games
+﻿package org.wikipedia.games
 
-import org.wikipedia.R
 import org.wikipedia.language.LanguageUtil
+import work.czzzz.anywiki.R
 
 enum class WikiGames(
     val titleRes: Int,

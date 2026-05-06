@@ -1,4 +1,4 @@
-package org.wikipedia.random
+﻿package org.wikipedia.random
 
 import android.net.Uri
 import android.os.Bundle
@@ -14,7 +14,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.databinding.FragmentRandomItemBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.setLayoutDirectionByLang
@@ -22,6 +21,7 @@ import org.wikipedia.page.PageTitle
 import org.wikipedia.util.ImageUrlUtil.getUrlForPreferredSize
 import org.wikipedia.util.Resource
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.databinding.FragmentRandomItemBinding
 
 class RandomItemFragment : Fragment() {
 

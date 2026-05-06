@@ -1,13 +1,13 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.onboarding.OnboardingPageView
+import work.czzzz.anywiki.R
 
 class SuggestedEditsImageRecsOnboardingActivity : BaseActivity() {
 

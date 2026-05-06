@@ -1,4 +1,4 @@
-package org.wikipedia.robots.screen
+﻿package org.wikipedia.robots.screen
 
 import BaseRobot
 import android.app.Activity
@@ -9,9 +9,9 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.TestUtil
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.R
 
 class HomeScreenRobot : BaseRobot() {
 

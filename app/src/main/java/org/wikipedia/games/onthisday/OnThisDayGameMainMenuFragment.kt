@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.app.Activity
 import android.os.Bundle
@@ -13,10 +13,8 @@ import androidx.fragment.app.activityViewModels
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
-import org.wikipedia.databinding.FragmentOnThisDayGameMainMenuBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.games.GamesHubActivity
 import org.wikipedia.games.WikiGames
@@ -25,6 +23,8 @@ import org.wikipedia.util.DateUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentOnThisDayGameMainMenuBinding
 import java.time.LocalDate
 
 class OnThisDayGameMainMenuFragment : OnThisDayGameBaseFragment() {

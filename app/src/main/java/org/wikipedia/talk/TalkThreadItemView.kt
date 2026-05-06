@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
@@ -15,12 +15,12 @@ import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ItemTalkThreadItemBinding
 import org.wikipedia.dataclient.discussiontools.ThreadItem
 import org.wikipedia.richtext.CustomHtmlParser
 import org.wikipedia.util.*
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemTalkThreadItemBinding
 
 @SuppressLint("RestrictedApi")
 class TalkThreadItemView(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {

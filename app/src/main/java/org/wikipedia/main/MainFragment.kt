@@ -1,4 +1,4 @@
-package org.wikipedia.main
+﻿package org.wikipedia.main
 
 import android.Manifest
 import android.app.Activity
@@ -34,7 +34,6 @@ import kotlinx.coroutines.launch
 import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
@@ -45,7 +44,6 @@ import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.commons.FilePageActivity
 import org.wikipedia.concurrency.FlowEventBus
-import org.wikipedia.databinding.FragmentMainBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.events.ImportReadingListsEvent
 import org.wikipedia.events.LoggedOutEvent
@@ -97,6 +95,8 @@ import org.wikipedia.watchlist.WatchlistActivity
 import org.wikipedia.yearinreview.YearInReviewDialog
 import org.wikipedia.yearinreview.YearInReviewOnboardingActivity
 import org.wikipedia.yearinreview.YearInReviewViewModel
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentMainBinding
 import java.io.File
 import java.util.concurrent.TimeUnit
 

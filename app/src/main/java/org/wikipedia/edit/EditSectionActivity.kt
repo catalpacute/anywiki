@@ -1,4 +1,4 @@
-package org.wikipedia.edit
+﻿package org.wikipedia.edit
 
 import android.content.Context
 import android.content.Intent
@@ -31,7 +31,6 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
@@ -40,9 +39,6 @@ import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.captcha.CaptchaHandler
 import org.wikipedia.captcha.CaptchaResult
-import org.wikipedia.databinding.ActivityEditSectionBinding
-import org.wikipedia.databinding.DialogWithCheckboxBinding
-import org.wikipedia.databinding.ItemEditActionbarButtonBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.mwapi.MwException
 import org.wikipedia.dataclient.mwapi.MwServiceError
@@ -74,6 +70,10 @@ import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.EditNoticesDialog
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityEditSectionBinding
+import work.czzzz.anywiki.databinding.DialogWithCheckboxBinding
+import work.czzzz.anywiki.databinding.ItemEditActionbarButtonBinding
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 

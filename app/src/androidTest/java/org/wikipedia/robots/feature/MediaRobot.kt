@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.app.Activity
@@ -17,10 +17,10 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiSelector
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.utils.GifMatchers
 import org.wikipedia.base.utils.waitForAsyncLoading
+import work.czzzz.anywiki.R
 
 class MediaRobot : BaseRobot() {
 

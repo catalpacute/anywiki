@@ -1,12 +1,12 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.json.JsonUtil
+import work.czzzz.anywiki.R
 
 class SettingsActivity : BaseSettingsActivity<SettingsFragment>() {
     private lateinit var initialLanguageList: String

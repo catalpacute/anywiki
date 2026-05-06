@@ -1,6 +1,6 @@
-package org.wikipedia.topics
+﻿package org.wikipedia.topics
 
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 data class ArticleTopic(
     val topicId: String,

@@ -1,4 +1,4 @@
-package org.wikipedia.feed.announcement
+﻿package org.wikipedia.feed.announcement
 
 import android.app.Activity
 import android.content.Context
@@ -9,12 +9,12 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.core.text.method.LinkMovementMethodCompat
 import androidx.core.view.updateLayoutParams
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewCardAnnouncementBinding
 import org.wikipedia.feed.model.Card
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardAnnouncementBinding
 
 class AnnouncementCardView(context: Context) : DefaultFeedCardView<AnnouncementCard>(context) {
     interface Callback {

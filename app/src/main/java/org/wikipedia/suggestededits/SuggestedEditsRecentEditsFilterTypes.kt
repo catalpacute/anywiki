@@ -1,7 +1,7 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
-import org.wikipedia.R
 import org.wikipedia.model.EnumCode
+import work.czzzz.anywiki.R
 
 enum class SuggestedEditsRecentEditsFilterTypes(val id: String,
                                                 val value: String,

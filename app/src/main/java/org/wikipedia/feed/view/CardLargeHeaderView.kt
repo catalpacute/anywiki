@@ -1,4 +1,4 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
@@ -9,9 +9,7 @@ import androidx.annotation.ColorInt
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.palette.graphics.Palette
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewCardHeaderLargeBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
@@ -19,6 +17,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.TransitionUtil
 import org.wikipedia.views.imageservice.ImageLoadListener
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardHeaderLargeBinding
 
 class CardLargeHeaderView(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.Image
@@ -46,10 +46,10 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.fastForEachIndexed
-import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 @Composable
 fun YearInReviewHighlightsScreen(

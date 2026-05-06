@@ -1,10 +1,9 @@
-package org.wikipedia.tests.articles
+﻿package org.wikipedia.tests.articles
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.wikipedia.R
 import org.wikipedia.TestConstants
 import org.wikipedia.base.BaseTest
 import org.wikipedia.main.MainActivity
@@ -15,6 +14,7 @@ import org.wikipedia.robots.feature.PageRobot
 import org.wikipedia.robots.feature.SearchRobot
 import org.wikipedia.robots.feature.TabsRobot
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 @LargeTest
 @RunWith(AndroidJUnit4::class)

@@ -1,8 +1,7 @@
-package org.wikipedia.feed
+﻿package org.wikipedia.feed
 
 import androidx.annotation.StringRes
 import kotlinx.coroutines.CoroutineScope
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.feed.accessibility.AccessibilityCardClient
@@ -17,6 +16,7 @@ import org.wikipedia.feed.wikigames.WikiGamesCardClient
 import org.wikipedia.model.EnumCode
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DeviceUtil
+import work.czzzz.anywiki.R
 
 enum class FeedContentType(private val code: Int,
                            @StringRes val titleId: Int,

@@ -45,6 +45,9 @@ jobs:
       - name: Build APK (alpha release)
         run: ./gradlew clean assembleAlphaRelease --no-daemon
 
+      - name: List unsigned APK outputs
+        run: ls -al app/build/outputs/apk/alpha/release
+
       - name: Sign APK
         id: sign_apk
         uses: kevin-david/zipalign-sign-android-release@v2
@@ -57,12 +60,40 @@ jobs:
         env:
           BUILD_TOOLS_VERSION: "35.0.0"
 
-      - name: Normalize output name
-        run: |
-          cp "${{ steps.sign_apk.outputs.signedReleaseFile }}" app/build/outputs/apk/alpha/release/anywiki-alpha-release-signed.apk
+      - name: List signed APK outputs
+        run: ls -al app/build/outputs/apk/alpha/release
 
-      - name: Upload signed APK artifact
+      - name: Normalize output names
+        run: |
+          RELEASE_DIR="app/build/outputs/apk/alpha/release"
+          mapfile -t SIGNED_INPUTS < <(find "${RELEASE_DIR}" -maxdepth 1 -type f -name '*signed.apk' | sort)
+
+          if [ "${#SIGNED_INPUTS[@]}" -ne 3 ]; then
+            echo "::error::Expected exactly 3 signed ABI APKs, found ${#SIGNED_INPUTS[@]}"
+            printf '%s\n' "${SIGNED_INPUTS[@]}"
+            exit 1
+          fi
+
+          for INPUT_APK in "${SIGNED_INPUTS[@]}"; do
+            BASENAME="$(basename "${INPUT_APK}")"
+            case "${BASENAME}" in
+              *arm64-v8a*) ABI="arm64-v8a" ;;
+              *armeabi-v7a*) ABI="armeabi-v7a" ;;
+              *x86_64*) ABI="x86_64" ;;
+              *)
+                echo "::error::Unable to infer ABI from ${BASENAME}"
+                exit 1
+                ;;
+            esac
+
+            cp "${INPUT_APK}" "${RELEASE_DIR}/anywiki-alpha-${ABI}-signed.apk"
+          done
+
+      - name: Upload signed APK artifacts
         uses: actions/upload-artifact@v7
         with:
           name: anywiki-alpha-release-signed
-          path: app/build/outputs/apk/alpha/release/anywiki-alpha-release-signed.apk
+          path: |
+            app/build/outputs/apk/alpha/release/anywiki-alpha-arm64-v8a-signed.apk
+            app/build/outputs/apk/alpha/release/anywiki-alpha-armeabi-v7a-signed.apk
+            app/build/outputs/apk/alpha/release/anywiki-alpha-x86_64-signed.apk

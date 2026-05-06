@@ -1,4 +1,4 @@
-package org.wikipedia.feed.configure
+﻿package org.wikipedia.feed.configure
 
 import android.content.Context
 import android.util.AttributeSet
@@ -10,10 +10,10 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ItemFeedContentTypeLangSelectDialogBinding
 import org.wikipedia.views.DefaultViewHolder
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemFeedContentTypeLangSelectDialogBinding
 
 class ConfigureItemLanguageDialogView : FrameLayout {
 

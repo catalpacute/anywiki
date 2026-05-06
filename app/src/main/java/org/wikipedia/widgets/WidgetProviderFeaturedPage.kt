@@ -1,4 +1,4 @@
-package org.wikipedia.widgets
+﻿package org.wikipedia.widgets
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -16,7 +16,6 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.history.HistoryEntry
@@ -26,6 +25,7 @@ import org.wikipedia.util.ImageUrlUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 import java.util.concurrent.TimeUnit
 
 class WidgetProviderFeaturedPage : AppWidgetProvider() {

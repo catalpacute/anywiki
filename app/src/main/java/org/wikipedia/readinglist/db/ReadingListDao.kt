@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist.db
+﻿package org.wikipedia.readinglist.db
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -7,13 +7,13 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 import androidx.room.Update
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.readinglist.database.ReadingListPage
 import org.wikipedia.readinglist.sync.ReadingListSyncAdapter
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 @Dao
 interface ReadingListDao {

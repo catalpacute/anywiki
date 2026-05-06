@@ -1,4 +1,4 @@
-package org.wikipedia.feed.suggestededits
+﻿package org.wikipedia.feed.suggestededits
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -20,10 +20,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource.FEED
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.FragmentSuggestedEditsCardItemBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.descriptions.DescriptionEditActivity
 import org.wikipedia.descriptions.DescriptionEditActivity.Action.ADD_CAPTION
@@ -41,6 +39,8 @@ import org.wikipedia.suggestededits.SuggestedEditsSnackbars
 import org.wikipedia.util.ImageUrlUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsCardItemBinding
 
 class SuggestedEditsCardItemFragment : Fragment() {
     private var _binding: FragmentSuggestedEditsCardItemBinding? = null

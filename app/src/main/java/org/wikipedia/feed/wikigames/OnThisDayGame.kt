@@ -1,4 +1,4 @@
-package org.wikipedia.feed.wikigames
+﻿package org.wikipedia.feed.wikigames
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
@@ -46,7 +46,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import kotlinx.coroutines.delay
-import org.wikipedia.R
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
@@ -56,6 +55,7 @@ import org.wikipedia.games.onthisday.OnThisDayGameProvider
 import org.wikipedia.games.onthisday.OnThisDayGameResultFragment
 import org.wikipedia.theme.Theme
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 
 @Composable
 fun OnThisDayGameCardPreview(

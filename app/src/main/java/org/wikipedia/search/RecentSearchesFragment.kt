@@ -1,4 +1,4 @@
-package org.wikipedia.search
+﻿package org.wikipedia.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,10 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.database.AppDatabase
-import org.wikipedia.databinding.FragmentSearchRecentBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryResult
@@ -29,6 +27,8 @@ import org.wikipedia.util.FeedbackUtil.setButtonTooltip
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.SwipeableItemTouchHelperCallback
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSearchRecentBinding
 import java.util.concurrent.ConcurrentHashMap
 
 class RecentSearchesFragment : Fragment() {

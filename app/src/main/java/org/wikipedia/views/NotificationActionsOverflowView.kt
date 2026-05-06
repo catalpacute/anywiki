@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -18,8 +18,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.PopupWindowCompat
 import androidx.core.widget.TextViewCompat
 import org.wikipedia.Constants
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewNotificationActionsOverflowBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.getString
 import org.wikipedia.notifications.NotificationCategory
@@ -31,6 +29,8 @@ import org.wikipedia.talk.TalkTopicsActivity
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewNotificationActionsOverflowBinding
 
 class NotificationActionsOverflowView(context: Context) : FrameLayout(context) {
 

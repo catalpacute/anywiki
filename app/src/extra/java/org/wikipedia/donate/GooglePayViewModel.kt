@@ -11,8 +11,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import org.json.JSONObject
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
@@ -24,6 +22,8 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.util.Resource
 import org.wikipedia.util.log.L
 import retrofit2.create
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 import java.net.SocketTimeoutException
 import java.time.Instant
 import java.util.concurrent.TimeUnit

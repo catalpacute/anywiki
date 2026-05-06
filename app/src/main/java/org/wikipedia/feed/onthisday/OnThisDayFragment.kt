@@ -1,4 +1,4 @@
-package org.wikipedia.feed.onthisday
+﻿package org.wikipedia.feed.onthisday
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -21,9 +21,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
-import org.wikipedia.databinding.FragmentOnThisDayBinding
-import org.wikipedia.databinding.ViewEventsLayoutBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.util.DateUtil
@@ -32,6 +29,9 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.CustomDatePicker
 import org.wikipedia.views.HeaderMarginItemDecoration
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentOnThisDayBinding
+import work.czzzz.anywiki.databinding.ViewEventsLayoutBinding
 import java.util.Calendar
 import java.util.Locale
 import kotlin.math.abs

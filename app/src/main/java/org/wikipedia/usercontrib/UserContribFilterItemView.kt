@@ -1,4 +1,4 @@
-package org.wikipedia.usercontrib
+﻿package org.wikipedia.usercontrib
 
 import android.content.Context
 import android.graphics.Typeface
@@ -10,11 +10,11 @@ import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ItemUserContribFilterBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemUserContribFilterBinding
 
 class UserContribFilterItemView constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.usercontrib
+﻿package org.wikipedia.usercontrib
 
 import android.content.Context
 import android.content.Intent
@@ -28,12 +28,8 @@ import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
-import org.wikipedia.databinding.ActivityUserContribBinding
-import org.wikipedia.databinding.ViewEditHistoryEmptyMessagesBinding
-import org.wikipedia.databinding.ViewEditHistorySearchBarBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.UserContribution
 import org.wikipedia.diff.ArticleEditDetailsActivity
@@ -51,6 +47,10 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.SearchAndFilterActionProvider
 import org.wikipedia.views.WikiErrorView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityUserContribBinding
+import work.czzzz.anywiki.databinding.ViewEditHistoryEmptyMessagesBinding
+import work.czzzz.anywiki.databinding.ViewEditHistorySearchBarBinding
 
 class UserContribListActivity : BaseActivity() {
 

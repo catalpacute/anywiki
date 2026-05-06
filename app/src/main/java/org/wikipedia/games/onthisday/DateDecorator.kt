@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.content.Context
 import android.content.res.ColorStateList
@@ -6,7 +6,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import androidx.core.content.ContextCompat
 import com.google.android.material.datepicker.DayViewDecorator
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 import java.util.Calendar
 import java.util.Date
 

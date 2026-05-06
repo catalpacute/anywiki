@@ -1,4 +1,4 @@
-package org.wikipedia.donate
+﻿package org.wikipedia.donate
 
 import android.content.Context
 import android.os.Bundle
@@ -12,12 +12,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
-import org.wikipedia.databinding.DialogDonateBinding
 import org.wikipedia.dataclient.donate.CampaignCollection
 import org.wikipedia.donate.donationreminder.DonationReminderHelper
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
@@ -25,6 +22,9 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.util.CustomTabsUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.Resource
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogDonateBinding
 
 class DonateDialog : ExtendedBottomSheetDialogFragment() {
     private var _binding: DialogDonateBinding? = null

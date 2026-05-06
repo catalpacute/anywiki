@@ -1,12 +1,12 @@
-package org.wikipedia.feed.random
+﻿package org.wikipedia.feed.random
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.feed.featured.FeaturedArticleCard
 import org.wikipedia.feed.model.CardType
 import org.wikipedia.history.HistoryEntry
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 
 class RandomCard(page: PageSummary, age: Int, wiki: WikiSite) : FeaturedArticleCard(page, age, wiki) {
 

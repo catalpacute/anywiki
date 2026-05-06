@@ -1,15 +1,15 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.app.Activity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.readinglist.database.ReadingListPage
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class RemoveFromReadingListsDialog(private val listsContainingPage: List<ReadingList>) {
     fun interface Callback {

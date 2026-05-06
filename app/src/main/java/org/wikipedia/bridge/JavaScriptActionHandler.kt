@@ -1,9 +1,7 @@
-package org.wikipedia.bridge
+﻿package org.wikipedia.bridge
 
 import android.content.Context
 import kotlinx.serialization.Serializable
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.extensions.getStrings
@@ -13,6 +11,8 @@ import org.wikipedia.page.PageTitle
 import org.wikipedia.page.PageViewModel
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DimenUtil
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 import java.util.Date
 import java.util.Locale
 import java.util.concurrent.TimeUnit

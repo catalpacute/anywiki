@@ -1,13 +1,13 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewListCardBinding
 import org.wikipedia.feed.model.Card
 import org.wikipedia.views.DrawableItemDecoration
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewListCardBinding
 
 abstract class ListCardView<T : Card?>(context: Context) : DefaultFeedCardView<T>(context) {
     interface Callback {

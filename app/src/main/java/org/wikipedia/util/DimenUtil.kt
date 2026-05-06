@@ -1,4 +1,4 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import android.content.res.Configuration
@@ -8,9 +8,9 @@ import android.util.TypedValue
 import androidx.annotation.DimenRes
 import androidx.core.content.res.use
 import androidx.core.util.TypedValueCompat
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import kotlin.math.roundToInt
 
 object DimenUtil {

@@ -1,12 +1,10 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.location.Location
 import okhttp3.Cookie
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.logging.HttpLoggingInterceptor
 import org.wikimedia.testkitchen.config.StreamConfig
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activitytab.ActivityTabModules
 import org.wikipedia.analytics.SessionData
@@ -32,6 +30,8 @@ import org.wikipedia.watchlist.WatchlistFilterTypes
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
 import org.wikipedia.yearinreview.YearInReviewModel
 import org.wikipedia.yearinreview.YearInReviewSurveyState
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 import java.util.Date
 
 /** Shared preferences utility for convenient POJO access.  */

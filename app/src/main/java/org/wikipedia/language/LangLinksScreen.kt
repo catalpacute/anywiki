@@ -1,4 +1,4 @@
-package org.wikipedia.language
+﻿package org.wikipedia.language
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,13 +26,13 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.compose.components.SearchEmptyView
 import org.wikipedia.compose.components.WikiTopAppBarWithSearch
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 
 @Composable
 fun ComposeLangLinksScreen(

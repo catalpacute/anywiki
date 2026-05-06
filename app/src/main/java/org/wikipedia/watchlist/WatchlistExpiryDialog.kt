@@ -1,4 +1,4 @@
-package org.wikipedia.watchlist
+﻿package org.wikipedia.watchlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -38,7 +38,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
@@ -49,6 +48,7 @@ import org.wikipedia.theme.Theme
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.Resource
+import work.czzzz.anywiki.R
 
 class WatchlistExpiryDialog : ExtendedBottomSheetDialogFragment() {
 

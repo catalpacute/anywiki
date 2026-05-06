@@ -1,4 +1,4 @@
-package org.wikipedia.edit.insertmedia
+﻿package org.wikipedia.edit.insertmedia
 
 import android.content.Context
 import android.content.Intent
@@ -26,15 +26,11 @@ import com.google.android.material.appbar.AppBarLayout
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.ActivityInsertMediaBinding
-import org.wikipedia.databinding.ItemEditActionbarButtonBinding
-import org.wikipedia.databinding.ItemInsertMediaBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.history.SearchActionModeCallback
 import org.wikipedia.page.PageTitle
@@ -46,6 +42,10 @@ import org.wikipedia.views.ImageZoomHelper
 import org.wikipedia.views.SearchActionProvider
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.imageservice.ImageLoadListener
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityInsertMediaBinding
+import work.czzzz.anywiki.databinding.ItemEditActionbarButtonBinding
+import work.czzzz.anywiki.databinding.ItemInsertMediaBinding
 
 class InsertMediaActivity : BaseActivity() {
     private lateinit var binding: ActivityInsertMediaBinding

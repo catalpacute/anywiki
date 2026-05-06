@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import android.content.Context
 import android.content.Intent
@@ -22,7 +22,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.ActivityTabEvent
 import org.wikipedia.compose.components.OnboardingItem
@@ -34,6 +33,7 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 private val onboardingItems = listOf(
     OnboardingItem(

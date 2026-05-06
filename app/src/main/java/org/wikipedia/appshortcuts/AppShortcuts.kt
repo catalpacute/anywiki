@@ -1,4 +1,4 @@
-package org.wikipedia.appshortcuts
+﻿package org.wikipedia.appshortcuts
 
 import android.content.Context
 import android.content.Intent
@@ -11,9 +11,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.main.MainActivity
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class AppShortcuts {
     companion object {

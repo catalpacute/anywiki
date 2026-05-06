@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -15,14 +15,14 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewUserMentionInputBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.edit.richtext.SyntaxHighlighter
 import org.wikipedia.extensions.coroutineScope
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewUserMentionInputBinding
 
 class UserMentionInputView(context: Context, attrs: AttributeSet? = null) :
     LinearLayout(context, attrs), UserMentionEditText.Listener {

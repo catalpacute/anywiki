@@ -1,4 +1,4 @@
-package org.wikipedia.donate.donationreminder
+﻿package org.wikipedia.donate.donationreminder
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
@@ -76,7 +76,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.compose.components.AppButton
 import org.wikipedia.compose.components.InlinePosition
@@ -88,6 +87,7 @@ import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.donate.DonateUtil
 import org.wikipedia.theme.Theme
+import work.czzzz.anywiki.R
 
 @Composable
 fun DonationReminderScreen(

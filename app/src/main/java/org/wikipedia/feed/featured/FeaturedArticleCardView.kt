@@ -1,9 +1,8 @@
-package org.wikipedia.feed.featured
+﻿package org.wikipedia.feed.featured
 
 import android.content.Context
 import android.net.Uri
 import android.view.LayoutInflater
-import org.wikipedia.databinding.ViewCardFeaturedArticleBinding
 import org.wikipedia.feed.view.CardFooterView
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
@@ -13,6 +12,7 @@ import org.wikipedia.readinglist.LongPressMenu
 import org.wikipedia.readinglist.database.ReadingListPage
 import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.views.ImageZoomHelper
+import work.czzzz.anywiki.databinding.ViewCardFeaturedArticleBinding
 
 open class FeaturedArticleCardView(context: Context) : DefaultFeedCardView<FeaturedArticleCard>(context) {
 

@@ -1,8 +1,8 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.os.Bundle
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
+import work.czzzz.anywiki.R
 
 abstract class BaseSettingsActivity<T : PreferenceLoaderFragment> : SingleFragmentActivity<T>() {
     abstract val title: Int

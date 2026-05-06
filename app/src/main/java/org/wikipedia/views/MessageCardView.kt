@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.net.Uri
@@ -6,11 +6,11 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewMessageCardBinding
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewMessageCardBinding
 
 class MessageCardView(context: Context, attrs: AttributeSet? = null) : WikiCardView(context, attrs) {
 

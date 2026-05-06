@@ -1,12 +1,12 @@
-package org.wikipedia.savedpages
+﻿package org.wikipedia.savedpages
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.notifications.NotificationCategory
 import org.wikipedia.views.NotificationWithProgressBar
+import work.czzzz.anywiki.R
 
 class SavedPageSyncNotification : BroadcastReceiver() {
     private val notification = NotificationWithProgressBar()

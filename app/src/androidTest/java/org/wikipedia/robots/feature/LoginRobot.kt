@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.content.Context
@@ -10,11 +10,11 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.platform.app.InstrumentationRegistry
 import org.hamcrest.Matchers
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.TestUtil
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 
 class LoginRobot : BaseRobot() {
 

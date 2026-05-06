@@ -1,4 +1,4 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.widget.RadioButton
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.children
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.DialogRegionalLanguageVariantSelectionBinding
-import org.wikipedia.databinding.ItemLanguageVariantSelectionBinding
 import org.wikipedia.language.AppLanguageLookUpTable
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogRegionalLanguageVariantSelectionBinding
+import work.czzzz.anywiki.databinding.ItemLanguageVariantSelectionBinding
 
 class RegionalLanguageVariantSelectionDialog(context: Context) : MaterialAlertDialogBuilder(context) {
     private var dialog: AlertDialog? = null

@@ -1,4 +1,4 @@
-package org.wikipedia.dataclient.okhttp
+﻿package org.wikipedia.dataclient.okhttp
 
 import android.os.Build
 import okhttp3.Cache
@@ -6,10 +6,10 @@ import okhttp3.CacheControl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.tls.HandshakeCertificates
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.io.File
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate

@@ -1,4 +1,4 @@
-package org.wikipedia.page.edithistory
+﻿package org.wikipedia.page.edithistory
 
 import android.content.Context
 import android.content.Intent
@@ -29,12 +29,8 @@ import kotlinx.coroutines.flow.distinctUntilChangedBy
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
-import org.wikipedia.databinding.ActivityEditHistoryBinding
-import org.wikipedia.databinding.ViewEditHistoryEmptyMessagesBinding
-import org.wikipedia.databinding.ViewEditHistorySearchBarBinding
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.diff.ArticleEditDetailsActivity
 import org.wikipedia.history.HistoryEntry
@@ -53,6 +49,10 @@ import org.wikipedia.views.EditHistoryFilterOverflowView
 import org.wikipedia.views.EditHistoryStatsView
 import org.wikipedia.views.SearchAndFilterActionProvider
 import org.wikipedia.views.WikiErrorView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityEditHistoryBinding
+import work.czzzz.anywiki.databinding.ViewEditHistoryEmptyMessagesBinding
+import work.czzzz.anywiki.databinding.ViewEditHistorySearchBarBinding
 
 class EditHistoryListActivity : BaseActivity() {
 

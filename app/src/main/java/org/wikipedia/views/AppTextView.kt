@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.os.Build
@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import androidx.core.content.res.use
 import com.google.android.material.textview.MaterialTextView
-import org.wikipedia.R
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
 
 // TODO: Document where it is desirable to use this class vs. a vanilla TextView
 open class AppTextView(context: Context, attrs: AttributeSet? = null) : MaterialTextView(context, attrs) {

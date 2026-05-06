@@ -1,4 +1,4 @@
-package org.wikipedia.compose.components
+﻿package org.wikipedia.compose.components
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -19,9 +19,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.theme.WikipediaTheme
+import work.czzzz.anywiki.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

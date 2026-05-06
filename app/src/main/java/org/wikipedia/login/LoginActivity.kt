@@ -1,4 +1,4 @@
-package org.wikipedia.login
+﻿package org.wikipedia.login
 
 import android.accounts.AccountAuthenticatorResponse
 import android.accounts.AccountManager
@@ -16,7 +16,6 @@ import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.testkitchen.TestKitchenAdapter
@@ -26,7 +25,6 @@ import org.wikipedia.captcha.CaptchaHandler
 import org.wikipedia.captcha.CaptchaResult
 import org.wikipedia.concurrency.FlowEventBus
 import org.wikipedia.createaccount.CreateAccountActivity
-import org.wikipedia.databinding.ActivityLoginBinding
 import org.wikipedia.events.LoggedInEvent
 import org.wikipedia.extensions.getInstrumentActionContext
 import org.wikipedia.extensions.instrument
@@ -42,6 +40,8 @@ import org.wikipedia.util.UriUtil.visitInExternalBrowser
 import org.wikipedia.util.log.L
 import org.wikipedia.views.NonEmptyValidator
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityLoginBinding
 import java.time.LocalDate
 
 class LoginActivity : BaseActivity() {

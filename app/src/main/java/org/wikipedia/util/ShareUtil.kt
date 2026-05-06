@@ -1,4 +1,4 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.ComponentName
 import android.content.Context
@@ -13,11 +13,11 @@ import android.os.TransactionTooLargeException
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import kotlinx.coroutines.*
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.DateUtil.getFeedCardDateString
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 import java.io.File
 
 object ShareUtil {

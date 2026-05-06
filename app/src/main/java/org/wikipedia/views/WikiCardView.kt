@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.os.Build
@@ -6,10 +6,10 @@ import android.util.AttributeSet
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.use
 import com.google.android.material.card.MaterialCardView
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 open class WikiCardView(context: Context, attrs: AttributeSet? = null) : MaterialCardView(context, attrs) {
 

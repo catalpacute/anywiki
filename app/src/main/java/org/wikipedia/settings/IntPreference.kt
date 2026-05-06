@@ -1,8 +1,8 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.Context
 import android.util.AttributeSet
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 open class IntPreference @JvmOverloads constructor(context: Context,
                                                    attrs: AttributeSet? = null,

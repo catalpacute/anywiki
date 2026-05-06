@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.content.Context
@@ -8,12 +8,12 @@ import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasData
 import org.hamcrest.Matchers.allOf
-import org.wikipedia.BuildConfig
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.base.TestConfig
 import org.wikipedia.dataclient.donate.CampaignCollection
+import work.czzzz.anywiki.BuildConfig
+import work.czzzz.anywiki.R
 
 class MoreMenuRobot : BaseRobot() {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewWikiErrorBinding
 import org.wikipedia.dataclient.mwapi.MwException
 import org.wikipedia.page.LinkMovementMethodExt
 import org.wikipedia.page.Namespace
@@ -19,6 +17,8 @@ import org.wikipedia.util.ThrowableUtil.isNotLoggedIn
 import org.wikipedia.util.ThrowableUtil.isOffline
 import org.wikipedia.util.ThrowableUtil.isTimeout
 import org.wikipedia.views.WikiErrorView.ErrorType.USER_PAGE_MISSING
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewWikiErrorBinding
 
 class WikiErrorView : LinearLayout {
 

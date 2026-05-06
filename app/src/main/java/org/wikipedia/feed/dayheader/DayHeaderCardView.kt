@@ -1,12 +1,12 @@
-package org.wikipedia.feed.dayheader
+﻿package org.wikipedia.feed.dayheader
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import org.wikipedia.databinding.ViewCardDayHeaderBinding
 import org.wikipedia.feed.model.Card
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.feed.view.FeedCardView
+import work.czzzz.anywiki.databinding.ViewCardDayHeaderBinding
 
 class DayHeaderCardView(context: Context) : FrameLayout(context), FeedCardView<Card> {
 

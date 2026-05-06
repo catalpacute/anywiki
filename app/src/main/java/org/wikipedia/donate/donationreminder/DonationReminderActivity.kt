@@ -1,4 +1,4 @@
-package org.wikipedia.donate.donationreminder
+﻿package org.wikipedia.donate.donationreminder
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.core.net.toUri
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
@@ -15,6 +14,7 @@ import org.wikipedia.readinglist.recommended.RecommendedReadingListOnboardingAct
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
 
 class DonationReminderActivity : BaseActivity() {
     private val viewModel: DonationReminderViewModel by viewModels()

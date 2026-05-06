@@ -1,4 +1,4 @@
-package org.wikipedia.settings.dev.playground
+﻿package org.wikipedia.settings.dev.playground
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -45,7 +45,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
@@ -53,6 +52,7 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeState
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetWorker
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 
 class ReadingChallengePlayGroundDialog : ExtendedBottomSheetDialogFragment(startExpanded = true) {
@@ -195,7 +195,7 @@ fun ReadingChallengePlayground(
                             Prefs.readingChallengeStreak = --streak
                             updateWidgetsExplicitly()
                         }
-                    }) { Text("−") }
+                    }) { Text("-", color = WikipediaTheme.colors.primaryColor) }
                     Text(
                         text = "$streak",
                         style = MaterialTheme.typography.headlineMedium,

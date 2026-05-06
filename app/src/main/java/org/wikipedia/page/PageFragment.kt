@@ -1,4 +1,4 @@
-package org.wikipedia.page
+﻿package org.wikipedia.page
 
 import android.animation.ObjectAnimator
 import android.app.Activity
@@ -47,7 +47,6 @@ import org.wikipedia.BackPressedHandler
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.LongPressHandler
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil.getCallback
 import org.wikipedia.analytics.eventplatform.ArticleFindInPageInteractionEvent
@@ -62,8 +61,6 @@ import org.wikipedia.bridge.JavaScriptActionHandler
 import org.wikipedia.categories.CategoryActivity
 import org.wikipedia.categories.CategoryDialog
 import org.wikipedia.database.AppDatabase
-import org.wikipedia.databinding.FragmentPageBinding
-import org.wikipedia.databinding.GroupFindReferencesInPageBinding
 import org.wikipedia.dataclient.RestService
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -118,6 +115,9 @@ import org.wikipedia.watchlist.WatchlistExpiry
 import org.wikipedia.watchlist.WatchlistExpiryDialog
 import org.wikipedia.watchlist.WatchlistViewModel
 import org.wikipedia.wiktionary.WiktionaryDialog
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentPageBinding
+import work.czzzz.anywiki.databinding.GroupFindReferencesInPageBinding
 import java.time.Duration
 import java.time.Instant
 

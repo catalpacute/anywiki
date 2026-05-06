@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.content.Context
@@ -21,9 +21,9 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import org.hamcrest.Matchers.allOf
 import org.junit.Assert.assertTrue
-import org.wikipedia.R
 import org.wikipedia.TestUtil.childAtPosition
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.R
 
 class SettingsRobot : BaseRobot() {
     fun verifyTitle() = apply {

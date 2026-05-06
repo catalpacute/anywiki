@@ -1,4 +1,4 @@
-package org.wikipedia.categories
+﻿package org.wikipedia.categories
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -11,8 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.R
-import org.wikipedia.databinding.DialogCategoriesBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.page.PageTitle
@@ -22,6 +20,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.PageItemView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogCategoriesBinding
 
 class CategoryDialog : ExtendedBottomSheetDialogFragment() {
     private var _binding: DialogCategoriesBinding? = null

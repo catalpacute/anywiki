@@ -1,4 +1,4 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import android.graphics.Color
@@ -16,11 +16,11 @@ import androidx.annotation.IntRange
 import androidx.core.text.buildSpannedString
 import androidx.core.text.set
 import okio.ByteString.Companion.encodeUtf8
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.page.PageTitle
 import org.wikipedia.richtext.CustomHtmlParser
 import org.wikipedia.staticdata.UserAliasData
+import work.czzzz.anywiki.R
 import java.nio.charset.StandardCharsets
 import java.text.Collator
 import java.text.Normalizer
@@ -87,7 +87,7 @@ object StringUtil {
     }
 
     fun sanitizeAbuseFilterCode(code: String): String {
-        return code.replace("[⧼⧽]".toRegex(), "")
+        return code.replace("[猝尖Ы]".toRegex(), "")
     }
 
     /**

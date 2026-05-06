@@ -1,4 +1,4 @@
-package org.wikipedia.search
+﻿package org.wikipedia.search
 
 import android.location.Location
 import android.view.View
@@ -68,7 +68,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
 import coil3.compose.AsyncImage
-import org.wikipedia.R
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
@@ -81,6 +80,7 @@ import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.UiState
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 
 @Composable
 fun HybridSearchResultsScreen(
@@ -612,7 +612,7 @@ private fun SemanticSearchResultHeaderPreview() {
         currentTheme = Theme.LIGHT
     ) {
         SemanticSearchResultHeader(
-            rephraseTitle = "Who is Beyoncé?",
+            rephraseTitle = "Who is Beyonc茅?",
             onInfoClick = {},
             onTurnOffExperimentClick = {}
         )
@@ -623,11 +623,11 @@ private fun SemanticSearchResultHeaderPreview() {
 @Composable
 private fun SemanticSearchResultPageItemPreview() {
     val wikiSite = WikiSite.preview()
-    val pageTitle = PageTitle("Beyoncé", wikiSite).apply {
+    val pageTitle = PageTitle("Beyonc茅", wikiSite).apply {
         description = "American singer, songwriter, and actress"
         thumbUrl = "https://example"
     }
-    val snippet = "Beyoncé Giselle Knowles-Carter is an <a href='#'>American singer</a>, songwriter, actress, and businesswoman. Born and raised in Houston, Texas, she performed in various singing and dancing competitions as a child. She rose to fame in the late 1990s as the lead singer of Destiny's Child, one of the world's best"
+    val snippet = "Beyonc茅 Giselle Knowles-Carter is an <a href='#'>American singer</a>, songwriter, actress, and businesswoman. Born and raised in Houston, Texas, she performed in various singing and dancing competitions as a child. She rose to fame in the late 1990s as the lead singer of Destiny's Child, one of the world's best"
 
     BaseTheme(
         currentTheme = Theme.LIGHT

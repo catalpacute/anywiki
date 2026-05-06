@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.content.Context
 import android.text.method.MovementMethod
@@ -7,14 +7,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemTalkThreadHeaderBinding
 import org.wikipedia.dataclient.discussiontools.ThreadItem
 import org.wikipedia.page.PageTitle
 import org.wikipedia.richtext.setHtml
 import org.wikipedia.staticdata.TalkAliasData
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemTalkThreadHeaderBinding
 
 class TalkThreadHeaderView constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {
     interface Callback {

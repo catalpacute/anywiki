@@ -1,4 +1,4 @@
-package org.wikipedia.games
+﻿package org.wikipedia.games
 
 import androidx.compose.animation.core.InfiniteTransition
 import androidx.compose.foundation.BorderStroke
@@ -38,7 +38,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
@@ -56,6 +55,7 @@ import org.wikipedia.feed.wikigames.WikiGame
 import org.wikipedia.games.onthisday.OnThisDayGameArchiveCalendarHelper
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 
 @Composable

@@ -1,4 +1,4 @@
-package org.wikipedia.feed.suggestededits
+﻿package org.wikipedia.feed.suggestededits
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ViewSuggestedEditsCardBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.feed.view.CardFooterView
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.views.PositionAwareFragmentStateAdapter
+import work.czzzz.anywiki.databinding.ViewSuggestedEditsCardBinding
 
 class SuggestedEditsCardView(context: Context) : DefaultFeedCardView<SuggestedEditsCard>(context), CardFooterView.Callback {
     interface Callback {

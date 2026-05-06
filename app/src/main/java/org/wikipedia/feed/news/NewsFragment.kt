@@ -1,4 +1,4 @@
-package org.wikipedia.feed.news
+﻿package org.wikipedia.feed.news
 
 import android.app.ActivityOptions
 import android.os.Bundle
@@ -15,8 +15,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
-import org.wikipedia.databinding.FragmentNewsBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.feed.model.Card
@@ -34,6 +32,8 @@ import org.wikipedia.util.TabUtil
 import org.wikipedia.views.DefaultRecyclerAdapter
 import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.DrawableItemDecoration
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentNewsBinding
 
 class NewsFragment : Fragment() {
 

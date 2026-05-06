@@ -1,14 +1,14 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.app.Activity
 import android.widget.ScrollView
 import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
-import org.wikipedia.databinding.DialogFeedbackOptionsBinding
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.FeedbackUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogFeedbackOptionsBinding
 
 object YearInReviewDialog {
     fun maybeShowYearInReviewFeedbackDialog(activity: Activity) {

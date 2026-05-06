@@ -1,4 +1,4 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -18,7 +18,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
@@ -26,7 +25,6 @@ import org.wikipedia.analytics.eventplatform.MachineGeneratedArticleDescriptions
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.captcha.CaptchaHandler
 import org.wikipedia.captcha.CaptchaResult
-import org.wikipedia.databinding.FragmentDescriptionEditBinding
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwException
@@ -44,6 +42,8 @@ import org.wikipedia.util.ReleaseUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.util.log.L
 import org.wikipedia.views.SuggestedArticleDescriptionsDialog
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentDescriptionEditBinding
 import java.io.IOException
 import java.util.Date
 import java.util.concurrent.TimeUnit

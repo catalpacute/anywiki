@@ -1,12 +1,12 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.preference.PreferenceFragmentCompat
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
 import org.wikipedia.util.ResourceUtil.getThemedColor
+import work.czzzz.anywiki.R
 
 abstract class PreferenceLoaderFragment : PreferenceFragmentCompat(), PreferenceLoader {
     override fun onCreatePreferences(bundle: Bundle?, s: String?) {

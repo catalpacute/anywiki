@@ -1,4 +1,4 @@
-package org.wikipedia.usercontrib
+﻿package org.wikipedia.usercontrib
 
 import android.app.Dialog
 import android.os.Bundle
@@ -12,14 +12,14 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
-import org.wikipedia.databinding.DialogUserInformationBinding
 import org.wikipedia.suggestededits.SuggestedEditsRecentEditsActivity
 import org.wikipedia.suggestededits.SuggestionsActivity
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.Resource
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.DialogUserInformationBinding
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.util.Date

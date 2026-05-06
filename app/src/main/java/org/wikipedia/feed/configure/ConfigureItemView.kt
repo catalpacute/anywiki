@@ -1,4 +1,4 @@
-package org.wikipedia.feed.configure
+﻿package org.wikipedia.feed.configure
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
-import org.wikipedia.databinding.ItemFeedContentTypeBinding
 import org.wikipedia.feed.FeedContentType
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemFeedContentTypeBinding
 
 class ConfigureItemView(context: Context) : FrameLayout(context) {
 

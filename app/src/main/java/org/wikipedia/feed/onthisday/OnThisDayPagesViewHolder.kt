@@ -1,4 +1,4 @@
-package org.wikipedia.feed.onthisday
+﻿package org.wikipedia.feed.onthisday
 
 import android.app.ActivityOptions
 import android.net.Uri
@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.history.HistoryEntry
@@ -23,6 +22,7 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.TabUtil
 import org.wikipedia.util.TransitionUtil
 import org.wikipedia.views.FaceAndColorDetectImageView
+import work.czzzz.anywiki.R
 
 class OnThisDayPagesViewHolder(
     private val activity: AppCompatActivity,

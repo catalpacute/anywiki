@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,10 +9,10 @@ import android.util.TypedValue
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isGone
-import org.wikipedia.R
 import org.wikipedia.richtext.RichTextUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class CabSearchView(
     context: Context,

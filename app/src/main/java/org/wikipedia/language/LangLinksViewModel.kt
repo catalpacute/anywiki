@@ -1,4 +1,4 @@
-package org.wikipedia.language
+﻿package org.wikipedia.language
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
@@ -21,6 +20,7 @@ import org.wikipedia.page.PageTitle
 import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 
 class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
     private val pageTitle = savedStateHandle.get<PageTitle>(Constants.ARG_TITLE)!!
@@ -181,7 +181,7 @@ class LangLinksViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
             val languageCode = link.wikiSite.languageCode
             val languageVariants = WikipediaApp.instance.languageState.getLanguageVariants(languageCode)
             if (AppLanguageLookUpTable.BELARUSIAN_LEGACY_LANGUAGE_CODE == languageCode) {
-                // Replace legacy name of тарашкевіца language with the correct name.
+                // Replace legacy name of 褌邪褉邪褕泻械胁褨褑邪 language with the correct name.
                 // TODO: Can probably be removed when T111853 is resolved.
                 it.remove()
                 it.add(PageTitle(link.text, WikiSite.forLanguageCode(AppLanguageLookUpTable.BELARUSIAN_TARASK_LANGUAGE_CODE)))

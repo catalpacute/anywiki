@@ -22,11 +22,9 @@ import com.google.android.gms.wallet.contract.TaskResultContracts
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 import org.json.JSONArray
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
-import org.wikipedia.databinding.ActivityDonateBinding
 import org.wikipedia.dataclient.donate.CampaignCollection
 import org.wikipedia.dataclient.donate.DonationConfig
 import org.wikipedia.util.FeedbackUtil
@@ -34,6 +32,8 @@ import org.wikipedia.util.Resource
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityDonateBinding
 import kotlin.math.max
 
 class GooglePayActivity : BaseActivity() {

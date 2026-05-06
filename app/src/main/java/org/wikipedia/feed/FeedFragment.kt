@@ -1,4 +1,4 @@
-package org.wikipedia.feed
+﻿package org.wikipedia.feed
 
 import android.net.Uri
 import android.os.Bundle
@@ -14,10 +14,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil.getCallback
-import org.wikipedia.databinding.FragmentFeedBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.feed.FeedCoordinatorBase.FeedUpdateListener
 import org.wikipedia.feed.configure.ConfigureActivity
@@ -52,6 +50,8 @@ import org.wikipedia.settings.languages.WikipediaLanguagesActivity
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentFeedBinding
 import java.time.LocalDate
 
 class FeedFragment : Fragment() {

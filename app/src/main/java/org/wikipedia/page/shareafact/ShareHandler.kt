@@ -1,16 +1,16 @@
-package org.wikipedia.page.shareafact
+﻿package org.wikipedia.page.shareafact
 
 import android.view.ActionMode
 import android.view.MenuItem
 import kotlinx.serialization.Serializable
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.bridge.CommunicationBridge
 import org.wikipedia.bridge.JavaScriptActionHandler
 import org.wikipedia.json.JsonUtil
 import org.wikipedia.page.PageFragment
 import org.wikipedia.util.log.L
 import org.wikipedia.wiktionary.WiktionaryDialog
+import work.czzzz.anywiki.R
 
 class ShareHandler(private val fragment: PageFragment, private val bridge: CommunicationBridge) {
     private var webViewActionMode: ActionMode? = null

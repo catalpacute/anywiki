@@ -1,13 +1,13 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.app.Activity
 import android.view.View
 import com.google.android.material.snackbar.Snackbar
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.descriptions.DescriptionEditActivity.Action
 import org.wikipedia.util.FeedbackUtil
+import work.czzzz.anywiki.R
 
 object SuggestedEditsSnackbars {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.onboarding
+﻿package org.wikipedia.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.google.android.material.tabs.TabLayoutMediator
 import org.wikipedia.BackPressedHandler
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
-import org.wikipedia.databinding.FragmentOnboardingPagerBinding
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentOnboardingPagerBinding
 
 abstract class OnboardingFragment(val enableSkip: Boolean = true) : Fragment(), BackPressedHandler {
     interface Callback {

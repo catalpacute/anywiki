@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Point
@@ -17,9 +17,9 @@ import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.databinding.ViewActionModeCloseButtonBinding
 import org.wikipedia.views.imageservice.ImageLoadListener
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.databinding.ViewActionModeCloseButtonBinding
 
 object ViewUtil {
     fun loadImage(view: ImageView, url: String?, force: Boolean = false,

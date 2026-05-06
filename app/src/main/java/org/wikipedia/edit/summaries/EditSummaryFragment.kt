@@ -1,4 +1,4 @@
-package org.wikipedia.edit.summaries
+﻿package org.wikipedia.edit.summaries
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -24,10 +24,8 @@ import com.google.android.material.chip.Chip
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.FragmentPreviewSummaryBinding
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.edit.EditSectionActivity
 import org.wikipedia.edit.EditSectionViewModel
@@ -43,6 +41,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ViewAnimations
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentPreviewSummaryBinding
 
 class EditSummaryFragment : Fragment() {
     private var _binding: FragmentPreviewSummaryBinding? = null

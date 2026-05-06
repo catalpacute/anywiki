@@ -1,6 +1,5 @@
-package org.wikipedia.feed.onthisday
+﻿package org.wikipedia.feed.onthisday
 
-import org.wikipedia.R
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.feed.model.CardType
@@ -8,6 +7,7 @@ import org.wikipedia.feed.model.WikiSiteCard
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.util.DateUtil
 import org.wikipedia.util.L10nUtil
+import work.czzzz.anywiki.R
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 

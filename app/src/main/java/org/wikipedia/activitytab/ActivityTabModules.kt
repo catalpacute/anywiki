@@ -1,7 +1,7 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import kotlinx.serialization.Serializable
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 @Serializable
 data class ActivityTabModules(

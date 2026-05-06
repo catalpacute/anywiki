@@ -1,10 +1,10 @@
-package org.wikipedia.page.linkpreview
+﻿package org.wikipedia.page.linkpreview
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import org.wikipedia.databinding.ViewLinkPreviewOverlayBinding
+import work.czzzz.anywiki.databinding.ViewLinkPreviewOverlayBinding
 
 class LinkPreviewOverlayView : FrameLayout {
     interface Callback {

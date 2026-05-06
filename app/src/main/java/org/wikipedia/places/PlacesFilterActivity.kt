@@ -1,4 +1,4 @@
-package org.wikipedia.places
+﻿package org.wikipedia.places
 
 import android.content.Context
 import android.content.Intent
@@ -11,16 +11,16 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.PlacesEvent
-import org.wikipedia.databinding.ActivityPlacesFiltersBinding
-import org.wikipedia.databinding.ViewPlacesFilterItemBinding
 import org.wikipedia.settings.Prefs
 import org.wikipedia.settings.languages.WikipediaLanguagesActivity
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.DefaultViewHolder
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityPlacesFiltersBinding
+import work.czzzz.anywiki.databinding.ViewPlacesFilterItemBinding
 
 class PlacesFilterActivity : BaseActivity() {
 

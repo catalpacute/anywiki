@@ -1,4 +1,4 @@
-package org.wikipedia.search
+﻿package org.wikipedia.search
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -25,9 +25,9 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
-import org.wikipedia.R
 import org.wikipedia.compose.extensions.toAnnotatedStringWithBoldQuery
 import org.wikipedia.compose.theme.WikipediaTheme
+import work.czzzz.anywiki.R
 
 @Composable
 fun HybridSearchSuggestionListView(

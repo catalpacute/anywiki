@@ -1,4 +1,4 @@
-package org.wikipedia.feed.configure
+﻿package org.wikipedia.feed.configure
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,10 +20,8 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.FragmentFeedConfigureBinding
 import org.wikipedia.feed.FeedContentType
 import org.wikipedia.settings.Prefs
 import org.wikipedia.settings.SettingsActivity
@@ -31,6 +29,8 @@ import org.wikipedia.util.Resource
 import org.wikipedia.util.log.L
 import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.DrawableItemDecoration
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentFeedConfigureBinding
 import java.util.Collections
 
 class ConfigureFragment : Fragment(), MenuProvider, ConfigureItemView.Callback {

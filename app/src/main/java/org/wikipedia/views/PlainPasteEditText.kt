@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.ClipData
 import android.content.Context
@@ -11,7 +11,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ContentInfoCompat
 import androidx.core.view.ViewCompat
 import com.google.android.material.textfield.TextInputEditText
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 open class PlainPasteEditText : TextInputEditText {
     constructor(context: Context) : super(context)

@@ -1,7 +1,7 @@
-package org.wikipedia.readinglist.recommended
+﻿package org.wikipedia.readinglist.recommended
 
 import androidx.annotation.StringRes
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 enum class RecommendedReadingListUpdateFrequency(
     @StringRes val displayStringRes: Int,

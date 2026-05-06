@@ -1,4 +1,4 @@
-package org.wikipedia.places
+﻿package org.wikipedia.places
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -64,11 +64,8 @@ import org.maplibre.android.style.layers.PropertyFactory.textFont
 import org.maplibre.android.style.layers.PropertyFactory.textIgnorePlacement
 import org.maplibre.android.style.layers.PropertyFactory.textSize
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.PlacesEvent
-import org.wikipedia.databinding.FragmentPlacesBinding
-import org.wikipedia.databinding.ItemPlacesListBinding
 import org.wikipedia.dataclient.okhttp.OkHttpConnectionFactory
 import org.wikipedia.dataclient.page.NearbyPage
 import org.wikipedia.extensions.parcelable
@@ -97,6 +94,9 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentPlacesBinding
+import work.czzzz.anywiki.databinding.ItemPlacesListBinding
 import java.util.Locale
 import kotlin.math.abs
 

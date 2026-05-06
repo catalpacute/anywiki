@@ -1,4 +1,4 @@
-package org.wikipedia.diff
+﻿package org.wikipedia.diff
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ItemDiffLineBinding
 import org.wikipedia.dataclient.restbase.DiffResponse
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemDiffLineBinding
 
 class DiffLineView(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(context, attrs) {
     private val binding = ItemDiffLineBinding.inflate(LayoutInflater.from(context), this)

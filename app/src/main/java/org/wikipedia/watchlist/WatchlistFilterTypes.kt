@@ -1,8 +1,8 @@
-package org.wikipedia.watchlist
+﻿package org.wikipedia.watchlist
 
 import androidx.annotation.StringRes
-import org.wikipedia.R
 import org.wikipedia.model.EnumCode
+import work.czzzz.anywiki.R
 
 @Suppress("unused")
 enum class WatchlistFilterTypes constructor(val id: String,

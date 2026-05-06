@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.content.Context
 import android.util.AttributeSet
@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.database.AppDatabase
-import org.wikipedia.databinding.ItemReadingListPreviewSaveSelectItemBinding
-import org.wikipedia.databinding.ViewReadingListPreviewSaveDialogBinding
 import org.wikipedia.extensions.coroutineScope
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.readinglist.database.ReadingListPage
@@ -25,6 +22,9 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.DrawableItemDecoration
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemReadingListPreviewSaveSelectItemBinding
+import work.czzzz.anywiki.databinding.ViewReadingListPreviewSaveDialogBinding
 import java.util.Date
 
 class ReadingListPreviewSaveDialogView(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {

@@ -1,12 +1,12 @@
-package org.wikipedia.feed.accessibility
+﻿package org.wikipedia.feed.accessibility
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.widget.LinearLayout
-import org.wikipedia.databinding.ViewCardAccessibilityBinding
 import org.wikipedia.feed.model.Card
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.feed.view.FeedCardView
+import work.czzzz.anywiki.databinding.ViewCardAccessibilityBinding
 
 class AccessibilityCardView(context: Context) : LinearLayout(context), FeedCardView<Card> {
 

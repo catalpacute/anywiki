@@ -1,4 +1,4 @@
-package org.wikipedia.compose.components.error
+﻿package org.wikipedia.compose.components.error
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -30,7 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
@@ -44,6 +43,7 @@ import org.wikipedia.util.ThrowableUtil.isEmptyException
 import org.wikipedia.util.ThrowableUtil.isNotLoggedIn
 import org.wikipedia.util.ThrowableUtil.isOffline
 import org.wikipedia.util.ThrowableUtil.isTimeout
+import work.czzzz.anywiki.R
 
 @Composable
 fun WikiErrorView(

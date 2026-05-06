@@ -1,16 +1,16 @@
-package org.wikipedia.feed.news
+﻿package org.wikipedia.feed.news
 
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.feed.news.NewsFragment.Companion.newInstance
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class NewsActivity : SingleFragmentActivity<NewsFragment>() {
 

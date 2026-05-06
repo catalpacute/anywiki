@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.app.Activity
 import android.content.Context
@@ -10,11 +10,11 @@ import android.widget.LinearLayout
 import androidx.annotation.DrawableRes
 import androidx.core.view.updateLayoutParams
 import androidx.core.widget.ImageViewCompat
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewSuggestedEditsStatsBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewSuggestedEditsStatsBinding
 
 internal class SuggestedEditsStatsView(context: Context, attrs: AttributeSet? = null) : LinearLayout(context, attrs) {
 

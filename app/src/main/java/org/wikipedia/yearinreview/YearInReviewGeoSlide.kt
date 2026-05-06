@@ -1,4 +1,4 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.graphics.Bitmap
 import android.graphics.Paint
@@ -49,7 +49,6 @@ import org.maplibre.android.maps.Style
 import org.maplibre.android.module.http.HttpRequestImpl
 import org.maplibre.android.plugins.annotation.SymbolManager
 import org.maplibre.android.plugins.annotation.SymbolOptions
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.compose.components.HtmlText
 import org.wikipedia.compose.theme.WikipediaTheme
@@ -63,6 +62,7 @@ import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
 
 @Composable
 fun GeoScreenContent(

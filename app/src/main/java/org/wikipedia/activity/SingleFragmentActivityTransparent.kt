@@ -1,10 +1,10 @@
-package org.wikipedia.activity
+﻿package org.wikipedia.activity
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 /**
  * Boilerplate for a FragmentActivity containing a single stack of

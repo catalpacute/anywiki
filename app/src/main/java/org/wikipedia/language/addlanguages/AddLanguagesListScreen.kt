@@ -1,4 +1,4 @@
-package org.wikipedia.language.addlanguages
+﻿package org.wikipedia.language.addlanguages
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -30,7 +30,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.compose.components.SearchEmptyView
 import org.wikipedia.compose.components.WikiTopAppBarWithSearch
@@ -41,6 +40,7 @@ import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 
 @Composable
 fun LanguagesListScreen(
@@ -221,7 +221,7 @@ private fun LanguagesListScreenPreview() {
             uiState = UiState.Success(data = listOf(
                 LanguageListItem(code = "", headerText = "Languages"),
                 LanguageListItem(code = "en", canonicalName = "English", localizedName = "English"),
-                LanguageListItem(code = "he", canonicalName = "Hebrew", localizedName = "עברית")
+                LanguageListItem(code = "he", canonicalName = "Hebrew", localizedName = "注讘专讬转")
             )
             ),
             { },

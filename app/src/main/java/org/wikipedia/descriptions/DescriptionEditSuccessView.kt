@@ -1,12 +1,12 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewDescriptionEditSuccessBinding
 import org.wikipedia.views.AppTextViewWithImages
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewDescriptionEditSuccessBinding
 
 class DescriptionEditSuccessView : FrameLayout {
     interface Callback {

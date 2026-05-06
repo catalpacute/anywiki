@@ -1,11 +1,11 @@
-package org.wikipedia.robots.screen
+﻿package org.wikipedia.robots.screen
 
 import BaseRobot
 import android.content.Context
 import androidx.test.espresso.action.ViewActions.click
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 
 class SuggestedEditsScreenRobot : BaseRobot() {
     fun clickArticleDescriptions() = apply {

@@ -1,17 +1,17 @@
-package org.wikipedia.login
+﻿package org.wikipedia.login
 
 import android.widget.Toast
 import androidx.annotation.StringRes
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import java.io.IOException
 import java.time.LocalDateTime
 

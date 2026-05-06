@@ -1,4 +1,4 @@
-package org.wikipedia.page
+﻿package org.wikipedia.page
 
 import android.app.SearchManager
 import android.app.assist.AssistContent
@@ -34,7 +34,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.SingleWebViewActivity
@@ -44,7 +43,6 @@ import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.commons.FilePageActivity
 import org.wikipedia.concurrency.FlowEventBus
-import org.wikipedia.databinding.ActivityPageBinding
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.donate.CampaignCollection
@@ -92,6 +90,8 @@ import org.wikipedia.watchlist.WatchlistExpiry
 import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
 import org.wikipedia.yearinreview.YearInReviewDialog
 import org.wikipedia.yearinreview.YearInReviewViewModel
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityPageBinding
 import java.time.LocalDate
 import java.util.Locale
 

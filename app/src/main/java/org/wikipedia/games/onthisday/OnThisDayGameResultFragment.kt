@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.app.Activity
 import android.content.res.ColorStateList
@@ -31,15 +31,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.activitytab.OnThisDayGameLoginPromptCard
 import org.wikipedia.activitytab.WikiGamesStatsCard
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.compose.theme.BaseTheme
-import org.wikipedia.databinding.FragmentOnThisDayGameResultBinding
-import org.wikipedia.databinding.ItemOnThisDayGameShareTopicBinding
-import org.wikipedia.databinding.ItemOnThisDayGameTopicBinding
 import org.wikipedia.dataclient.page.PageSummary
 import org.wikipedia.extensions.ensureSoftwareBitmaps
 import org.wikipedia.history.HistoryEntry
@@ -59,6 +55,10 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.views.MarginItemDecoration
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.imageservice.ImageLoadListener
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentOnThisDayGameResultBinding
+import work.czzzz.anywiki.databinding.ItemOnThisDayGameShareTopicBinding
+import work.czzzz.anywiki.databinding.ItemOnThisDayGameTopicBinding
 import java.time.Duration
 import java.time.LocalDate
 import java.time.LocalDateTime

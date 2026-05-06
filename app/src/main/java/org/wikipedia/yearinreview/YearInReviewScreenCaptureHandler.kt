@@ -1,12 +1,12 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.graphics.Bitmap
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import org.wikipedia.R
 import org.wikipedia.util.ShareUtil
+import work.czzzz.anywiki.R
 
 @Composable
 fun YearInReviewScreenCaptureHandler(

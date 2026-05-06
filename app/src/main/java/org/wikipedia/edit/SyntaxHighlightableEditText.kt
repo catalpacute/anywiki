@@ -1,4 +1,4 @@
-package org.wikipedia.edit
+﻿package org.wikipedia.edit
 
 import android.annotation.SuppressLint
 import android.content.ClipData
@@ -20,10 +20,10 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
 import android.widget.EditText
 import androidx.annotation.RequiresApi
-import org.wikipedia.R
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import kotlin.math.min
 
 /**

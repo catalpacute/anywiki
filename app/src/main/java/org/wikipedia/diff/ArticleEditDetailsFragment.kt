@@ -1,4 +1,4 @@
-package org.wikipedia.diff
+﻿package org.wikipedia.diff
 
 import android.graphics.Rect
 import android.net.Uri
@@ -29,13 +29,11 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.EditAttemptStepEvent
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.FragmentArticleEditDetailsBinding
 import org.wikipedia.dataclient.mwapi.MwQueryPage.Revision
 import org.wikipedia.dataclient.okhttp.HttpStatusException
 import org.wikipedia.extensions.parcelableExtra
@@ -67,6 +65,8 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.SurveyDialog
 import org.wikipedia.watchlist.WatchlistExpiry
 import org.wikipedia.watchlist.WatchlistExpiryDialog
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentArticleEditDetailsBinding
 
 class ArticleEditDetailsFragment : Fragment(), WatchlistExpiryDialog.Callback, MenuProvider {
     interface Callback {

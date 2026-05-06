@@ -1,4 +1,4 @@
-package org.wikipedia.page.leadimages
+﻿package org.wikipedia.page.leadimages
 
 import android.net.Uri
 import androidx.core.app.ActivityOptionsCompat
@@ -11,7 +11,6 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.ImageEditType
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.auth.AccountUtil
@@ -36,6 +35,7 @@ import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ObservableWebView
+import work.czzzz.anywiki.R
 
 class LeadImagesHandler(private val parentFragment: PageFragment,
                         webView: ObservableWebView,

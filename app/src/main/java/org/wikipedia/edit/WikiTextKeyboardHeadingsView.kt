@@ -1,12 +1,12 @@
-package org.wikipedia.edit
+﻿package org.wikipedia.edit
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewWikitextKeyboardHeadingsBinding
 import org.wikipedia.util.FeedbackUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewWikitextKeyboardHeadingsBinding
 
 class WikiTextKeyboardHeadingsView : FrameLayout {
     private val binding = ViewWikitextKeyboardHeadingsBinding.inflate(LayoutInflater.from(context), this)

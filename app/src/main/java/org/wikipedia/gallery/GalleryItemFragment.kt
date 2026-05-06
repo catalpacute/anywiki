@@ -1,4 +1,4 @@
-package org.wikipedia.gallery
+﻿package org.wikipedia.gallery
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -26,11 +26,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.FragmentGalleryItemBinding
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.DimenUtil
@@ -42,6 +40,8 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.ViewUtil
 import org.wikipedia.views.imageservice.ImageLoadListener
 import org.wikipedia.views.imageservice.ImageService
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentGalleryItemBinding
 import kotlin.math.abs
 
 class GalleryItemFragment : Fragment(), MenuProvider {

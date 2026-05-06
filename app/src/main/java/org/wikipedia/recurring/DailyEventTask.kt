@@ -1,10 +1,10 @@
-package org.wikipedia.recurring
+﻿package org.wikipedia.recurring
 
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.DailyStatsEvent
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
 import org.wikipedia.analytics.eventplatform.RecommendedReadingListEvent
+import work.czzzz.anywiki.R
 import java.util.Date
 import java.util.concurrent.TimeUnit
 

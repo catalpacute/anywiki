@@ -1,4 +1,4 @@
-package org.wikipedia.anywiki
+﻿package org.wikipedia.anywiki
 
 import android.app.Application
 import android.net.Uri
@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.jsoup.Jsoup
-import org.wikipedia.R
 import org.wikipedia.anywiki.mediawiki.DiscoverFailure
 import org.wikipedia.anywiki.mediawiki.DiscoveryResult
 import org.wikipedia.anywiki.mediawiki.MediaWikiClient
@@ -25,6 +24,7 @@ import org.wikipedia.anywiki.storage.BookmarkStore
 import org.wikipedia.anywiki.storage.HistoryStore
 import org.wikipedia.anywiki.storage.ReaderSettingsStore
 import org.wikipedia.anywiki.storage.WikiStore
+import work.czzzz.anywiki.R
 
 enum class ReaderTab {
     SOURCES,

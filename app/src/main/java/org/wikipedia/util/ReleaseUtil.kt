@@ -1,9 +1,9 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import android.content.pm.PackageManager
-import org.wikipedia.BuildConfig
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.BuildConfig
 
 object ReleaseUtil {
     private const val RELEASE_PROD = 0

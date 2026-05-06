@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.annotation.SuppressLint
 import android.widget.Toast
@@ -13,12 +13,12 @@ import com.google.android.material.datepicker.MaterialCalendar
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.datepicker.OnSelectionChangedListener
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.games.WikiGames
 import org.wikipedia.games.onthisday.OnThisDayGameViewModel.Companion.dateReleasedForLang
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZoneOffset

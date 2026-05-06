@@ -1,4 +1,4 @@
-package org.wikipedia.gallery
+﻿package org.wikipedia.gallery
 
 import android.app.assist.AssistContent
 import android.content.Context
@@ -28,13 +28,11 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.ImageEditType
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.JavaScriptActionHandler
 import org.wikipedia.commons.FilePageActivity
-import org.wikipedia.databinding.ActivityGalleryBinding
 import org.wikipedia.dataclient.Service
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.wikidata.Entities
@@ -64,6 +62,8 @@ import org.wikipedia.util.log.L
 import org.wikipedia.views.PositionAwareFragmentStateAdapter
 import org.wikipedia.views.ViewAnimations
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityGalleryBinding
 import java.io.File
 
 class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, GalleryItemFragment.Callback {

@@ -1,4 +1,4 @@
-package org.wikipedia.feed.view
+﻿package org.wikipedia.feed.view
 
 import android.content.Context
 import android.graphics.LinearGradient
@@ -8,9 +8,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewGradientCircleNumberBinding
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewGradientCircleNumberBinding
 
 class GradientCircleNumberView(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
     private val binding = ViewGradientCircleNumberBinding.inflate(LayoutInflater.from(context), this)

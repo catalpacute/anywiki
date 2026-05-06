@@ -1,11 +1,11 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import org.wikipedia.R
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 open class WikiSwipeRefreshLayout(context: Context, attrs: AttributeSet?) : SwipeRefreshLayout(context, attrs) {
 

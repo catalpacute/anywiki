@@ -1,4 +1,4 @@
-package org.wikipedia.language.addlanguages
+﻿package org.wikipedia.language.addlanguages
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,12 +9,12 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import org.apache.commons.lang3.StringUtils
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.mwapi.SiteMatrix
 import org.wikipedia.util.UiState
 import org.wikipedia.util.log.L
+import work.czzzz.anywiki.R
 
 class AddLanguagesViewModel : ViewModel() {
     private val suggestedLanguageCodes = WikipediaApp.instance.languageState.remainingSuggestedLanguageCodes

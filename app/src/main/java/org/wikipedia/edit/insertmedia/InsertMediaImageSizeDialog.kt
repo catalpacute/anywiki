@@ -1,4 +1,4 @@
-package org.wikipedia.edit.insertmedia
+﻿package org.wikipedia.edit.insertmedia
 
 import android.content.DialogInterface
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.wikipedia.activity.FragmentUtil
-import org.wikipedia.databinding.DialogInsertMediaSizeBinding
 import org.wikipedia.page.ExtendedBottomSheetDialogFragment
+import work.czzzz.anywiki.databinding.DialogInsertMediaSizeBinding
 
 class InsertMediaImageSizeDialog : ExtendedBottomSheetDialogFragment() {
     interface Callback {

@@ -1,4 +1,4 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.content.Context
 import android.graphics.drawable.Animatable
@@ -32,13 +32,13 @@ import coil3.compose.SubcomposeAsyncImage
 import coil3.compose.SubcomposeAsyncImageContent
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
-import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.compose.theme.BaseTheme
 import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.history.db.HistoryEntryWithImage
 import org.wikipedia.theme.Theme
 import org.wikipedia.yearinreview.YearInReviewScreenData.CustomIconScreen
+import work.czzzz.anywiki.R
 
 fun Modifier.yearInReviewHeaderBackground(): Modifier {
     return this.background(

@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.annotation.SuppressLint
@@ -27,9 +27,9 @@ import androidx.test.espresso.web.webdriver.DriverAtoms.webScrollIntoView
 import androidx.test.espresso.web.webdriver.Locator
 import org.hamcrest.Matchers.allOf
 import org.hamcrest.Matchers.containsString
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.base.utils.AssertJavascriptAction
+import work.czzzz.anywiki.R
 
 class PageRobot(private val context: Context) : BaseRobot() {
     fun clickLink(linkTitle: String) = apply {

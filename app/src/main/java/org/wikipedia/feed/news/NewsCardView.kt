@@ -1,4 +1,4 @@
-package org.wikipedia.feed.news
+﻿package org.wikipedia.feed.news
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewCardNewsBinding
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
 import org.wikipedia.settings.Prefs
@@ -15,6 +13,8 @@ import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.ImageZoomHelper
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewCardNewsBinding
 
 class NewsCardView(context: Context) : DefaultFeedCardView<NewsCard>(context) {
 

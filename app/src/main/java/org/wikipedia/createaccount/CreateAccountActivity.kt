@@ -1,4 +1,4 @@
-package org.wikipedia.createaccount
+﻿package org.wikipedia.createaccount
 
 import android.content.Context
 import android.content.Intent
@@ -20,7 +20,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
@@ -29,7 +28,6 @@ import org.wikipedia.auth.AccountUtil
 import org.wikipedia.captcha.CaptchaHandler
 import org.wikipedia.captcha.CaptchaResult
 import org.wikipedia.captcha.HCaptchaHelper
-import org.wikipedia.databinding.ActivityCreateAccountBinding
 import org.wikipedia.extensions.getInstrumentActionContext
 import org.wikipedia.extensions.instrument
 import org.wikipedia.login.LoginActivity
@@ -40,6 +38,8 @@ import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.NonEmptyValidator
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityCreateAccountBinding
 import java.util.regex.Pattern
 
 class CreateAccountActivity : BaseActivity() {

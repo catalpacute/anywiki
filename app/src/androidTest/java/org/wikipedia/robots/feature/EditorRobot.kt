@@ -1,4 +1,4 @@
-package org.wikipedia.robots.feature
+﻿package org.wikipedia.robots.feature
 
 import BaseRobot
 import android.content.Context
@@ -9,9 +9,9 @@ import androidx.test.espresso.NoMatchingViewException
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.pressKey
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import org.wikipedia.R
 import org.wikipedia.base.TestConfig
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
 
 class EditorRobot : BaseRobot() {
     val currentWikiText

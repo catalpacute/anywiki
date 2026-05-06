@@ -1,12 +1,10 @@
-package org.wikipedia.feed.places
+﻿package org.wikipedia.feed.places
 
 import android.content.Context
 import android.location.Location
 import android.view.LayoutInflater
 import androidx.core.view.isVisible
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.PlacesEvent
-import org.wikipedia.databinding.ViewPlacesCardBinding
 import org.wikipedia.feed.view.CardFooterView
 import org.wikipedia.feed.view.DefaultFeedCardView
 import org.wikipedia.feed.view.FeedAdapter
@@ -19,6 +17,8 @@ import org.wikipedia.settings.Prefs
 import org.wikipedia.util.GeoUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.views.ViewUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewPlacesCardBinding
 import java.util.Locale
 
 class PlacesCardView(context: Context) : DefaultFeedCardView<PlacesCard>(context) {

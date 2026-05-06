@@ -1,4 +1,4 @@
-package org.wikipedia.donate.donationreminder
+﻿package org.wikipedia.donate.donationreminder
 
 import android.content.Context
 import android.text.Spannable
@@ -7,11 +7,11 @@ import android.text.style.ImageSpan
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.core.content.ContextCompat
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewDonationReminderCardBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.views.WikiCardView
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewDonationReminderCardBinding
 
 class DonationReminderCardView(context: Context, attrs: AttributeSet? = null) : WikiCardView(context, attrs) {
 

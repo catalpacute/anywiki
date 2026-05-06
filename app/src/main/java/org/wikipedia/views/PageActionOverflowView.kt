@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.graphics.Color
@@ -13,16 +13,16 @@ import androidx.core.view.doOnDetach
 import androidx.core.widget.PopupWindowCompat
 import androidx.core.widget.TextViewCompat
 import com.google.android.material.textview.MaterialTextView
-import org.wikipedia.R
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ItemCustomizeToolbarMenuBinding
-import org.wikipedia.databinding.ViewPageActionOverflowBinding
 import org.wikipedia.page.PageViewModel
 import org.wikipedia.page.action.PageActionItem
 import org.wikipedia.page.customize.CustomizeToolbarActivity
 import org.wikipedia.page.tabs.Tab
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ItemCustomizeToolbarMenuBinding
+import work.czzzz.anywiki.databinding.ViewPageActionOverflowBinding
 
 class PageActionOverflowView(context: Context) : FrameLayout(context) {
 

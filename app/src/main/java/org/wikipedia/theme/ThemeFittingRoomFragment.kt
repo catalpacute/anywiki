@@ -1,4 +1,4 @@
-package org.wikipedia.theme
+﻿package org.wikipedia.theme
 
 import android.graphics.Typeface
 import android.os.Bundle
@@ -11,13 +11,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.concurrency.FlowEventBus
-import org.wikipedia.databinding.FragmentThemeFittingRoomBinding
 import org.wikipedia.events.ChangeTextSizeEvent
 import org.wikipedia.events.WebViewInvalidateEvent
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentThemeFittingRoomBinding
 
 class ThemeFittingRoomFragment : Fragment() {
     private var _binding: FragmentThemeFittingRoomBinding? = null

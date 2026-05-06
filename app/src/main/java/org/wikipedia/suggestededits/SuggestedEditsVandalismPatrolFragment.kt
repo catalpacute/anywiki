@@ -1,15 +1,15 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import org.wikipedia.Constants
-import org.wikipedia.databinding.FragmentSuggestedEditsVandalismItemBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.diff.ArticleEditDetailsFragment
 import org.wikipedia.page.PageTitle
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsVandalismItemBinding
 
 class SuggestedEditsVandalismPatrolFragment : SuggestedEditsItemFragment(), ArticleEditDetailsFragment.Callback {
     private var _binding: FragmentSuggestedEditsVandalismItemBinding? = null

@@ -1,4 +1,4 @@
-package org.wikipedia.gallery
+﻿package org.wikipedia.gallery
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,10 +11,10 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.wikipedia.R
 import org.wikipedia.dataclient.mwapi.MwQueryPage
 import org.wikipedia.util.StringUtil
 import org.wikipedia.views.ViewUtil.loadImage
+import work.czzzz.anywiki.R
 
 class GalleryThumbnailScrollView constructor(context: Context, attrs: AttributeSet? = null) : RecyclerView(context, attrs) {
 

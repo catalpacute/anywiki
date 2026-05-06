@@ -1,4 +1,4 @@
-package org.wikipedia.watchlist
+﻿package org.wikipedia.watchlist
 
 import android.content.Context
 import android.os.Bundle
@@ -25,12 +25,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.WatchlistAnalyticsHelper
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.FragmentWatchlistBinding
-import org.wikipedia.databinding.ViewWatchlistSearchBarBinding
 import org.wikipedia.dataclient.mwapi.MwQueryResult
 import org.wikipedia.diff.ArticleEditDetailsActivity
 import org.wikipedia.history.HistoryEntry
@@ -49,6 +46,9 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.views.NotificationButtonView
 import org.wikipedia.views.SearchAndFilterActionProvider
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentWatchlistBinding
+import work.czzzz.anywiki.databinding.ViewWatchlistSearchBarBinding
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.util.Date

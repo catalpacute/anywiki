@@ -1,11 +1,11 @@
-package org.wikipedia.feed.topread
+﻿package org.wikipedia.feed.topread
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.extensions.parcelableExtra
+import work.czzzz.anywiki.R
 
 class TopReadArticlesActivity : SingleFragmentActivity<TopReadFragment>() {
 

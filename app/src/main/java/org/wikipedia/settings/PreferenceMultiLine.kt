@@ -1,4 +1,4 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceClickListener
 import androidx.preference.PreferenceViewHolder
-import org.wikipedia.R
 import org.wikipedia.analytics.eventplatform.BreadCrumbLogEvent
 import org.wikipedia.util.DimenUtil
+import work.czzzz.anywiki.R
 
 @Suppress("unused")
 class PreferenceMultiLine : Preference {

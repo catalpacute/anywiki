@@ -1,4 +1,4 @@
-package org.wikipedia.robots
+﻿package org.wikipedia.robots
 
 import BaseRobot
 import android.os.Build
@@ -6,9 +6,9 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.google.android.apps.common.testing.accessibility.framework.utils.contrast.Color
-import org.wikipedia.R
 import org.wikipedia.TestUtil
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.R
 
 class AppThemeRobot : BaseRobot() {
     fun toggleTheme() = apply {

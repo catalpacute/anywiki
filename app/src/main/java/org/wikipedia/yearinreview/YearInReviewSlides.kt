@@ -1,9 +1,8 @@
-package org.wikipedia.yearinreview
+﻿package org.wikipedia.yearinreview
 
 import android.content.Context
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
-import org.wikipedia.R
 import org.wikipedia.compose.ComposeColors
 import org.wikipedia.history.db.HistoryEntryWithImage
 import org.wikipedia.settings.Prefs
@@ -13,6 +12,7 @@ import org.wikipedia.yearinreview.YearInReviewScreenData.HighlightItem
 import org.wikipedia.yearinreview.YearInReviewScreenData.HighlightsScreen
 import org.wikipedia.yearinreview.YearInReviewScreenData.ReadingPatterns
 import org.wikipedia.yearinreview.YearInReviewScreenData.StandardScreen
+import work.czzzz.anywiki.R
 import java.text.NumberFormat
 import java.time.DayOfWeek
 import java.time.Month

@@ -1,4 +1,4 @@
-package org.wikipedia.activitytab
+﻿package org.wikipedia.activitytab
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.BorderStroke
@@ -29,7 +29,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import org.wikipedia.R
 import org.wikipedia.compose.components.WikiCard
 import org.wikipedia.compose.components.error.WikiErrorClickEvents
 import org.wikipedia.compose.components.error.WikiErrorView
@@ -38,6 +37,7 @@ import org.wikipedia.compose.theme.WikipediaTheme
 import org.wikipedia.games.onthisday.OnThisDayGameViewModel
 import org.wikipedia.theme.Theme
 import org.wikipedia.util.UiState
+import work.czzzz.anywiki.R
 import java.text.DecimalFormat
 
 @Composable

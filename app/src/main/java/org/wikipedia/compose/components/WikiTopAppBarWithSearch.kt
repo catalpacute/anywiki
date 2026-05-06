@@ -1,4 +1,4 @@
-package org.wikipedia.compose.components
+﻿package org.wikipedia.compose.components
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -16,8 +16,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import org.wikipedia.R
 import org.wikipedia.compose.theme.WikipediaTheme
+import work.czzzz.anywiki.R
 
 enum class TopAppBarState {
     SEARCH,

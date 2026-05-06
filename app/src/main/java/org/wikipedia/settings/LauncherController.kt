@@ -1,10 +1,10 @@
-package org.wikipedia.settings
+﻿package org.wikipedia.settings
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
+import work.czzzz.anywiki.R
 
 object LauncherController {
 
@@ -42,6 +42,6 @@ enum class LauncherIcon(
     );
 
     fun getComponentName(context: Context): ComponentName {
-        return ComponentName(context.packageName, "org.wikipedia.$key")
+        return ComponentName(context.packageName, "${context.packageName}.$key")
     }
 }

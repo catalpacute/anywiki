@@ -1,12 +1,12 @@
-package org.wikipedia.language
+﻿package org.wikipedia.language
 
 import android.content.Context
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.L10nUtil
 import org.wikipedia.util.ReleaseUtil
+import work.czzzz.anywiki.R
 import java.util.Locale
 
 class AppLanguageState(context: Context) {

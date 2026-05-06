@@ -1,4 +1,4 @@
-package org.wikipedia.widgets
+﻿package org.wikipedia.widgets
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -11,8 +11,8 @@ import android.util.SizeF
 import android.widget.RemoteViews
 import androidx.core.app.PendingIntentCompat
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
 import org.wikipedia.search.SearchActivity
+import work.czzzz.anywiki.R
 
 class WidgetProviderSearch : AppWidgetProvider() {
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {

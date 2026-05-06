@@ -1,4 +1,4 @@
-package org.wikipedia.login
+﻿package org.wikipedia.login
 
 import android.accounts.AccountAuthenticatorResponse
 import android.accounts.AccountManager
@@ -10,18 +10,18 @@ import android.view.inputmethod.EditorInfo
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.textfield.TextInputLayout
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil.updateAccount
 import org.wikipedia.createaccount.CreateAccountActivity.Companion.validateInput
 import org.wikipedia.createaccount.CreateAccountActivity.ValidateResult
-import org.wikipedia.databinding.ActivityResetPasswordBinding
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.NonEmptyValidator
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityResetPasswordBinding
 
 class ResetPasswordActivity : BaseActivity() {
     private lateinit var binding: ActivityResetPasswordBinding

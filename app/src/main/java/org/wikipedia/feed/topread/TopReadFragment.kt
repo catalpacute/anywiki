@@ -1,4 +1,4 @@
-package org.wikipedia.feed.topread
+﻿package org.wikipedia.feed.topread
 
 import android.app.ActivityOptions
 import android.os.Bundle
@@ -13,8 +13,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
-import org.wikipedia.R
-import org.wikipedia.databinding.FragmentMostReadBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.feed.model.Card
 import org.wikipedia.feed.view.ListCardItemView
@@ -27,6 +25,8 @@ import org.wikipedia.util.TabUtil
 import org.wikipedia.views.DefaultRecyclerAdapter
 import org.wikipedia.views.DefaultViewHolder
 import org.wikipedia.views.DrawableItemDecoration
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentMostReadBinding
 
 class TopReadFragment : Fragment() {
 

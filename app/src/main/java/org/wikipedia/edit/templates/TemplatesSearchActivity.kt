@@ -1,4 +1,4 @@
-package org.wikipedia.edit.templates
+﻿package org.wikipedia.edit.templates
 
 import android.content.Context
 import android.content.Intent
@@ -21,12 +21,9 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.adapter.PagingDataAdapterPatched
 import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
-import org.wikipedia.databinding.ActivityTemplatesSearchBinding
-import org.wikipedia.databinding.ItemTemplatesSearchBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.TemplateDataResponse
 import org.wikipedia.page.PageTitle
@@ -36,6 +33,9 @@ import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityTemplatesSearchBinding
+import work.czzzz.anywiki.databinding.ItemTemplatesSearchBinding
 
 class TemplatesSearchActivity : BaseActivity() {
     private lateinit var binding: ActivityTemplatesSearchBinding

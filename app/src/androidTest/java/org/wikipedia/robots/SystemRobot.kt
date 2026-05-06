@@ -1,4 +1,4 @@
-package org.wikipedia.robots
+﻿package org.wikipedia.robots
 
 import BaseRobot
 import android.app.Activity
@@ -9,9 +9,9 @@ import androidx.test.espresso.matcher.ViewMatchers.isRoot
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiSelector
-import org.wikipedia.R
 import org.wikipedia.TestUtil
 import org.wikipedia.base.TestConfig
+import work.czzzz.anywiki.R
 
 class SystemRobot : BaseRobot() {
     fun turnOnAirplaneMode() = apply {

@@ -1,14 +1,14 @@
-package org.wikipedia.commons
+﻿package org.wikipedia.commons
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.activity.SingleFragmentActivity
 import org.wikipedia.extensions.parcelableExtra
 import org.wikipedia.page.PageTitle
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class FilePageActivity : SingleFragmentActivity<FilePageFragment>() {
 

@@ -1,10 +1,10 @@
-package org.wikipedia.util
+﻿package org.wikipedia.util
 
 import android.content.Context
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
-import org.wikipedia.R
+import work.czzzz.anywiki.R
 
 object CustomTabsUtil {
 

@@ -1,4 +1,4 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import kotlinx.coroutines.launch
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.extensions.coroutineScope
@@ -14,6 +13,7 @@ import org.wikipedia.page.ExtendedBottomSheetDialogFragment
 import org.wikipedia.readinglist.database.ReadingList
 import org.wikipedia.readinglist.database.ReadingListPage
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
 
 class ReadingListItemActionsDialog : ExtendedBottomSheetDialogFragment() {
     interface Callback {

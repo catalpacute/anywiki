@@ -1,4 +1,4 @@
-package org.wikipedia.usercontrib
+﻿package org.wikipedia.usercontrib
 
 import android.content.Context
 import android.content.Intent
@@ -10,10 +10,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
-import org.wikipedia.databinding.ActivityUserContribWikiSelectBinding
 import org.wikipedia.page.Namespace
 import org.wikipedia.settings.Prefs
 import org.wikipedia.settings.languages.WikipediaLanguagesActivity
@@ -21,6 +19,8 @@ import org.wikipedia.staticdata.TalkAliasData
 import org.wikipedia.staticdata.UserAliasData
 import org.wikipedia.staticdata.UserTalkAliasData
 import org.wikipedia.views.DefaultViewHolder
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityUserContribWikiSelectBinding
 
 class UserContribFilterActivity : BaseActivity() {
 

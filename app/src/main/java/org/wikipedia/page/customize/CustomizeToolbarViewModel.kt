@@ -1,9 +1,9 @@
-package org.wikipedia.page.customize
+﻿package org.wikipedia.page.customize
 
 import androidx.lifecycle.ViewModel
-import org.wikipedia.R
 import org.wikipedia.page.action.PageActionItem
 import org.wikipedia.settings.Prefs
+import work.czzzz.anywiki.R
 import java.util.*
 
 class CustomizeToolbarViewModel : ViewModel() {

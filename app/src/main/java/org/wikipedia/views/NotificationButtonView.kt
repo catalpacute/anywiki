@@ -1,4 +1,4 @@
-package org.wikipedia.views
+﻿package org.wikipedia.views
 
 import android.content.Context
 import android.util.AttributeSet
@@ -8,10 +8,10 @@ import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
 import androidx.annotation.DrawableRes
 import androidx.core.view.isVisible
-import org.wikipedia.R
-import org.wikipedia.databinding.ViewNotificationButtonBinding
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.ResourceUtil
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ViewNotificationButtonBinding
 
 class NotificationButtonView constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(context, attrs) {
     private val binding = ViewNotificationButtonBinding.inflate(LayoutInflater.from(context), this)

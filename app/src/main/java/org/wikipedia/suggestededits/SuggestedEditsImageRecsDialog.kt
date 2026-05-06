@@ -1,4 +1,4 @@
-package org.wikipedia.suggestededits
+﻿package org.wikipedia.suggestededits
 
 import android.app.Dialog
 import android.os.Bundle
@@ -8,10 +8,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.wikipedia.R
 import org.wikipedia.activity.FragmentUtil
 import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
-import org.wikipedia.databinding.FragmentSuggestedEditsImageRecsDialogBinding
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.FragmentSuggestedEditsImageRecsDialogBinding
 
 class SuggestedEditsImageRecsDialog : DialogFragment() {
     interface Callback {

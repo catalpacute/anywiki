@@ -1,4 +1,4 @@
-package org.wikipedia.activity
+﻿package org.wikipedia.activity
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -19,12 +19,10 @@ import androidx.activity.addCallback
 import androidx.core.view.isVisible
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.DonorExperienceEvent
 import org.wikipedia.analytics.eventplatform.YearInReviewEvent
 import org.wikipedia.bridge.JavaScriptActionHandler
-import org.wikipedia.databinding.ActivitySingleWebViewBinding
 import org.wikipedia.dataclient.SharedPreferenceCookieManager
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.okhttp.OkHttpWebViewClient
@@ -38,6 +36,8 @@ import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.yearinreview.YearInReviewViewModel
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivitySingleWebViewBinding
 
 class SingleWebViewActivity : BaseActivity() {
     private lateinit var binding: ActivitySingleWebViewBinding

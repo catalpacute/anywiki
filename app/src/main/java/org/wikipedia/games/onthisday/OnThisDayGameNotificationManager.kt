@@ -1,4 +1,4 @@
-package org.wikipedia.games.onthisday
+﻿package org.wikipedia.games.onthisday
 
 import android.app.Activity
 import android.app.AlarmManager
@@ -7,7 +7,6 @@ import android.content.Context
 import android.content.Intent
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.wikipedia.Constants
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.games.WikiGames
@@ -17,6 +16,7 @@ import org.wikipedia.notifications.NotificationPollBroadcastReceiver.Companion.A
 import org.wikipedia.notifications.NotificationPresenter
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.FeedbackUtil
+import work.czzzz.anywiki.R
 
 enum class OnThisDayGameNotificationState {
     NO_INTERACTED,

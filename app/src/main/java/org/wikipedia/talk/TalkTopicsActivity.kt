@@ -1,4 +1,4 @@
-package org.wikipedia.talk
+﻿package org.wikipedia.talk
 
 import android.content.Context
 import android.content.Intent
@@ -24,13 +24,9 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource.TALK_TOPICS_ACTIVITY
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.auth.AccountUtil
-import org.wikipedia.databinding.ActivityTalkTopicsBinding
-import org.wikipedia.databinding.ItemTalkTopicBinding
-import org.wikipedia.databinding.ViewTalkTopicsHeaderBinding
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.discussiontools.ThreadItem
 import org.wikipedia.dataclient.okhttp.HttpStatusException
@@ -67,6 +63,10 @@ import org.wikipedia.views.ViewUtil
 import org.wikipedia.watchlist.WatchlistExpiry
 import org.wikipedia.watchlist.WatchlistExpiryDialog
 import org.wikipedia.watchlist.WatchlistViewModel
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.ActivityTalkTopicsBinding
+import work.czzzz.anywiki.databinding.ItemTalkTopicBinding
+import work.czzzz.anywiki.databinding.ViewTalkTopicsHeaderBinding
 
 class TalkTopicsActivity : BaseActivity(), WatchlistExpiryDialog.Callback {
     private lateinit var binding: ActivityTalkTopicsBinding

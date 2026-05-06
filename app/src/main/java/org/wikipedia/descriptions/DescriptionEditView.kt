@@ -1,4 +1,4 @@
-package org.wikipedia.descriptions
+﻿package org.wikipedia.descriptions
 
 import android.app.Activity
 import android.content.Context
@@ -16,11 +16,8 @@ import androidx.core.view.isVisible
 import androidx.core.widget.ImageViewCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
-import org.wikipedia.R
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.MachineGeneratedArticleDescriptionsAnalyticsHelper
-import org.wikipedia.databinding.GroupCaptchaBinding
-import org.wikipedia.databinding.ViewDescriptionEditBinding
 import org.wikipedia.extensions.setLayoutDirectionByLang
 import org.wikipedia.language.LanguageUtil
 import org.wikipedia.mlkit.MlKitLanguageDetector
@@ -34,6 +31,9 @@ import org.wikipedia.util.ResourceUtil
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.views.SuggestedArticleDescriptionsDialog
+import work.czzzz.anywiki.R
+import work.czzzz.anywiki.databinding.GroupCaptchaBinding
+import work.czzzz.anywiki.databinding.ViewDescriptionEditBinding
 import java.util.Locale
 
 class DescriptionEditView(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs), MlKitLanguageDetector.Callback {

@@ -1,8 +1,8 @@
-package org.wikipedia.readinglist
+﻿package org.wikipedia.readinglist
 
 import android.app.Activity
-import org.wikipedia.R
 import org.wikipedia.views.TextInputDialog
+import work.czzzz.anywiki.R
 
 object ReadingListTitleDialog {
     interface Callback {

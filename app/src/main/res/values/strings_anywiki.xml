@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="anywiki_app_name">AnyWiki Reader</string>
+    <string name="anywiki_error_invalid_url">Please enter a valid site URL.</string>
+    <string name="anywiki_error_not_mediawiki">This site does not look like a readable MediaWiki instance.</string>
+    <string name="anywiki_error_api_unreachable">Cannot reach the wiki API. Check the URL and network.</string>
+    <string name="anywiki_error_api_disabled">This wiki API is disabled or access is denied.</string>
+    <string name="anywiki_error_network_offline">Network appears offline. Please try again.</string>
+    <string name="anywiki_error_search_failed">Search failed. Please retry later.</string>
+    <string name="anywiki_error_article_fetch_failed">Article fetch failed. Fallback to original page is enabled.</string>
+    <string name="anywiki_error_select_wiki_first">Please select a wiki source first.</string>
+    <string name="anywiki_error_source_missing">The source of this saved article has been removed.</string>
+    <string name="anywiki_message_wiki_exists">This wiki source already exists.</string>
+    <string name="anywiki_message_wiki_added">Source added: %1$s</string>
+    <string name="anywiki_message_wiki_removed">Source removed.</string>
+    <string name="anywiki_message_active_source_changed">Active source changed.</string>
+</resources>

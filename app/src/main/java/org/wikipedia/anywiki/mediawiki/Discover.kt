@@ -21,15 +21,24 @@ object MediaWikiDiscover {
                 val general = result.getOrThrow()
                 val siteName = general.sitename?.takeIf { it.isNotBlank() } ?: normalized.host
                 val articlePath = general.articlepath?.takeIf { it.contains("\$1") } ?: "/wiki/\$1"
+                val mainPageTitle = general.mainpage?.takeIf { it.isNotBlank() } ?: "Main Page"
+                val restProbe = client.probeRestEndpoints(
+                    origin = normalized.origin,
+                    pageTitle = mainPageTitle
+                )
                 return DiscoveryResult.Success(
                     WikiSiteConfig(
                         id = UUID.randomUUID().toString(),
-                        siteName = siteName,
+                        displayName = siteName,
                         baseUrl = normalized.baseUrl,
-                        origin = normalized.origin,
                         apiUrl = apiUrl,
                         articlePath = articlePath,
-                        logoUrl = resolveLogoUrl(normalized, general.logo)
+                        mainPageTitle = mainPageTitle,
+                        logoUrl = resolveLogoUrl(normalized, general.logo),
+                        supportsLangCode = false,
+                        restBaseUrl = restProbe.restBaseUrl,
+                        supportsRestSummary = restProbe.supportsSummary,
+                        supportsMobileHtml = restProbe.supportsMobileHtml
                     )
                 )
             }
@@ -51,7 +60,7 @@ object MediaWikiDiscover {
         }
     }
 
-    internal fun candidateApiUrls(url: NormalizedWikiUrl): List<String> {
+    fun candidateApiUrls(url: NormalizedWikiUrl): List<String> {
         val base = url.baseUrl.trimEnd('/')
         val origin = url.origin.trimEnd('/')
         return listOf(
@@ -62,7 +71,7 @@ object MediaWikiDiscover {
         ).distinct()
     }
 
-    internal fun normalizeBaseUrl(input: String): NormalizedWikiUrl? {
+    fun normalizeBaseUrl(input: String): NormalizedWikiUrl? {
         val trimmed = input.trim()
         if (trimmed.isEmpty()) {
             return null

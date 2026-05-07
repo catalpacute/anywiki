@@ -91,7 +91,7 @@
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.Splash"
             android:label="@string/anywiki_app_name"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="org.wikipedia.main.MainActivity"
             android:windowSoftInputMode="adjustResize"
@@ -99,7 +99,7 @@
             android:exported="true" />
         <activity-alias
             android:name=".DefaultIcon"
-            android:targetActivity="org.wikipedia.anywiki.AnyWikiReaderActivity"
+            android:targetActivity="org.wikipedia.main.MainActivity"
             android:icon="@mipmap/launcher"
             android:label="@string/anywiki_app_name"
             android:exported="true">
@@ -111,7 +111,7 @@
         </activity-alias>
         <activity-alias
             android:name=".YIR25Icon"
-            android:targetActivity="org.wikipedia.anywiki.AnyWikiReaderActivity"
+            android:targetActivity="org.wikipedia.main.MainActivity"
             android:icon="@mipmap/launcher_yir25"
             android:label="@string/anywiki_app_name"
             android:exported="true"
@@ -151,6 +151,9 @@
         </activity>
         <activity
             android:name="org.wikipedia.settings.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
+        <activity
+            android:name="org.wikipedia.settings.WikiSourcesActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
             android:name="org.wikipedia.settings.dev.DeveloperSettingsActivity"

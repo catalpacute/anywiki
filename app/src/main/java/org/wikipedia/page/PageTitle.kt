@@ -8,7 +8,6 @@ import kotlinx.serialization.Serializable
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.language.LanguageUtil
 import org.wikipedia.staticdata.ContributionsNameData
-import org.wikipedia.staticdata.MainPageNameData
 import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import java.util.*
@@ -72,7 +71,7 @@ data class PageTitle(
 
     val isMainPage: Boolean
         get() {
-            val mainPageTitle = MainPageNameData.valueFor(wikiSite.languageCode)
+            val mainPageTitle = wikiSite.mainPageTitle()
             return mainPageTitle == displayText
         }
 
@@ -82,7 +81,7 @@ data class PageTitle(
         }
 
     val uri: String
-        get() = getUriForDomain(wikiSite.authority())
+        get() = wikiSite.articleUrl(prefixedText, fragment)
 
     /**
      * Notes on the `namespace` field:
@@ -128,7 +127,7 @@ data class PageTitle(
     constructor(title: String?, wiki: WikiSite, thumbUrl: String? = null) :
             this(null, wiki, title.orEmpty(), null, thumbUrl, null, null, null) {
         // FIXME: Does not handle mainspace articles with a colon in the title well at all
-        var text = title.orEmpty().ifEmpty { MainPageNameData.valueFor(wiki.languageCode) }
+        var text = title.orEmpty().ifEmpty { wiki.mainPageTitle() }
 
         // Split off any fragment (#...) from the title
         var parts = text.split("#".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
@@ -177,11 +176,10 @@ data class PageTitle(
 
     fun getWebApiUrl(fragment: String?): String {
         return String.format(
-            "%1\$s://%2\$s/w/index.php?title=%3\$s&%4\$s",
-            wikiSite.scheme(),
-            wikiSite.authority(),
+            "%1\$s?title=%2\$s&%3\$s",
+            wikiSite.url("index.php"),
             UriUtil.encodeURL(prefixedText),
-            fragment
+            fragment.orEmpty()
         )
     }
 
@@ -189,27 +187,18 @@ data class PageTitle(
         return prefixedText
     }
 
-    private fun getUriForDomain(domain: String): String {
-        return String.format(
-            "%1\$s://%2\$s/%3\$s/%4\$s%5\$s",
-            wikiSite.scheme(),
-            domain,
-            if (LanguageUtil.isChineseVariant(domain)) wikiSite.languageCode else "wiki",
-            UriUtil.encodeURL(prefixedText),
-            if (!fragment.isNullOrEmpty()) "#" + UriUtil.encodeURL(fragment!!) else ""
-        )
-    }
-
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is PageTitle) return false
         return other.prefixedText == prefixedText &&
                 other.namespace == namespace &&
-                other.wikiSite.languageCode == wikiSite.languageCode
+                other.wikiSite.languageCode == wikiSite.languageCode &&
+                other.wikiSite.url() == wikiSite.url()
     }
 
     override fun hashCode(): Int {
         var result = _namespace?.hashCode() ?: 0
+        result = 31 * result + wikiSite.url().hashCode()
         result = 31 * result + wikiSite.languageCode.hashCode()
         result = 31 * result + _text.hashCode()
         result = 31 * result + (fragment?.hashCode() ?: 0)
@@ -228,11 +217,15 @@ data class PageTitle(
         }
 
         fun titleForInternalLink(internalLink: String?, wiki: WikiSite): PageTitle {
-            // Strip the /wiki/ from the href
-            return PageTitle(UriUtil.removeInternalLinkPrefix(internalLink.orEmpty()), wiki)
+            return PageTitle(UriUtil.removeInternalLinkPrefix(internalLink.orEmpty(), wiki), wiki)
         }
 
         fun titleForUri(uri: Uri, wiki: WikiSite): PageTitle {
+            val queryTitle = uri.getQueryParameter("title")
+            if (!queryTitle.isNullOrBlank()) {
+                val fullTitle = if (uri.fragment.isNullOrBlank()) queryTitle else "$queryTitle#${uri.fragment}"
+                return PageTitle(fullTitle, wiki)
+            }
             var path = uri.path
             if (!uri.fragment.isNullOrEmpty()) {
                 path += "#" + uri.fragment

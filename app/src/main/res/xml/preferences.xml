@@ -7,6 +7,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/preferences_general_heading">
         <org.wikipedia.settings.PreferenceMultiLine
+            android:key="@string/preference_key_anywiki_sources_json"
+            android:title="@string/anywiki_settings_sources_title"
+            android:summary="@string/anywiki_settings_sources_summary" />
+        <org.wikipedia.settings.PreferenceMultiLine
                 android:key="@string/preference_key_language"
                 android:title="@string/preference_title_language">
         </org.wikipedia.settings.PreferenceMultiLine>

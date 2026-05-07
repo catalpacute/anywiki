@@ -198,10 +198,11 @@ class SavedPageSyncService(context: Context, params: WorkerParameters) : Corouti
                 if (!summaryResponse.thumbnailUrl.isNullOrEmpty()) {
                     page.thumbUrl = UriUtil.resolveProtocolRelativeUrl(pageTitle.wikiSite, summaryResponse.thumbnailUrl.orEmpty())
                     val existingPageImage = AppDatabase.instance.pageImagesDao()
-                        .findItemsBy(pageTitle.wikiSite.languageCode, pageTitle.namespace, pageTitle.prefixedText)
+                        .findItemsBy(pageTitle.wikiSite.url(), pageTitle.wikiSite.languageCode, pageTitle.namespace, pageTitle.prefixedText)
                         .firstOrNull()
 
                     AppDatabase.instance.pageImagesDao().insertPageImage(PageImage(
+                        pageTitle.wikiSite.url(),
                         pageTitle.wikiSite.languageCode,
                         pageTitle.namespace,
                         page.apiTitle,

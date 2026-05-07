@@ -8,10 +8,11 @@ import org.wikipedia.page.PageTitle
 
 @Parcelize
 @Entity(
-    primaryKeys = ["lang", "namespace", "apiTitle"],
-    indices = [Index(value = ["lang", "namespace", "apiTitle"])]
+    primaryKeys = ["siteUrl", "lang", "namespace", "apiTitle"],
+    indices = [Index(value = ["siteUrl", "lang", "namespace", "apiTitle"])]
 )
 data class PageImage(
+    val siteUrl: String,
     val lang: String,
     val namespace: String,
     val apiTitle: String,
@@ -22,6 +23,6 @@ data class PageImage(
     var geoLon: Double = 0.0
 ) : Parcelable {
 
-    constructor(title: PageTitle, imageName: String?, description: String?, geoLat: Double?, geoLon: Double?) : this(title.wikiSite.languageCode,
+    constructor(title: PageTitle, imageName: String?, description: String?, geoLat: Double?, geoLon: Double?) : this(title.wikiSite.url(), title.wikiSite.languageCode,
         title.namespace, title.text, imageName, description, 0, geoLat ?: 0.0, geoLon ?: 0.0)
 }

@@ -20,6 +20,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.WikipediaApp
+import org.wikipedia.anywiki.WikiSourceRepository
 import org.wikipedia.analytics.eventplatform.PlacesEvent
 import org.wikipedia.database.AppDatabase
 import org.wikipedia.extensions.instrument
@@ -65,7 +66,7 @@ class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.
         setSearchText("")
     }
 
-    private fun isHybridSearchEnabled(): Boolean = HybridSearchAbCTest().isHybridSearchEnabled(searchLanguageCode)
+    private fun isHybridSearchEnabled(): Boolean = false
 
     private val searchQueryListener = object : SearchView.OnQueryTextListener {
         override fun onQueryTextSubmit(queryText: String): Boolean {
@@ -184,19 +185,10 @@ class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.
     }
 
     fun setUpLanguageScroll(position: Int) {
-        var pos = position
-        searchLanguageCode = app.languageState.appLanguageCode
-        if (app.languageState.appLanguageCodes.size > 1) {
-            pos = if (app.languageState.appLanguageCodes.size > pos) pos else 0
-            binding.searchLanguageScrollViewContainer.visibility = View.VISIBLE
-            binding.searchLanguageScrollView.setUpLanguageScrollTabData(app.languageState.appLanguageCodes, pos, this)
-            binding.searchLangButton.visibility = View.GONE
-        } else {
-            binding.searchLanguageScrollViewContainer.visibility = View.GONE
-            binding.searchLangButton.visibility = View.VISIBLE
-            initLangButton()
-            recentSearchesFragment.reloadRecentSearches()
-        }
+        searchLanguageCode = WikiSourceRepository.getActiveWikiSite().languageCode.ifBlank { app.languageState.appLanguageCode }
+        binding.searchLanguageScrollViewContainer.visibility = View.GONE
+        binding.searchLangButton.visibility = View.GONE
+        recentSearchesFragment.reloadRecentSearches()
     }
 
     override fun onDestroyView() {
@@ -267,8 +259,7 @@ class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.
     }
 
     private fun onLangButtonClick() {
-        langBtnClicked = true
-        requestAddLanguageLauncher.launch(WikipediaLanguagesActivity.newIntent(requireActivity(), InvokeSource.SEARCH))
+        langBtnClicked = false
     }
 
     private fun startSearch(term: String?, force: Boolean, resetHybridSearch: Boolean = false) {
@@ -353,7 +344,7 @@ class SearchFragment : Fragment(), SearchResultCallback, RecentSearchesFragment.
                     getString(R.string.hybrid_search_article_search_hint, StringUtil.fromHtml(articleTitle))
                 }
             } else {
-                getString(R.string.search_hint)
+                getString(R.string.anywiki_search_hint_generic)
             }
 
         // remove focus line from search plate

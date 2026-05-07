@@ -16,6 +16,12 @@ class MediaWikiClient(
     private val httpClient: OkHttpClient = defaultClient(),
     private val json: Json = Json { ignoreUnknownKeys = true }
 ) {
+    data class RestProbeResult(
+        val restBaseUrl: String? = null,
+        val supportsSummary: Boolean = false,
+        val supportsMobileHtml: Boolean = false
+    )
+
     suspend fun fetchSiteInfo(apiUrl: String): Result<SiteGeneral> = runCatching {
         val response = request<SiteInfoResponse>(
             apiUrl = apiUrl,
@@ -77,6 +83,32 @@ class MediaWikiClient(
         )
     }
 
+    suspend fun probeRestEndpoints(origin: String, pageTitle: String): RestProbeResult = withContext(Dispatchers.IO) {
+        val candidates = listOf(
+            "${origin.trimEnd('/')}/api/rest_v1"
+        )
+
+        candidates.forEach { restBaseUrl ->
+            val summaryAvailable = runCatching {
+                requestStatusCode("$restBaseUrl/page/summary/${encodePathSegment(pageTitle)}")
+            }.getOrDefault(-1)
+            if (summaryAvailable in 200..299) {
+                val mobileHtmlAvailable = runCatching {
+                    requestStatusCode(
+                        "$restBaseUrl/${RestServicePath.MOBILE_HTML}${encodePathSegment(pageTitle)}",
+                        accept = RestServicePath.MOBILE_HTML_ACCEPT
+                    )
+                }.getOrDefault(-1) in 200..299
+                return@withContext RestProbeResult(
+                    restBaseUrl = restBaseUrl,
+                    supportsSummary = true,
+                    supportsMobileHtml = mobileHtmlAvailable
+                )
+            }
+        }
+        RestProbeResult()
+    }
+
     fun buildActionUrl(apiUrl: String, params: Map<String, String>): String {
         val parsed = apiUrl.toHttpUrlOrNull() ?: throw IllegalArgumentException("Invalid API URL: $apiUrl")
         val builder = parsed.newBuilder()
@@ -93,8 +125,7 @@ class MediaWikiClient(
     }
 
     fun buildArticleUrl(site: WikiSiteConfig, title: String): String {
-        val encodedTitle = URLEncoder.encode(title.replace(' ', '_'), StandardCharsets.UTF_8)
-            .replace("+", "%20")
+        val encodedTitle = encodePathSegment(title.replace(' ', '_'))
         val resolvedPath = site.articlePath.replace("\$1", encodedTitle)
         return if (resolvedPath.startsWith("http://") || resolvedPath.startsWith("https://")) {
             resolvedPath
@@ -120,6 +151,22 @@ class MediaWikiClient(
         }
     }
 
+    private fun encodePathSegment(value: String): String {
+        return URLEncoder.encode(value, StandardCharsets.UTF_8).replace("+", "%20")
+    }
+
+    private fun requestStatusCode(url: String, accept: String? = null): Int {
+        val requestBuilder = Request.Builder()
+            .url(url)
+            .header("User-Agent", USER_AGENT)
+        if (!accept.isNullOrBlank()) {
+            requestBuilder.header("Accept", accept)
+        }
+        httpClient.newCall(requestBuilder.build()).execute().use { response ->
+            return response.code
+        }
+    }
+
     companion object {
         const val USER_AGENT = "AnyWikiReader/0.1 contact: dev@example.com"
 
@@ -129,6 +176,11 @@ class MediaWikiClient(
             .callTimeout(25, TimeUnit.SECONDS)
             .build()
     }
+}
+
+private object RestServicePath {
+    const val MOBILE_HTML = "page/mobile-html/"
+    const val MOBILE_HTML_ACCEPT = "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML/1.2.1\""
 }
 
 class MediaWikiApiException(val code: String?, override val message: String) : RuntimeException(message)

@@ -4,6 +4,7 @@ import java.util.Date
 
 data class HistoryEntryWithImage(
     val authority: String,
+    val siteUrl: String?,
     val lang: String,
     val apiTitle: String,
     val displayTitle: String,

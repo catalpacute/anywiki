@@ -8,6 +8,8 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import org.wikipedia.WikipediaApp
 import org.wikipedia.analytics.eventplatform.ArticleLinkPreviewInteractionEvent
+import org.wikipedia.anywiki.WikiSourceRepository
+import org.wikipedia.anywiki.mediawiki.MediaWikiClient
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.bridge.CommunicationBridge
 import org.wikipedia.bridge.JavaScriptActionHandler
@@ -24,6 +26,7 @@ import org.wikipedia.page.tabs.Tab
 import org.wikipedia.settings.Prefs
 import org.wikipedia.staticdata.UserTalkAliasData
 import org.wikipedia.util.DateUtil
+import org.wikipedia.util.StringUtil
 import org.wikipedia.util.UriUtil
 import org.wikipedia.util.log.L
 import org.wikipedia.views.ObservableWebView
@@ -143,11 +146,16 @@ class PageFragmentLoadState(private var model: PageViewModel,
                     }
 
                     val pageSummaryRequest = async {
-                        ServiceFactory.getRest(title.wikiSite).getSummaryResponse(title.prefixedText, cacheControl = model.cacheControl.toString(),
-                            saveHeader = if (model.isInReadingList) OfflineCacheInterceptor.SAVE_HEADER_SAVE else null,
-                            langHeader = title.wikiSite.languageCode, titleHeader = UriUtil.encodeURL(title.prefixedText))
+                        if (title.wikiSite.supportsRestSummary()) {
+                            ServiceFactory.getRest(title.wikiSite).getSummaryResponse(title.prefixedText, cacheControl = model.cacheControl.toString(),
+                                saveHeader = if (model.isInReadingList) OfflineCacheInterceptor.SAVE_HEADER_SAVE else null,
+                                langHeader = title.wikiSite.languageCode, titleHeader = UriUtil.encodeURL(title.prefixedText))
+                        } else {
+                            null
+                        }
                     }
-                    val makeWatchRequest = WikipediaApp.instance.isOnline && AccountUtil.isLoggedIn
+                    val supportsLegacyMwApiExtras = title.wikiSite.authority().endsWith(org.wikipedia.dataclient.WikiSite.BASE_DOMAIN)
+                    val makeWatchRequest = WikipediaApp.instance.isOnline && AccountUtil.isLoggedIn && supportsLegacyMwApiExtras
                     val watchedRequest = async {
                         try {
                             if (makeWatchRequest) {
@@ -165,7 +173,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
                     }
                     val categoriesRequest = async {
                         try {
-                            if (!makeWatchRequest && WikipediaApp.instance.isOnline) {
+                            if (!makeWatchRequest && WikipediaApp.instance.isOnline && supportsLegacyMwApiExtras) {
                                 ServiceFactory.get(title.wikiSite).getCategoriesProps(title.text)
                             } else {
                                 MwQueryResponse()
@@ -176,16 +184,25 @@ class PageFragmentLoadState(private var model: PageViewModel,
                         }
                     }
                     val pageSummaryResponse = pageSummaryRequest.await()
+                    val parseFallback = if (pageSummaryResponse?.body() == null) {
+                        loadParseFallback(title)
+                    } else {
+                        null
+                    }
                     val watchedResponse = watchedRequest.await()
                     val categoriesResponse = categoriesRequest.await()
                     val isWatched = watchedResponse.query?.firstPage()?.watched == true
                     val hasWatchlistExpiry = watchedResponse.query?.firstPage()?.hasWatchlistExpiry() == true
-                    if (pageSummaryResponse.body() == null) {
+                    if (pageSummaryResponse?.body() == null && parseFallback == null) {
                         throw RuntimeException("Summary response was invalid.")
                     }
-                    val redirectedFrom = if (pageSummaryResponse.raw().priorResponse?.isRedirect == true) model.title?.displayText else null
-                    createPageModel(pageSummaryResponse, isWatched, hasWatchlistExpiry)
-                    if (OfflineCacheInterceptor.SAVE_HEADER_SAVE == pageSummaryResponse.headers()[OfflineCacheInterceptor.SAVE_HEADER]) {
+                    val redirectedFrom = if (pageSummaryResponse?.raw()?.priorResponse?.isRedirect == true) model.title?.displayText else null
+                    if (pageSummaryResponse?.body() != null) {
+                        createPageModel(pageSummaryResponse.body()!!, pageSummaryResponse.raw().request.url.fragment, isWatched, hasWatchlistExpiry)
+                    } else {
+                        createPageModel(parseFallback!!, title.fragment, isWatched, hasWatchlistExpiry)
+                    }
+                    if (pageSummaryResponse != null && OfflineCacheInterceptor.SAVE_HEADER_SAVE == pageSummaryResponse.headers()[OfflineCacheInterceptor.SAVE_HEADER]) {
                         showPageOfflineMessage(pageSummaryResponse.headers().getInstant("date"))
                     }
 
@@ -231,21 +248,36 @@ class PageFragmentLoadState(private var model: PageViewModel,
             Toast.LENGTH_LONG).show()
     }
 
-    private fun createPageModel(response: Response<PageSummary>,
+    private suspend fun loadParseFallback(title: PageTitle): PageSummary? {
+        val source = WikiSourceRepository.findMatchingSource(title.wikiSite.uri) ?: return null
+        val parsed = MediaWikiClient().parseArticle(source, title.prefixedText).getOrNull() ?: return null
+        val displayTitle = StringUtil.fromHtml(parsed.displayTitle).toString()
+        return PageSummary(
+            namespace = PageSummary.NamespaceContainer(title.namespace().code(), title.namespace),
+            titles = PageSummary.Titles(parsed.title, displayTitle),
+            lang = title.wikiSite.languageCode,
+            description = title.description,
+            extract = title.extract,
+            extractHtml = parsed.html,
+            type = if (parsed.title == title.wikiSite.mainPageTitle()) PageSummary.TYPE_MAIN_PAGE else PageSummary.TYPE_STANDARD
+        )
+    }
+
+    private fun createPageModel(pageSummary: PageSummary,
+                                requestedFragment: String?,
                                 isWatched: Boolean,
                                 hasWatchlistExpiry: Boolean) {
-        if (!fragment.isAdded || response.body() == null) {
+        if (!fragment.isAdded) {
             return
         }
-        val pageSummary = response.body()
-        val page = pageSummary?.toPage(model.title)
+        val page = pageSummary.toPage(model.title)
         model.page = page
         model.isWatched = isWatched
         model.hasWatchlistExpiry = hasWatchlistExpiry
         model.title = page?.title
         model.title?.let { title ->
-            if (!response.raw().request.url.fragment.isNullOrEmpty()) {
-                title.fragment = response.raw().request.url.fragment
+            if (!requestedFragment.isNullOrEmpty()) {
+                title.fragment = requestedFragment
             }
             if (title.description.isNullOrEmpty()) {
                 WikipediaApp.instance.appSessionEvent.noDescription()
@@ -253,7 +285,7 @@ class PageFragmentLoadState(private var model: PageViewModel,
             if (!title.isMainPage) {
                 title.displayText = page?.displayTitle.orEmpty()
             }
-            title.thumbUrl = pageSummary?.thumbnailUrl
+            title.thumbUrl = pageSummary.thumbnailUrl
             leadImagesHandler.loadLeadImage()
             fragment.requireActivity().invalidateOptionsMenu()
 
@@ -279,12 +311,12 @@ class PageFragmentLoadState(private var model: PageViewModel,
                     }
 
                     // Update metadata in the DB
-                    AppDatabase.instance.pageImagesDao().upsertForMetadata(entry, title.thumbUrl, title.description, pageSummary?.coordinates?.latitude, pageSummary?.coordinates?.longitude)
+                    AppDatabase.instance.pageImagesDao().upsertForMetadata(entry, title.thumbUrl, title.description, pageSummary.coordinates?.latitude, pageSummary.coordinates?.longitude)
                 }
 
                 // And finally, count this as a page view.
                 WikipediaApp.instance.appSessionEvent.pageViewed(entry)
-                ArticleLinkPreviewInteractionEvent(title.wikiSite.dbName(), pageSummary?.pageId ?: 0, entry.source).logNavigate()
+                ArticleLinkPreviewInteractionEvent(title.wikiSite.dbName(), pageSummary.pageId, entry.source).logNavigate()
             }
         }
     }

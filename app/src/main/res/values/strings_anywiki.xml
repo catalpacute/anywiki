@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="anywiki_app_name">AnyWiki Reader</string>
+    <string name="anywiki_nav_source_home">Sources</string>
+    <string name="anywiki_open_main_page">Open main page</string>
+    <string name="anywiki_manage_sources">Manage sources</string>
+    <string name="anywiki_recent_reads">Recent reading</string>
+    <string name="anywiki_recent_reads_empty">No recent reading for the current source yet.</string>
+    <string name="anywiki_sources_empty">No wiki sources added yet.</string>
+    <string name="anywiki_settings_sources_title">Wiki sources</string>
+    <string name="anywiki_settings_sources_summary">Add, remove, and switch MediaWiki sources.</string>
+    <string name="anywiki_source_add_title">Add wiki source</string>
+    <string name="anywiki_source_input_hint">Wiki site URL</string>
+    <string name="anywiki_source_add_action">Add source</string>
+    <string name="anywiki_source_set_active">Set active</string>
+    <string name="anywiki_source_active">Current source</string>
+    <string name="anywiki_source_remove">Remove</string>
+    <string name="anywiki_search_hint_generic">Search current source</string>
     <string name="anywiki_error_invalid_url">Please enter a valid site URL.</string>
     <string name="anywiki_error_not_mediawiki">This site does not look like a readable MediaWiki instance.</string>
     <string name="anywiki_error_api_unreachable">Cannot reach the wiki API. Check the URL and network.</string>

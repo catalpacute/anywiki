@@ -16,21 +16,15 @@ import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import org.wikipedia.Constants
 import org.wikipedia.activity.SingleFragmentActivity
-import org.wikipedia.analytics.eventplatform.ImageRecommendationsEvent
-import org.wikipedia.analytics.eventplatform.PatrollerExperienceEvent
 import org.wikipedia.dataclient.WikiSite
-import org.wikipedia.feed.FeedFragment
 import org.wikipedia.navtab.NavTab
 import org.wikipedia.onboarding.InitialOnboardingActivity
-import org.wikipedia.page.ExclusiveBottomSheetPresenter
 import org.wikipedia.page.PageActivity
 import org.wikipedia.settings.Prefs
 import org.wikipedia.util.DeviceUtil
 import org.wikipedia.util.DimenUtil
 import org.wikipedia.util.FeedbackUtil
 import org.wikipedia.util.ResourceUtil
-import org.wikipedia.widgets.readingchallenge.ReadingChallengeInstallWidgetDialog
-import org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetRepository
 import work.czzzz.anywiki.R
 import work.czzzz.anywiki.databinding.ActivityMainBinding
 
@@ -43,7 +37,7 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
     private var controlNavTabInFragment = false
     private val onboardingLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         val fragment = fragment.currentFragment
-        if (it.resultCode == InitialOnboardingActivity.RESULT_LANGUAGE_CHANGED && fragment is FeedFragment) {
+        if (it.resultCode == InitialOnboardingActivity.RESULT_LANGUAGE_CHANGED && fragment is SourceHomeFragment) {
             fragment.refresh()
         }
     }
@@ -105,7 +99,6 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
 
     override fun onTabChanged(tab: NavTab) {
         if (tab == NavTab.EXPLORE) {
-            // TODO: conditionally hide toolbar if we're looking at a full-bleed Compose feed.
             binding.mainToolbarWordmark.visibility = View.VISIBLE
             binding.mainToolbar.title = ""
             controlNavTabInFragment = false
@@ -113,16 +106,6 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
             if (tab == NavTab.SEARCH && Prefs.showSearchTabTooltip) {
                 FeedbackUtil.showTooltip(this, fragment.binding.mainNavTabLayout.findViewById(NavTab.SEARCH.id), getString(R.string.search_tab_tooltip), aboveOrBelow = true, autoDismiss = false)
                 Prefs.showSearchTabTooltip = false
-            }
-            if (tab == NavTab.EDITS) {
-                ImageRecommendationsEvent.logImpression("suggested_edit_dialog")
-                PatrollerExperienceEvent.logImpression("suggested_edits_dialog")
-
-                if (ReadingChallengeWidgetRepository.shouldShowWidgetInstallDialog()) {
-                    ExclusiveBottomSheetPresenter.show(supportFragmentManager,
-                        ReadingChallengeInstallWidgetDialog()
-                    )
-                }
             }
             binding.mainToolbarWordmark.visibility = View.GONE
             binding.mainToolbar.setTitle(tab.text)
@@ -165,9 +148,6 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
-        if (intent.hasExtra(ReadingChallengeWidgetRepository.INTENT_EXTRA_READING_CHALLENGE_JOIN)) {
-            maybeShowReadingChallengePrompt()
-        }
         fragment.handleIntent(intent)
     }
 
@@ -181,10 +161,8 @@ class MainActivity : SingleFragmentActivity<MainFragment>(), MainFragment.Callba
 
     private fun handleIntent(intent: Intent) {
         if (Intent.ACTION_VIEW == intent.action && intent.data != null) {
-            // TODO: handle special cases of non-article content, e.g. shared reading lists.
             intent.data?.let {
-                if (it.authority.orEmpty().endsWith(WikiSite.BASE_DOMAIN)) {
-                    // Pass it right along to PageActivity
+                if (WikiSite.matchesUri(it) || it.authority.orEmpty().endsWith(WikiSite.BASE_DOMAIN)) {
                     val uri = it.toString().replace("wikipedia://", WikiSite.DEFAULT_SCHEME + "://").toUri()
                     startActivity(Intent(this, PageActivity::class.java)
                             .setAction(Intent.ACTION_VIEW)

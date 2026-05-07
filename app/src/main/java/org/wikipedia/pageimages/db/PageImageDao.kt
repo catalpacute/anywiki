@@ -15,29 +15,29 @@ interface PageImageDao {
     @Query("SELECT * FROM PageImage")
     suspend fun getAllPageImages(): List<PageImage>
 
-    @Query("SELECT * FROM PageImage WHERE lang = :lang AND namespace = :namespace AND apiTitle = :apiTitle")
-    suspend fun findItemsBy(lang: String, namespace: String, apiTitle: String): List<PageImage>
+    @Query("SELECT * FROM PageImage WHERE siteUrl = :siteUrl AND lang = :lang AND namespace = :namespace AND apiTitle = :apiTitle")
+    suspend fun findItemsBy(siteUrl: String, lang: String, namespace: String, apiTitle: String): List<PageImage>
 
     @Query("DELETE FROM PageImage")
     suspend fun deleteAll()
 
     @Transaction
     suspend fun upsertForTimeSpent(entry: HistoryEntry, timeSpent: Int) {
-        val items = findItemsBy(entry.lang, entry.namespace, entry.apiTitle)
+        val items = findItemsBy(entry.authority, entry.lang, entry.namespace, entry.apiTitle)
         if (items.isNotEmpty()) {
             items.forEach {
                 it.timeSpentSec += timeSpent
                 insertPageImage(it)
             }
         } else {
-            insertPageImage(PageImage(entry.lang, entry.namespace, entry.apiTitle, entry.title.thumbUrl,
+            insertPageImage(PageImage(entry.authority, entry.lang, entry.namespace, entry.apiTitle, entry.title.thumbUrl,
                 entry.title.description, timeSpent))
         }
     }
 
     @Transaction
     suspend fun upsertForMetadata(entry: HistoryEntry, imageName: String?, description: String?, geoLat: Double?, geoLon: Double?) {
-        val items = findItemsBy(entry.lang, entry.namespace, entry.apiTitle)
+        val items = findItemsBy(entry.authority, entry.lang, entry.namespace, entry.apiTitle)
         if (items.isNotEmpty()) {
             items.forEach {
                 it.imageName = imageName
@@ -47,7 +47,7 @@ interface PageImageDao {
                 insertPageImage(it)
             }
         } else {
-            insertPageImage(PageImage(entry.lang, entry.namespace, entry.apiTitle, imageName, description,
+            insertPageImage(PageImage(entry.authority, entry.lang, entry.namespace, entry.apiTitle, imageName, description,
                 0, geoLat ?: 0.0, geoLon ?: 0.0))
         }
     }

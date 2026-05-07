@@ -422,20 +422,18 @@ class GalleryActivity : BaseActivity(), LinkPreviewDialog.LoadPageCallback, Gall
     private val linkMovementMethod = LinkMovementMethodExt { urlStr ->
         L.v("Link clicked was $urlStr")
         var url = UriUtil.resolveProtocolRelativeUrl(urlStr)
-        if (url.startsWith("/wiki/")) {
+        val articlePrefix = WikipediaApp.instance.wikiSite.articlePath().substringBefore("\$1")
+        if (url.startsWith(articlePrefix)) {
             val title = PageTitle.titleForInternalLink(url, WikipediaApp.instance.wikiSite)
             showLinkPreview(title)
         } else {
             val uri = url.toUri()
-            val authority = uri.authority
-            if (authority != null && WikiSite.supportedAuthority(authority) && uri.path?.startsWith("/wiki/") == true) {
+            if (WikiSite.matchesUri(uri)) {
                 val title = PageTitle.titleForUri(uri, WikiSite(uri))
                 showLinkPreview(title)
             } else {
-                // if it's a /w/ URI, turn it into a full URI and go external
-                if (url.startsWith("/w/")) {
-                    url = String.format("%1\$s://%2\$s", WikipediaApp.instance.wikiSite.scheme(),
-                        WikipediaApp.instance.wikiSite.authority()) + url
+                if (url.startsWith("/")) {
+                    url = WikipediaApp.instance.wikiSite.origin() + url
                 }
                 UriUtil.handleExternalLink(this@GalleryActivity, url.toUri())
             }

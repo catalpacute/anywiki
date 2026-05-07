@@ -23,6 +23,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 import org.wikipedia.Constants
 import org.wikipedia.WikipediaApp
+import org.wikipedia.anywiki.WikiSourceRepository
 import org.wikipedia.dataclient.ServiceFactory
 import org.wikipedia.dataclient.WikiSite
 import org.wikipedia.dataclient.mwapi.MwQueryResponse
@@ -47,7 +48,7 @@ class SearchResultsViewModel : ViewModel() {
     private val _lexicalResultsForLogging = MutableStateFlow<List<SearchResult>?>(null)
     var lexicalResultsForLogging = _lexicalResultsForLogging.asStateFlow()
 
-    private var _languageCode = MutableStateFlow(WikipediaApp.instance.languageState.appLanguageCode)
+    private var _languageCode = MutableStateFlow(WikiSourceRepository.getActiveWikiSite().languageCode.ifBlank { WikipediaApp.instance.appOrSystemLanguageCode })
     var languageCode = _languageCode.asStateFlow()
 
     private var _hybridSearchResultState = MutableStateFlow<UiState<List<SearchResult>>>(UiState.Loading)
@@ -58,7 +59,7 @@ class SearchResultsViewModel : ViewModel() {
     val getTestGroup get() = HybridSearchAbCTest().getGroupName()
 
     private val semanticSearchService: SemanticSearchService = ServiceFactory[WikiSite(SemanticSearchService.BASE_URL), SemanticSearchService.BASE_URL, SemanticSearchService::class.java]
-    val isHybridSearchExperimentOn get() = HybridSearchAbCTest().isHybridSearchEnabled(languageCode.value)
+    val isHybridSearchExperimentOn get() = false
 
     private var lastXSearchIdPrefix = ""
     private var lastXSearchIdFullText = ""
@@ -112,7 +113,7 @@ class SearchResultsViewModel : ViewModel() {
                 return@launch
             }
 
-            val wikiSite = WikiSite.forLanguageCode(lang)
+            val wikiSite = WikiSourceRepository.getActiveWikiSite()
 
             val lexicalDeferred = async {
                 runCatching {
@@ -229,7 +230,7 @@ class SearchResultsViewModel : ViewModel() {
 
         override suspend fun load(params: LoadParams<Int>): LoadResult<Int, SearchResult> {
             return try {
-                if (searchTerm.isNullOrEmpty() || languageCode.isNullOrEmpty()) {
+                if (searchTerm.isNullOrEmpty()) {
                     return LoadResult.Page(emptyList(), null, null)
                 }
 

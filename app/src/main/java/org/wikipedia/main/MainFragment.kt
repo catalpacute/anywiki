@@ -37,8 +37,6 @@ import org.wikipedia.Constants.InvokeSource
 import org.wikipedia.WikipediaApp
 import org.wikipedia.activity.BaseActivity
 import org.wikipedia.activity.FragmentUtil.getCallback
-import org.wikipedia.activitytab.ActivityTabFragment
-import org.wikipedia.activitytab.ActivityTabOnboardingActivity
 import org.wikipedia.analytics.eventplatform.ReadingListsAnalyticsHelper
 import org.wikipedia.analytics.eventplatform.WikiGamesEvent
 import org.wikipedia.auth.AccountUtil
@@ -49,7 +47,6 @@ import org.wikipedia.events.ImportReadingListsEvent
 import org.wikipedia.events.LoggedOutEvent
 import org.wikipedia.events.LoggedOutInBackgroundEvent
 import org.wikipedia.events.NewRecommendedReadingListEvent
-import org.wikipedia.feed.FeedFragment
 import org.wikipedia.feed.image.FeaturedImage
 import org.wikipedia.feed.image.FeaturedImageCard
 import org.wikipedia.feed.news.NewsActivity
@@ -100,7 +97,7 @@ import work.czzzz.anywiki.databinding.FragmentMainBinding
 import java.io.File
 import java.util.concurrent.TimeUnit
 
-class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.Callback, HistoryFragment.Callback, MenuNavTabDialog.Callback, ActivityTabFragment.Callback {
+class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragment.Callback, MenuNavTabDialog.Callback {
     interface Callback {
         fun onTabChanged(tab: NavTab)
         fun updateToolbarElevation(elevate: Boolean)
@@ -126,12 +123,6 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
             pendingDownloadImage?.let { download(it) }
         } else {
             FeedbackUtil.showMessage(this, R.string.gallery_save_image_write_permission_rationale)
-        }
-    }
-
-    private val activityTabOnboardingLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            onNavigateTo(NavTab.EDITS)
         }
     }
 
@@ -173,19 +164,12 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         binding.mainNavTabLayout.setOverlayDot(NavTab.READING_LISTS, shouldShowRedDotForRecommendedReadingList)
         binding.mainNavTabLayout.setOnItemSelectedListener { item ->
             navTabBackStack.clear()
-            if (item.order == NavTab.EDITS.code()) {
-                if (!Prefs.isActivityTabOnboardingShown) {
-                    activityTabOnboardingLauncher.launch(ActivityTabOnboardingActivity.newIntent(requireContext()))
-                    binding.mainNavTabLayout.setOverlayDot(NavTab.EDITS, false)
-                    return@setOnItemSelectedListener false
-                }
-            }
             if (item.order == NavTab.MORE.code()) {
                 ExclusiveBottomSheetPresenter.show(childFragmentManager, MenuNavTabDialog.newInstance())
                 return@setOnItemSelectedListener false
             }
             val fragment = currentFragment
-            if (item.order == NavTab.EXPLORE.code() && fragment is FeedFragment) {
+            if (item.order == NavTab.EXPLORE.code() && fragment is SourceHomeFragment) {
                 fragment.scrollToTop()
             }
             if (fragment is HistoryFragment && item.order == NavTab.SEARCH.code()) {
@@ -196,8 +180,6 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
             requireActivity().invalidateOptionsMenu()
             true
         }
-
-        binding.mainNavTabLayout.setOverlayDot(NavTab.EDITS, !Prefs.isActivityTabOnboardingShown)
 
         notificationButtonView = NotificationButtonView(requireActivity())
 
@@ -357,8 +339,6 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
                 !(binding.mainNavTabLayout.selectedItemId == NavTab.EXPLORE.code() &&
                         intent.getIntExtra(Constants.INTENT_EXTRA_GO_TO_MAIN_TAB, NavTab.EXPLORE.code()) == NavTab.EXPLORE.code())) {
             onNavigateTo(NavTab.of(intent.getIntExtra(Constants.INTENT_EXTRA_GO_TO_MAIN_TAB, NavTab.EXPLORE.code())))
-        } else if (intent.hasExtra(Constants.INTENT_EXTRA_GO_TO_SE_TAB)) {
-            onNavigateTo(NavTab.of(intent.getIntExtra(Constants.INTENT_EXTRA_GO_TO_SE_TAB, NavTab.EDITS.code())))
         } else if (intent.hasExtra(Constants.INTENT_EXTRA_PREVIEW_SAVED_READING_LISTS)) {
             onNavigateTo(NavTab.READING_LISTS)
         } else if (lastPageViewedWithin(1) && !intent.hasExtra(Constants.INTENT_RETURN_TO_MAIN) && WikipediaApp.instance.tabCount > 0) {
@@ -366,11 +346,11 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         }
     }
 
-    override fun onFeedSearchRequested(view: View) {
+    fun onFeedSearchRequested(view: View) {
         openSearchActivity(InvokeSource.FEED_BAR, null, view)
     }
 
-    override fun onFeedVoiceSearchRequested() {
+    fun onFeedVoiceSearchRequested() {
         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
                 .putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
         try {
@@ -380,7 +360,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         }
     }
 
-    override fun onFeedSelectPage(entry: HistoryEntry, openInNewBackgroundTab: Boolean) {
+    fun onFeedSelectPage(entry: HistoryEntry, openInNewBackgroundTab: Boolean) {
         if (openInNewBackgroundTab) {
             TabUtil.openInNewBackgroundTab(entry)
             showTabCountsAnimation = true
@@ -390,7 +370,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         }
     }
 
-    override fun onFeedSelectPageWithAnimation(entry: HistoryEntry, sharedElements: Array<Pair<View, String>>) {
+    fun onFeedSelectPageWithAnimation(entry: HistoryEntry, sharedElements: Array<Pair<View, String>>) {
         val options = ActivityOptions.makeSceneTransitionAnimation(requireActivity(), *sharedElements)
         val intent = PageActivity.newIntentForNewTab(requireContext(), entry, entry.title)
         if (sharedElements.isNotEmpty()) {
@@ -399,26 +379,26 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         startActivity(intent, if (DimenUtil.isLandscape(requireContext()) || sharedElements.isEmpty()) null else options.toBundle())
     }
 
-    override fun onFeedAddPageToList(entry: HistoryEntry, addToDefault: Boolean) {
+    fun onFeedAddPageToList(entry: HistoryEntry, addToDefault: Boolean) {
         ReadingListBehaviorsUtil.addToDefaultList(requireActivity(), entry.title, addToDefault, InvokeSource.FEED)
     }
 
-    override fun onFeedMovePageToList(sourceReadingListId: Long, entry: HistoryEntry) {
+    fun onFeedMovePageToList(sourceReadingListId: Long, entry: HistoryEntry) {
         ReadingListBehaviorsUtil.moveToList(requireActivity(), sourceReadingListId, entry.title, InvokeSource.FEED)
     }
 
-    override fun onFeedNewsItemSelected(card: NewsCard, view: NewsItemView) {
+    fun onFeedNewsItemSelected(card: NewsCard, view: NewsItemView) {
         val options = ActivityOptions.makeSceneTransitionAnimation(requireActivity(), view.imageView, getString(R.string.transition_news_item))
         view.newsItem?.let {
             startActivity(NewsActivity.newIntent(requireActivity(), it, card.wikiSite()), if (it.thumb() != null) options.toBundle() else null)
         }
     }
 
-    override fun onFeedSeCardFooterClicked() {
+    fun onFeedSeCardFooterClicked() {
         startActivity(SuggestedEditsTasksActivity.newIntent(requireActivity()))
     }
 
-    override fun onFeedShareImage(card: FeaturedImageCard) {
+    fun onFeedShareImage(card: FeaturedImageCard) {
         val thumbUrl = card.baseImage().thumbnailUrl
         val fullSizeUrl = card.baseImage().original.source
         ImageService.loadImage(requireContext(), thumbUrl, onSuccess = { bitmap ->
@@ -430,7 +410,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         })
     }
 
-    override fun onFeedDownloadImage(image: FeaturedImage) {
+    fun onFeedDownloadImage(image: FeaturedImage) {
         pendingDownloadImage = image
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ||
             ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
@@ -440,7 +420,7 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         }
     }
 
-    override fun onFeaturedImageSelected(card: FeaturedImageCard) {
+    fun onFeaturedImageSelected(card: FeaturedImageCard) {
         startActivity(FilePageActivity.newIntent(requireActivity(), PageTitle(card.filename(), card.wikiSite())))
     }
 
@@ -453,14 +433,14 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         callback()?.updateToolbarElevation(elevate)
     }
 
-    override fun onWikiGamesCardFooterClicked() {
+    fun onWikiGamesCardFooterClicked() {
         WikiGamesEvent.submit(action = "more_click", "game_feed")
         startActivity(GamesHubActivity.newIntent(requireActivity()))
     }
 
     fun requestUpdateToolbarElevation() {
         val fragment = currentFragment
-        updateToolbarElevation(fragment is FeedFragment && fragment.shouldElevateToolbar())
+        updateToolbarElevation(fragment !is SourceHomeFragment)
     }
 
     override fun onLoadPage(entry: HistoryEntry) {
@@ -526,8 +506,8 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
 
     fun onGoOffline() {
         val fragment = currentFragment
-        if (fragment is FeedFragment) {
-            fragment.onGoOffline()
+        if (fragment is SourceHomeFragment) {
+            fragment.refresh()
         } else if (fragment is HistoryFragment) {
             fragment.refresh()
         }
@@ -535,8 +515,8 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
 
     fun onGoOnline() {
         val fragment = currentFragment
-        if (fragment is FeedFragment) {
-            fragment.onGoOnline()
+        if (fragment is SourceHomeFragment) {
+            fragment.refresh()
         } else if (fragment is HistoryFragment) {
             fragment.refresh()
         }
@@ -576,18 +556,14 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
 
     private fun refreshContents() {
         when (val fragment = currentFragment) {
-            is FeedFragment -> fragment.refresh()
+            is SourceHomeFragment -> fragment.refresh()
             is ReadingListsFragment -> fragment.updateLists()
             is HistoryFragment -> fragment.refresh()
-            is SuggestedEditsTasksFragment -> fragment.refreshContents()
         }
     }
 
     private fun updateFeedHiddenCards() {
-        val fragment = currentFragment
-        if (fragment is FeedFragment) {
-            fragment.updateHiddenCards()
-        }
+        // Source home has no feed customization.
     }
 
     private fun maybeShowImportReadingListsNewInstallDialog() {
@@ -618,12 +594,8 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, FeedFragment.
         return getCallback(this, Callback::class.java)
     }
 
-    override fun onNavigateTo(navTab: NavTab) {
-        val lastNavTab = NavTab.entries.find { binding.mainNavTabLayout.selectedItemId == binding.mainNavTabLayout.menu[it.code()].itemId }
+    fun onNavigateTo(navTab: NavTab) {
         binding.mainNavTabLayout.selectedItemId = binding.mainNavTabLayout.menu[navTab.code()].itemId
-        if (lastNavTab == NavTab.EDITS && navTab != NavTab.EDITS) {
-            navTabBackStack.add(NavTab.EDITS)
-        }
     }
 
     companion object {

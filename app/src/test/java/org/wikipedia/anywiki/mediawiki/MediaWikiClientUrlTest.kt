@@ -27,9 +27,8 @@ class MediaWikiClientUrlTest {
     fun buildArticleUrl_usesArticlePathTemplate() {
         val site = WikiSiteConfig(
             id = "id",
-            siteName = "site",
+            displayName = "site",
             baseUrl = "https://example.com/wiki",
-            origin = "https://example.com",
             apiUrl = "https://example.com/api.php",
             articlePath = "/custom/\$1"
         )

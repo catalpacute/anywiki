@@ -85,11 +85,11 @@ object UriUtil {
 
         // also handle images like /w/extensions/ImageMap/desc-20.png?15600 on Estados Unidos
         // or like /api/rest_v1/page/graph/png/API/0/019dd76b5f4887040716e65de53802c5033cb40c.png
-        return if (ret.startsWith("./") || ret.startsWith("/w/") ||
-                ret.startsWith("/wiki/") || ret.startsWith("/api/"))
-            wiki.uri.buildUpon().appendEncodedPath(ret.replaceFirst("/".toRegex(), ""))
-                    .build().toString()
-        else ret
+        return when {
+            ret.startsWith("./") -> wiki.articleUrl(ret.removePrefix("./"))
+            ret.startsWith("/") -> wiki.origin() + ret
+            else -> ret
+        }
     }
 
     fun resolveProtocolRelativeUrl(url: String): String {
@@ -97,19 +97,14 @@ object UriUtil {
     }
 
     fun isValidPageLink(uri: Uri): Boolean {
-        return ((!uri.authority.isNullOrEmpty() &&
-                uri.authority!!.endsWith(WikiSite.BASE_DOMAIN) &&
-                !uri.path.isNullOrEmpty() &&
-                uri.path!!.matches(("^$WIKI_REGEX.*").toRegex())) &&
-                (uri.fragment == null || (uri.fragment!!.isNotEmpty() &&
-                        !uri.fragment!!.startsWith("cite"))))
+        return (WikiSite.matchesUri(uri) &&
+                (uri.fragment == null || (uri.fragment!!.isNotEmpty() && !uri.fragment!!.startsWith("cite"))))
     }
 
     fun isAppSupportedLink(uri: Uri): Boolean {
-        val supportedAuthority = uri.authority?.run { WikiSite.supportedAuthority(this) } == true
-        return (uri.path?.run { matches(("^$WIKI_REGEX.*").toRegex()) } == true ||
-                !uri.fragment.isNullOrEmpty() ||
-                !uri.getQueryParameter("title").isNullOrEmpty() && !uri.getQueryParameter("diff").isNullOrEmpty()) && supportedAuthority
+        return (WikiSite.matchesUri(uri) ||
+                !uri.getQueryParameter("title").isNullOrEmpty() && !uri.getQueryParameter("diff").isNullOrEmpty()) &&
+                (uri.path?.isNotBlank() == true || !uri.fragment.isNullOrEmpty())
     }
 
     fun handleExternalLink(context: Context, uri: Uri) {
@@ -140,8 +135,12 @@ object UriUtil {
     }
 
     /** For internal links only  */
-    fun removeInternalLinkPrefix(link: String): String {
-        return link.replaceFirst(WIKI_REGEX.toRegex(), "")
+    fun removeInternalLinkPrefix(link: String, wiki: WikiSite): String {
+        val articlePrefix = wiki.articlePath().substringBefore("\$1")
+        return when {
+            link.startsWith(articlePrefix) -> link.removePrefix(articlePrefix)
+            else -> link.replaceFirst(WIKI_REGEX.toRegex(), "")
+        }
     }
 
     /** For links that could be internal or external links  */

@@ -71,7 +71,7 @@ class GamesHubActivity : SingleFragmentActivity<GamesHubFragment>() {
                 val intent = MainActivity.newIntent(this)
                     .apply {
                         addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                        putExtra(Constants.INTENT_EXTRA_GO_TO_SE_TAB, NavTab.EDITS.code())
+                    putExtra(Constants.INTENT_EXTRA_GO_TO_MAIN_TAB, NavTab.EXPLORE.code())
                         putExtra(Constants.INTENT_EXTRA_SCROLL_TO_GAMES, primaryLangCodeSupported)
                         if (!WikipediaApp.instance.languageState.appLanguageCode.equals(fragment.viewModel.selectedLanguage, true) || !primaryLangCodeSupported) {
                             putExtra(Constants.INTENT_EXTRA_SNACKBAR_MESSAGE, getString(R.string.activity_tab_snackbar_label))

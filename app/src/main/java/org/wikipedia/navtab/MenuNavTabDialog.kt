@@ -121,6 +121,17 @@ class MenuNavTabDialog : ExtendedBottomSheetDialogFragment() {
             dismiss()
         }
 
+        binding.mainDrawerAccountContainer.isVisible = false
+        binding.mainDrawerTempAccountContainer.isVisible = false
+        binding.mainDrawerContribsContainer.isVisible = false
+        binding.mainDrawerEditContainer.isVisible = false
+        binding.mainDrawerTalkContainer.isVisible = false
+        binding.mainDrawerWatchlistContainer.isVisible = false
+        binding.mainDrawerGamesHubContainer.isVisible = false
+        binding.mainDrawerPlacesContainer.isVisible = false
+        binding.mainDrawerDonateContainer.isVisible = false
+        binding.mainDrawerYearInReviewContainer.isVisible = false
+
         updateState()
         return binding.root
     }
@@ -136,42 +147,17 @@ class MenuNavTabDialog : ExtendedBottomSheetDialogFragment() {
     }
 
     private fun updateState() {
-        if (AccountUtil.isLoggedIn) {
-            if (AccountUtil.isTemporaryAccount) {
-                binding.mainDrawerAccountAvatar.setImageResource(R.drawable.ic_login_24px)
-                ImageViewCompat.setImageTintList(binding.mainDrawerAccountAvatar, getThemedColorStateList(requireContext(), R.attr.progressive_color))
-                binding.tempAccountName.text = AccountUtil.userName
-                binding.mainDrawerAccountName.isVisible = false
-                binding.mainDrawerLoginButton.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
-                binding.mainDrawerLoginButton.text = getString(R.string.main_drawer_login)
-                binding.mainDrawerLoginButton.setTextColor(getThemedColorStateList(requireContext(), R.attr.progressive_color))
-                binding.mainDrawerLoginButton.isVisible = true
-            } else {
-                binding.mainDrawerAccountAvatar.setImageResource(R.drawable.ic_baseline_person_24)
-                ImageViewCompat.setImageTintList(binding.mainDrawerAccountAvatar, getThemedColorStateList(requireContext(), R.attr.secondary_color))
-                binding.mainDrawerAccountName.text = AccountUtil.userName
-                binding.mainDrawerAccountName.isVisible = true
-                binding.mainDrawerLoginButton.isVisible = false
-            }
-            binding.mainDrawerTalkContainer.isVisible = true
-            binding.mainDrawerTempAccountContainer.isVisible = AccountUtil.isTemporaryAccount
-            binding.mainDrawerWatchlistContainer.isVisible = !AccountUtil.isTemporaryAccount
-            binding.mainDrawerContribsContainer.isVisible = true
-            binding.mainDrawerEditContainer.isVisible = true
-        } else {
-            binding.mainDrawerAccountAvatar.setImageResource(R.drawable.ic_login_24px)
-            ImageViewCompat.setImageTintList(binding.mainDrawerAccountAvatar, getThemedColorStateList(requireContext(), R.attr.progressive_color))
-            binding.mainDrawerAccountName.isVisible = false
-            binding.mainDrawerTempAccountContainer.isVisible = false
-            binding.mainDrawerLoginButton.textAlignment = View.TEXT_ALIGNMENT_TEXT_START
-            binding.mainDrawerLoginButton.text = getString(R.string.main_drawer_login)
-            binding.mainDrawerLoginButton.setTextColor(getThemedColorStateList(requireContext(), R.attr.progressive_color))
-            binding.mainDrawerTalkContainer.isVisible = false
-            binding.mainDrawerWatchlistContainer.isVisible = false
-            binding.mainDrawerContribsContainer.isVisible = false
-            binding.mainDrawerEditContainer.isVisible = false
-        }
-        binding.mainDrawerGamesHubContainer.isVisible = WikiGames.WHICH_CAME_FIRST.isLangSupported(*WikipediaApp.instance.languageState.appLanguageCodes.toTypedArray())
+        binding.mainDrawerAccountContainer.isVisible = false
+        binding.mainDrawerTempAccountContainer.isVisible = false
+        binding.mainDrawerContribsContainer.isVisible = false
+        binding.mainDrawerEditContainer.isVisible = false
+        binding.mainDrawerTalkContainer.isVisible = false
+        binding.mainDrawerWatchlistContainer.isVisible = false
+        binding.mainDrawerGamesHubContainer.isVisible = false
+        binding.mainDrawerPlacesContainer.isVisible = false
+        binding.mainDrawerDonateContainer.isVisible = false
+        binding.mainDrawerYearInReviewContainer.isVisible = false
+        binding.mainDrawerSettingsContainer.isVisible = true
     }
 
     private fun callback(): Callback? {

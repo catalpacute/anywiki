@@ -14,6 +14,7 @@ import kotlinx.coroutines.launch
 import org.wikipedia.analytics.eventplatform.AppSessionEvent
 import org.wikipedia.analytics.eventplatform.ClientErrorEvent
 import org.wikipedia.analytics.eventplatform.EventPlatformClient
+import org.wikipedia.anywiki.WikiSourceRepository
 import org.wikipedia.appshortcuts.AppShortcuts
 import org.wikipedia.auth.AccountUtil
 import org.wikipedia.concurrency.FlowEventBus
@@ -107,10 +108,8 @@ class WikipediaApp : Application() {
     @get:Synchronized
     val wikiSite: WikiSite
         get() {
-            // TODO: why don't we ensure that the app language hasn't changed here instead of the client?
             if (defaultWikiSite == null) {
-                val lang = if (Prefs.mediaWikiBaseUriSupportsLangCode) appOrSystemLanguageCode else ""
-                defaultWikiSite = WikiSite.forLanguageCode(lang)
+                defaultWikiSite = WikiSourceRepository.getActiveWikiSite()
             }
             return defaultWikiSite!!
         }
@@ -141,7 +140,7 @@ class WikipediaApp : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        WikiSite.setDefaultBaseUrl(Prefs.mediaWikiBaseUrl)
+        WikiSite.setDefaultBaseUrl(WikiSourceRepository.getActiveSource().baseUrl)
 
         connectionStateMonitor.enable()
 

@@ -1,17 +1,36 @@
 package org.wikipedia.anywiki.mediawiki
 
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
+import org.wikipedia.util.UriUtil
 
 @Serializable
 data class WikiSiteConfig(
     val id: String,
-    val siteName: String,
+    val displayName: String,
     val baseUrl: String,
-    val origin: String,
     val apiUrl: String,
     val articlePath: String = "/wiki/\$1",
-    val logoUrl: String? = null
-)
+    val mainPageTitle: String = "Main Page",
+    val logoUrl: String? = null,
+    val supportsLangCode: Boolean = false,
+    val restBaseUrl: String? = null,
+    val supportsRestSummary: Boolean = false,
+    val supportsMobileHtml: Boolean = false
+) {
+    @Transient
+    val siteName = displayName
+
+    @Transient
+    val origin: String = run {
+        val scheme = UriUtil.decodeURL(baseUrl).substringBefore("://", "https")
+        val withoutScheme = baseUrl.substringAfter("://", baseUrl)
+        val authority = withoutScheme.substringBefore("/")
+        "$scheme://$authority"
+    }
+}
+
+typealias WikiSource = WikiSiteConfig
 
 @Serializable
 data class WikiSearchResult(
@@ -90,7 +109,9 @@ data class SiteGeneral(
     val base: String? = null,
     val server: String? = null,
     val logo: String? = null,
-    val articlepath: String? = null
+    val articlepath: String? = null,
+    val mainpage: String? = null,
+    val lang: String? = null
 )
 
 @Serializable

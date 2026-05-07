@@ -942,6 +942,7 @@ class PageFragment : Fragment(), BackPressedHandler, CommunicationBridge.Communi
                 }) {
                     if (!page.thumbUrl.equals(title.thumbUrl, true) || !page.description.equals(title.description, true)) {
                         AppDatabase.instance.readingListPageDao().updateThumbAndDescriptionByName(
+                            wiki = page.wiki,
                             lang = page.wiki.languageCode,
                             apiTitle = page.apiTitle,
                             thumbUrl = title.thumbUrl,

@@ -39,7 +39,7 @@ import org.wikipedia.talk.db.TalkTemplateDao
 import java.time.LocalDate
 
 const val DATABASE_NAME = "wikipedia.db"
-const val DATABASE_VERSION = 32
+const val DATABASE_VERSION = 33
 
 @Database(
     entities = [
@@ -356,12 +356,43 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        val MIGRATION_32_33 = object : Migration(32, 33) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                val defaultSiteUrl = WikipediaApp.instance.wikiSite.url()
+
+                db.execSQL("UPDATE ReadingListPage SET wiki = CASE WHEN instr(wiki, '://') > 0 THEN wiki ELSE 'https://' || wiki END")
+                db.execSQL("UPDATE RecommendedPage SET wiki = CASE WHEN instr(wiki, '://') > 0 THEN wiki ELSE 'https://' || wiki END")
+
+                db.execSQL("ALTER TABLE HistoryEntry RENAME TO HistoryEntry_old33")
+                db.execSQL("CREATE TABLE `HistoryEntry` (`authority` TEXT NOT NULL, `lang` TEXT NOT NULL, `apiTitle` TEXT NOT NULL, `displayTitle` TEXT NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namespace` TEXT NOT NULL, `timestamp` INTEGER NOT NULL, `source` INTEGER NOT NULL, `prevId` INTEGER NOT NULL DEFAULT -1)")
+                db.execSQL("CREATE INDEX IF NOT EXISTS index_HistoryEntry_authority_lang_namespace_apiTitle ON HistoryEntry (authority, lang, namespace, apiTitle)")
+                db.execSQL("INSERT INTO HistoryEntry (authority, lang, apiTitle, displayTitle, id, namespace, timestamp, source, prevId) " +
+                    "SELECT CASE WHEN instr(authority, '://') > 0 THEN authority ELSE 'https://' || authority END, lang, apiTitle, displayTitle, id, namespace, timestamp, source, prevId FROM HistoryEntry_old33")
+
+                db.execSQL("ALTER TABLE PageImage RENAME TO PageImage_old33")
+                db.execSQL("CREATE TABLE `PageImage` (`siteUrl` TEXT NOT NULL, `lang` TEXT NOT NULL, `namespace` TEXT NOT NULL, `apiTitle` TEXT NOT NULL, `imageName` TEXT, `description` TEXT, `timeSpentSec` INTEGER NOT NULL DEFAULT 0, `geoLat` REAL NOT NULL DEFAULT 0.0, `geoLon` REAL NOT NULL DEFAULT 0.0, PRIMARY KEY(`siteUrl`, `lang`, `namespace`, `apiTitle`))")
+                db.execSQL("CREATE INDEX IF NOT EXISTS index_PageImage_siteUrl_lang_namespace_apiTitle ON PageImage (siteUrl, lang, namespace, apiTitle)")
+                db.execSQL(
+                    "INSERT INTO PageImage (siteUrl, lang, namespace, apiTitle, imageName, description, timeSpentSec, geoLat, geoLon) " +
+                        "SELECT COALESCE((" +
+                        "    SELECT CASE WHEN instr(h.authority, '://') > 0 THEN h.authority ELSE 'https://' || h.authority END" +
+                        "    FROM HistoryEntry_old33 h" +
+                        "    WHERE h.lang = PageImage_old33.lang AND h.namespace = PageImage_old33.namespace AND h.apiTitle = PageImage_old33.apiTitle" +
+                        "    ORDER BY h.timestamp DESC LIMIT 1" +
+                        "), '$defaultSiteUrl'), lang, namespace, apiTitle, imageName, description, timeSpentSec, geoLat, geoLon FROM PageImage_old33"
+                )
+
+                db.execSQL("DROP TABLE IF EXISTS HistoryEntry_old33")
+                db.execSQL("DROP TABLE IF EXISTS PageImage_old33")
+            }
+        }
+
         val instance: AppDatabase by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
             Room.databaseBuilder(WikipediaApp.instance, AppDatabase::class.java, DATABASE_NAME)
                 .addMigrations(MIGRATION_19_20, MIGRATION_20_21, MIGRATION_21_22, MIGRATION_22_23,
                     MIGRATION_23_24, MIGRATION_24_25, MIGRATION_25_26, MIGRATION_26_27,
                     MIGRATION_26_28, MIGRATION_27_28, MIGRATION_28_29, MIGRATION_29_30,
-                    MIGRATION_30_31, MIGRATION_31_32)
+                    MIGRATION_30_31, MIGRATION_31_32, MIGRATION_32_33)
                 .fallbackToDestructiveMigration(false)
                 .build()
         }

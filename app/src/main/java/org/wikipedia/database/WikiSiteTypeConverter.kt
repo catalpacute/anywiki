@@ -11,6 +11,6 @@ class WikiSiteTypeConverter {
 
     @TypeConverter
     fun wikiSiteToString(wikiSite: WikiSite?): String? {
-        return wikiSite?.authority()
+        return wikiSite?.url()
     }
 }

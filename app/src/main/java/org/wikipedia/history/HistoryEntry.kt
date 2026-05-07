@@ -20,7 +20,7 @@ import java.util.Date
 @Parcelize
 @TypeParceler<Date, DateParceler>()
 @Entity(
-    indices = [Index(value = ["lang", "namespace", "apiTitle"])]
+    indices = [Index(value = ["authority", "lang", "namespace", "apiTitle"])]
 )
 class HistoryEntry(
     // TODO: change these properties back to val when HistoryEntry is no longer serializable. (i.e. when we update Tabs to be in the database instead of Prefs)
@@ -34,7 +34,7 @@ class HistoryEntry(
     var source: Int = SOURCE_INTERNAL_LINK,
     var prevId: Long = -1,
 ) : Parcelable {
-    constructor(title: PageTitle, source: Int, timestamp: Date = Date()) : this(title.wikiSite.authority(),
+    constructor(title: PageTitle, source: Int, timestamp: Date = Date()) : this(title.wikiSite.url(),
         title.wikiSite.languageCode, title.text, title.displayText, namespace = title.namespace,
         timestamp = timestamp, source = source) {
         pageTitle = title

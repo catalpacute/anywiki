@@ -24,10 +24,10 @@ interface HistoryEntryDao {
     @Query("SELECT * FROM HistoryEntry WHERE authority = :authority AND lang = :lang AND apiTitle = :apiTitle AND timestamp = :timestamp LIMIT 1")
     suspend fun findEntryBy(authority: String, lang: String, apiTitle: String, timestamp: Long): HistoryEntry?
 
-    @Query("SELECT COUNT(*) FROM (SELECT DISTINCT HistoryEntry.lang, HistoryEntry.apiTitle FROM HistoryEntry WHERE timestamp BETWEEN :startMillis AND :endMillis)")
+    @Query("SELECT COUNT(*) FROM (SELECT DISTINCT HistoryEntry.authority, HistoryEntry.lang, HistoryEntry.apiTitle FROM HistoryEntry WHERE timestamp BETWEEN :startMillis AND :endMillis)")
     suspend fun getDistinctEntriesCountBetween(startMillis: Long, endMillis: Long = System.currentTimeMillis()): Int
 
-    @Query("SELECT COUNT(*) FROM (SELECT DISTINCT HistoryEntry.lang, HistoryEntry.apiTitle FROM HistoryEntry WHERE timestamp > :timestamp)")
+    @Query("SELECT COUNT(*) FROM (SELECT DISTINCT HistoryEntry.authority, HistoryEntry.lang, HistoryEntry.apiTitle FROM HistoryEntry WHERE timestamp > :timestamp)")
     suspend fun getDistinctEntriesCountSince(timestamp: Long): Int?
 
     @Query("SELECT displayTitle FROM HistoryEntry WHERE timestamp BETWEEN :startMillis AND :endMillis GROUP BY displayTitle HAVING COUNT(displayTitle) > 1 ORDER BY COUNT(displayTitle) DESC LIMIT :limit")

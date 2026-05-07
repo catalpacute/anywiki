@@ -65,8 +65,8 @@ interface ReadingListPageDao {
     @Query("SELECT * FROM ReadingListPage WHERE listId = :listId AND status != :excludedStatus")
     suspend fun getPagesByListId(listId: Long, excludedStatus: Long): List<ReadingListPage>
 
-    @Query("UPDATE ReadingListPage SET thumbUrl = :thumbUrl, description = :description WHERE lang = :lang AND apiTitle = :apiTitle")
-    suspend fun updateThumbAndDescriptionByName(lang: String, apiTitle: String, thumbUrl: String?, description: String?)
+    @Query("UPDATE ReadingListPage SET thumbUrl = :thumbUrl, description = :description WHERE wiki = :wiki AND lang = :lang AND apiTitle = :apiTitle")
+    suspend fun updateThumbAndDescriptionByName(wiki: WikiSite, lang: String, apiTitle: String, thumbUrl: String?, description: String?)
 
     @Query("UPDATE ReadingListPage SET status = :newStatus WHERE status = :oldStatus AND offline = :offline")
     suspend fun updateStatus(oldStatus: Long, newStatus: Long, offline: Boolean)
@@ -160,7 +160,7 @@ interface ReadingListPageDao {
             .replace("%", "\\%").replace("_", "\\_")
 
         val pages = findPageBySearchTerm("%$normalizedQuery%")
-                .filter { wikiSite.languageCode == it.lang && StringUtil.fromHtml(it.accentInvariantTitle).contains(normalizedQuery, true) }
+                .filter { wikiSite.url() == it.wiki.url() && wikiSite.languageCode == it.lang && StringUtil.fromHtml(it.accentInvariantTitle).contains(normalizedQuery, true) }
 
         return if (pages.isEmpty()) SearchResults()
         else SearchResults(pages.take(2).map {

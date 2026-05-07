@@ -43,7 +43,7 @@ abstract class LinkHandler(protected val context: Context) : JSEventListener, Ur
             // for URLs without an explicit scheme, add our default scheme explicitly.
             href = wikiSite.scheme() + ":" + href
         } else if (href.startsWith("./")) {
-            href = href.replace("./", "/wiki/")
+            href = href.replace("./", wikiSite.articlePath().substringBefore("\$1"))
         }
 
         // special: returned by page-library when clicking Read More items in the footer.
@@ -80,11 +80,11 @@ abstract class LinkHandler(protected val context: Context) : JSEventListener, Ur
             site = WikiSite(uri.authority!!, wikiSite.languageCode)
         }
         L.d("Link clicked was $uri")
-        val supportedAuthority = uri.authority?.run { WikiSite.supportedAuthority(this) } == true
+        val supportedSource = WikiSite.matchesUri(uri)
         when {
-            uri.path?.run { matches(("^${UriUtil.WIKI_REGEX}.*").toRegex()) } == true && supportedAuthority -> {
+            supportedSource && (uri.path?.isNotBlank() == true || !uri.getQueryParameter("title").isNullOrBlank()) -> {
                 val newTitle = if (titleStr.isEmpty()) {
-                    PageTitle.titleForInternalLink(uri.path, site)
+                    PageTitle.titleForInternalLink(uri.getQueryParameter("title") ?: uri.path, site)
                 } else PageTitle.withSeparateFragment(titleStr, uri.fragment, site)
                 if (newTitle.isFilePage) {
                     onMediaLinkClicked(newTitle)
@@ -94,10 +94,10 @@ abstract class LinkHandler(protected val context: Context) : JSEventListener, Ur
                     onInternalLinkClicked(newTitle)
                 }
             }
-            !uri.fragment.isNullOrEmpty() && supportedAuthority -> {
+            !uri.fragment.isNullOrEmpty() && supportedSource -> {
                 onPageLinkClicked(uri.fragment!!, linkText)
             }
-            !uri.getQueryParameter("title").isNullOrEmpty() && !uri.getQueryParameter("diff").isNullOrEmpty() && supportedAuthority -> {
+            !uri.getQueryParameter("title").isNullOrEmpty() && !uri.getQueryParameter("diff").isNullOrEmpty() && supportedSource -> {
                 val diffAttr = uri.getQueryParameter("diff").orEmpty()
                 var diffRev = diffAttr.toLongOrNull() ?: -1
                 if (diffAttr == "next" || diffAttr == "prev") {

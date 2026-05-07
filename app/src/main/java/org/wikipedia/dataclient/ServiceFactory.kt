@@ -61,7 +61,7 @@ object ServiceFactory {
     }
 
     fun getBasePath(wiki: WikiSite): String {
-        var path = wiki.url()
+        var path = wiki.origin()
         if (!path.endsWith("/")) {
             path += "/"
         }
@@ -69,7 +69,7 @@ object ServiceFactory {
     }
 
     fun getRestBasePath(wiki: WikiSite): String {
-        var path = if (Prefs.restbaseUriFormat.isEmpty()) wiki.url() + "/" + RestService.REST_API_PREFIX
+        var path = wiki.restBaseUrl()?.takeIf { it.isNotBlank() } ?: if (Prefs.restbaseUriFormat.isEmpty()) wiki.url() + "/" + RestService.REST_API_PREFIX
         else String.format(Prefs.restbaseUriFormat, "https", wiki.authority())
         if (!path.endsWith("/")) {
             path += "/"

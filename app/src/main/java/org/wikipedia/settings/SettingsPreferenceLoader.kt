@@ -33,6 +33,19 @@ import work.czzzz.anywiki.R
 internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : BasePreferenceLoader(fragment) {
     override fun loadPreferences() {
         loadPreferences(R.xml.preferences)
+        findPreference(R.string.preference_key_anywiki_sources_json).onPreferenceClickListener = Preference.OnPreferenceClickListener {
+            activity.startActivity(WikiSourcesActivity.newIntent(activity))
+            true
+        }
+        findPreference(R.string.preference_key_language).isVisible = false
+        findPreference(R.string.preference_key_customize_explore_feed).isVisible = false
+        findPreference(R.string.preference_key_year_in_review_is_enabled).isVisible = false
+        findPreference(R.string.preference_key_selected_app_icon).isVisible = false
+        findPreference(R.string.preference_category_recommended_reading_list).isVisible = false
+        findPreference(R.string.preference_category_donations).isVisible = false
+        findPreference(R.string.preference_category_sync).isVisible = false
+        findPreference(R.string.preference_key_donation_reminders).isVisible = false
+        findPreference(R.string.preference_key_delete_local_donation_history).isVisible = false
         if (RemoteConfig.config.disableReadingListSync) {
             findPreference(R.string.preference_category_sync).isVisible = false
             findPreference(R.string.preference_key_sync_reading_lists).isVisible = false
@@ -40,17 +53,6 @@ internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : Ba
         findPreference(R.string.preference_key_sync_reading_lists).onPreferenceChangeListener = SyncReadingListsListener()
         loadPreferences(R.xml.preferences_about)
         updateLanguagePrefSummary()
-        findPreference(R.string.preference_key_language).onPreferenceClickListener = Preference.OnPreferenceClickListener {
-            activity.startActivityForResult(WikipediaLanguagesActivity.newIntent(activity, Constants.InvokeSource.SETTINGS),
-                    Constants.ACTIVITY_REQUEST_ADD_A_LANGUAGE)
-            true
-        }
-        findPreference(R.string.preference_key_customize_explore_feed).onPreferenceClickListener = Preference.OnPreferenceClickListener {
-             activity.startActivityForResult(
-                 ConfigureActivity.newIntent(activity, Constants.InvokeSource.NAV_MENU.ordinal),
-                    Constants.ACTIVITY_REQUEST_FEED_CONFIGURE)
-            true
-        }
         findPreference(R.string.preference_key_color_theme).let {
             it.setSummary(WikipediaApp.instance.currentTheme.nameId)
             it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
@@ -149,6 +151,14 @@ internal class SettingsPreferenceLoader(fragment: PreferenceFragmentCompat) : Ba
             FeedbackUtil.showMessage(activity, activity.resources.getString(messageResId))
             true
         }
+
+        findPreference(R.string.preference_key_language).isVisible = false
+        findPreference(R.string.preference_key_customize_explore_feed).isVisible = false
+        findPreference(R.string.preference_key_year_in_review_is_enabled).isVisible = false
+        findPreference(R.string.preference_key_selected_app_icon).isVisible = false
+        findPreference(R.string.preference_category_recommended_reading_list).isVisible = false
+        findPreference(R.string.preference_category_donations).isVisible = false
+        findPreference(R.string.preference_category_sync).isVisible = false
     }
 
     private fun deviceInformation(): String {

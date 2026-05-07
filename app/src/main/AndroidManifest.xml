@@ -66,8 +66,8 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:icon="@mipmap/launcher"
-        android:label="@string/app_name"
-        android:name=".WikipediaApp"
+        android:label="@string/anywiki_app_name"
+        android:name="org.wikipedia.WikipediaApp"
         android:theme="@style/AppTheme">
 
         <!-- Multi-window support on Samsung devices -->
@@ -87,19 +87,19 @@
         <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
 
         <activity
-            android:name=".anywiki.AnyWikiReaderActivity"
+            android:name="org.wikipedia.anywiki.AnyWikiReaderActivity"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.Splash"
             android:label="@string/anywiki_app_name"
             android:exported="true" />
         <activity
-            android:name=".main.MainActivity"
+            android:name="org.wikipedia.main.MainActivity"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.Splash"
             android:exported="true" />
         <activity-alias
             android:name=".DefaultIcon"
-            android:targetActivity=".anywiki.AnyWikiReaderActivity"
+            android:targetActivity="org.wikipedia.anywiki.AnyWikiReaderActivity"
             android:icon="@mipmap/launcher"
             android:label="@string/anywiki_app_name"
             android:exported="true">
@@ -111,7 +111,7 @@
         </activity-alias>
         <activity-alias
             android:name=".YIR25Icon"
-            android:targetActivity=".anywiki.AnyWikiReaderActivity"
+            android:targetActivity="org.wikipedia.anywiki.AnyWikiReaderActivity"
             android:icon="@mipmap/launcher_yir25"
             android:label="@string/anywiki_app_name"
             android:exported="true"
@@ -124,15 +124,15 @@
         </activity-alias>
 
         <activity
-            android:name=".page.PageActivity"
+            android:name="org.wikipedia.page.PageActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:parentActivityName=".main.MainActivity"
+            android:parentActivityName="org.wikipedia.main.MainActivity"
             android:exported="true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.MainActivity" />
+                android:value="org.wikipedia.main.MainActivity" />
             <intent-filter
                 tools:targetApi="m"
                 android:autoVerify="true">
@@ -150,68 +150,68 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".settings.SettingsActivity"
+            android:name="org.wikipedia.settings.SettingsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".settings.dev.DeveloperSettingsActivity"
+            android:name="org.wikipedia.settings.dev.DeveloperSettingsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".settings.NotificationSettingsActivity" />
-        <activity android:name=".settings.languages.WikipediaLanguagesActivity"
+            android:name="org.wikipedia.settings.NotificationSettingsActivity" />
+        <activity android:name="org.wikipedia.settings.languages.WikipediaLanguagesActivity"
             android:label="@string/wikipedia_languages_title"/>
-        <activity android:name=".language.LangLinksActivity"
+        <activity android:name="org.wikipedia.language.LangLinksActivity"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize"/>
         <activity
-            android:name=".language.addlanguages.AddLanguagesListActivity"
+            android:name="org.wikipedia.language.addlanguages.AddLanguagesListActivity"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize"/>
         <activity
-            android:name=".suggestededits.SuggestionsActivity"
+            android:name="org.wikipedia.suggestededits.SuggestionsActivity"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".suggestededits.SuggestedEditsTasksActivity"
+            android:name="org.wikipedia.suggestededits.SuggestedEditsTasksActivity"
             android:theme="@style/AppTheme.ActionBar"
             android:label="@string/suggested_edits_activity_title" />
         <activity
-            android:name=".edit.EditSectionActivity"
+            android:name="org.wikipedia.edit.EditSectionActivity"
             android:windowSoftInputMode="adjustResize|stateVisible"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name="org.wikipedia.login.LoginActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".createaccount.CreateAccountActivity"
+            android:name="org.wikipedia.createaccount.CreateAccountActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".login.ResetPasswordActivity"
+            android:name="org.wikipedia.login.ResetPasswordActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
         <activity
-            android:name=".gallery.GalleryActivity"
+            android:name="org.wikipedia.gallery.GalleryActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.FullScreen" />
 
         <activity
-            android:name=".settings.LicenseActivity"/>
+            android:name="org.wikipedia.settings.LicenseActivity"/>
 
         <activity
-            android:name=".feed.news.NewsActivity"
+            android:name="org.wikipedia.feed.news.NewsActivity"
             android:label="@string/view_card_news_title"/>
 
         <activity
-            android:name=".descriptions.DescriptionEditActivity"
+            android:name="org.wikipedia.descriptions.DescriptionEditActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".search.SearchActivity"
+            android:name="org.wikipedia.search.SearchActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.Splash"
@@ -229,192 +229,192 @@
         </activity>
 
         <activity
-            android:name=".descriptions.DescriptionEditSuccessActivity"
+            android:name="org.wikipedia.descriptions.DescriptionEditSuccessActivity"
             android:theme="@style/AppTheme.FullScreen.Translucent"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
-            android:name=".descriptions.DescriptionEditTutorialActivity" />
+            android:name="org.wikipedia.descriptions.DescriptionEditTutorialActivity" />
 
         <activity
-            android:name=".readinglist.ReadingListActivity" />
+            android:name="org.wikipedia.readinglist.ReadingListActivity" />
 
         <activity
-            android:name=".onboarding.InitialOnboardingActivity"/>
+            android:name="org.wikipedia.onboarding.InitialOnboardingActivity"/>
 
         <activity
-            android:name=".feed.topread.TopReadArticlesActivity"
+            android:name="org.wikipedia.feed.topread.TopReadArticlesActivity"
             android:theme="@style/AppTheme.ActionBar"/>
 
-        <activity android:name=".feed.onthisday.OnThisDayActivity"
+        <activity android:name="org.wikipedia.feed.onthisday.OnThisDayActivity"
             android:configChanges="orientation|screenSize"/>
 
-        <activity android:name=".feed.configure.ConfigureActivity"
+        <activity android:name="org.wikipedia.feed.configure.ConfigureActivity"
             android:label="@string/feed_configure_activity_title"/>
 
-        <activity android:name=".random.RandomActivity"
+        <activity android:name="org.wikipedia.random.RandomActivity"
             android:label="@string/view_random_card_title"
             android:theme="@style/AppTheme.ActionBar"/>
 
-        <activity android:name=".theme.ThemeFittingRoomActivity"
+        <activity android:name="org.wikipedia.theme.ThemeFittingRoomActivity"
             android:label="@string/preference_title_app_theme"
             android:theme="@style/AppTheme.ActionBar"/>
 
         <activity
-            android:name=".notifications.NotificationActivity"
+            android:name="org.wikipedia.notifications.NotificationActivity"
             android:label="@string/notifications_activity_title"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
 
         <activity
-            android:name=".page.tabs.TabActivity"
+            android:name="org.wikipedia.page.tabs.TabActivity"
             android:label="@string/tabs_activity_title" />
 
         <activity
-            android:name=".categories.CategoryActivity" />
+            android:name="org.wikipedia.categories.CategoryActivity" />
 
-        <activity android:name=".suggestededits.SuggestedEditsImageTagsOnboardingActivity" />
+        <activity android:name="org.wikipedia.suggestededits.SuggestedEditsImageTagsOnboardingActivity" />
 
-        <activity android:name=".suggestededits.SuggestedEditsImageRecsOnboardingActivity" />
+        <activity android:name="org.wikipedia.suggestededits.SuggestedEditsImageRecsOnboardingActivity" />
 
-        <activity android:name=".suggestededits.SuggestedEditsRecentEditsOnboardingActivity" />
+        <activity android:name="org.wikipedia.suggestededits.SuggestedEditsRecentEditsOnboardingActivity" />
 
         <activity
-            android:name=".watchlist.WatchlistActivity"
+            android:name="org.wikipedia.watchlist.WatchlistActivity"
             android:label="@string/watchlist_title"
             android:theme="@style/AppTheme.ActionBar"/>
 
         <activity
-            android:name=".watchlist.WatchlistFilterActivity"
+            android:name="org.wikipedia.watchlist.WatchlistFilterActivity"
             android:label="@string/watchlist_filter_title"
             android:theme="@style/AppTheme.ActionBar"/>
 
         <activity
-            android:name=".suggestededits.SuggestedEditsImageTagEditActivity"
+            android:name="org.wikipedia.suggestededits.SuggestedEditsImageTagEditActivity"
             android:theme="@style/AppTheme.ActionBar" />
 
         <activity
-            android:name=".suggestededits.SuggestedEditsRecentEditsActivity"/>
+            android:name="org.wikipedia.suggestededits.SuggestedEditsRecentEditsActivity"/>
 
         <activity
-            android:name=".suggestededits.SuggestedEditsRecentEditsFilterActivity"
+            android:name="org.wikipedia.suggestededits.SuggestedEditsRecentEditsFilterActivity"
             android:label="@string/patroller_tasks_filters_title"
             android:theme="@style/AppTheme.ActionBar"/>
 
         <activity
-            android:name=".commons.FilePageActivity"
+            android:name="org.wikipedia.commons.FilePageActivity"
             android:label=""
             android:theme="@style/AppTheme"/>
 
         <activity
-            android:name=".talk.TalkTopicsActivity"
+            android:name="org.wikipedia.talk.TalkTopicsActivity"
             android:label="" />
 
         <activity
-            android:name=".talk.TalkTopicActivity" />
+            android:name="org.wikipedia.talk.TalkTopicActivity" />
 
         <activity
-            android:name=".talk.TalkReplyActivity"
+            android:name="org.wikipedia.talk.TalkReplyActivity"
             android:configChanges="orientation|screenSize"/>
 
         <activity
-            android:name=".talk.ArchivedTalkPagesActivity" />
+            android:name="org.wikipedia.talk.ArchivedTalkPagesActivity" />
 
         <activity
-            android:name=".diff.ArticleEditDetailsActivity" />
+            android:name="org.wikipedia.diff.ArticleEditDetailsActivity" />
 
         <activity
-            android:name=".activity.SingleWebViewActivity"
+            android:name="org.wikipedia.activity.SingleWebViewActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".page.customize.CustomizeToolbarActivity"
+            android:name="org.wikipedia.page.customize.CustomizeToolbarActivity"
             android:label="@string/customize_toolbar_title"
             android:theme="@style/AppTheme.ActionBar"/>
 
         <activity
-            android:name=".notifications.NotificationFilterActivity"
+            android:name="org.wikipedia.notifications.NotificationFilterActivity"
             android:label="@string/notifications_filter_label"
             android:theme="@style/AppTheme.ActionBar"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
 
         <activity
-            android:name=".page.edithistory.EditHistoryListActivity" />
+            android:name="org.wikipedia.page.edithistory.EditHistoryListActivity" />
 
         <activity
-            android:name=".usercontrib.UserContribListActivity" />
+            android:name="org.wikipedia.usercontrib.UserContribListActivity" />
 
         <activity
-            android:name=".usercontrib.UserContribFilterActivity"
+            android:name="org.wikipedia.usercontrib.UserContribFilterActivity"
             android:label="@string/user_contrib_filter_activity_title"
             android:theme="@style/AppTheme.ActionBar" />
             
         <activity
-            android:name=".edit.insertmedia.InsertMediaActivity"
+            android:name="org.wikipedia.edit.insertmedia.InsertMediaActivity"
             android:label="@string/insert_media_title"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
 
         <activity
-            android:name=".edit.templates.TemplatesSearchActivity"
+            android:name="org.wikipedia.edit.templates.TemplatesSearchActivity"
             android:label="@string/templates_search_hint"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize" />
 
         <activity
-            android:name=".places.PlacesActivity" />
+            android:name="org.wikipedia.places.PlacesActivity" />
 
         <activity
-            android:name=".places.PlacesFilterActivity"/>
+            android:name="org.wikipedia.places.PlacesFilterActivity"/>
 
         <activity
-            android:name=".talk.template.TalkTemplatesActivity"
+            android:name="org.wikipedia.talk.template.TalkTemplatesActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".donate.GooglePayActivity"/>
+            android:name="org.wikipedia.donate.GooglePayActivity"/>
 
         <activity
-            android:name=".settings.AboutActivity"/>
+            android:name="org.wikipedia.settings.AboutActivity"/>
 
         <activity
-            android:name=".games.onthisday.OnThisDayGameActivity"/>
+            android:name="org.wikipedia.games.onthisday.OnThisDayGameActivity"/>
 
         <activity
-            android:name=".games.GamesHubActivity"/>
+            android:name="org.wikipedia.games.GamesHubActivity"/>
 
         <activity
-            android:name=".readinglist.recommended.RecommendedReadingListOnboardingActivity"/>
+            android:name="org.wikipedia.readinglist.recommended.RecommendedReadingListOnboardingActivity"/>
 
         <activity
-            android:name=".settings.dev.playground.CategoryDeveloperPlayGround"/>
+            android:name="org.wikipedia.settings.dev.playground.CategoryDeveloperPlayGround"/>
 
         <activity
-            android:name=".yearinreview.YearInReviewOnboardingActivity"/>
+            android:name="org.wikipedia.yearinreview.YearInReviewOnboardingActivity"/>
 
         <activity
-            android:name=".yearinreview.YearInReviewActivity"/>
+            android:name="org.wikipedia.yearinreview.YearInReviewActivity"/>
       
         <activity
-            android:name=".readinglist.recommended.RecommendedReadingListSettingsActivity"
+            android:name="org.wikipedia.readinglist.recommended.RecommendedReadingListSettingsActivity"
             android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".activitytab.ActivityTabCustomizationActivity" />
+            android:name="org.wikipedia.activitytab.ActivityTabCustomizationActivity" />
 
         <activity
-            android:name=".activitytab.ActivityTabOnboardingActivity" />
+            android:name="org.wikipedia.activitytab.ActivityTabOnboardingActivity" />
 
         <activity
-            android:name=".search.HybridSearchOnboardingActivity" />
+            android:name="org.wikipedia.search.HybridSearchOnboardingActivity" />
 
         <activity
-            android:name=".donate.donationreminder.DonationReminderActivity"
+            android:name="org.wikipedia.donate.donationreminder.DonationReminderActivity"
             android:windowSoftInputMode="adjustResize"/>
 
         <activity
-            android:name=".widgets.readingchallenge.ReadingChallengeOnboardingActivity" />
+            android:name="org.wikipedia.widgets.readingchallenge.ReadingChallengeOnboardingActivity" />
 
         <provider
-            android:name=".WikipediaFileProvider"
+            android:name="org.wikipedia.WikipediaFileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -453,7 +453,7 @@
 
         <receiver
             android:label="@string/reading_challenge_widget_name"
-            android:name=".widgets.readingchallenge.ReadingChallengeWidgetReceiver"
+            android:name="org.wikipedia.widgets.readingchallenge.ReadingChallengeWidgetReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -463,16 +463,16 @@
                 android:resource="@xml/reading_challenge_widget_info"/>
         </receiver>
 
-        <receiver android:name=".notifications.NotificationPollBroadcastReceiver"
+        <receiver android:name="org.wikipedia.notifications.NotificationPollBroadcastReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name=".notifications.NotificationPollBroadcastReceiver.ACTION_POLL" />
+                <action android:name="action_notification_poll" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name=".auth.AuthenticatorService"
+            android:name="org.wikipedia.auth.AuthenticatorService"
             android:exported="false">
 
             <intent-filter>
@@ -485,10 +485,10 @@
 
         </service>
 
-        <receiver android:name=".savedpages.SavedPageSyncNotification" />
+        <receiver android:name="org.wikipedia.savedpages.SavedPageSyncNotification" />
 
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name="org.wikipedia.push.WikipediaFirebaseMessagingService"
             android:exported="false"
             tools:ignore="Instantiatable">
             <intent-filter>
@@ -498,3 +498,4 @@
 
     </application>
 </manifest>
+

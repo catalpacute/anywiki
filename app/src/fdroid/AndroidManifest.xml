@@ -11,13 +11,14 @@
             tools:node="remove"/>
 
         <service
-            android:name=".push.WikipediaFirebaseMessagingService"
+            android:name="org.wikipedia.push.WikipediaFirebaseMessagingService"
             tools:node="remove"/>
 
         <activity
-            android:name=".donate.GooglePayActivity"
+            android:name="org.wikipedia.donate.GooglePayActivity"
             tools:node="remove"/>
 
     </application>
 
 </manifest>
+

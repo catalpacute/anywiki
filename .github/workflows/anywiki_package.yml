@@ -3,11 +3,11 @@ name: AnyWiki Signed APK
 on:
   push:
     branches:
-      - "**"
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build_signed_apk:
@@ -66,6 +66,9 @@ jobs:
       - name: List signed APK outputs
         run: ls -al app/build/outputs/apk/alpha/release
 
+      - name: Create hash
+        run: git rev-parse HEAD > app/build/outputs/apk/alpha/release/rev-hash.txt
+
       - name: Normalize output names
         run: |
           RELEASE_DIR="app/build/outputs/apk/alpha/release"
@@ -100,3 +103,29 @@ jobs:
             app/build/outputs/apk/alpha/release/anywiki-alpha-arm64-v8a-signed.apk
             app/build/outputs/apk/alpha/release/anywiki-alpha-armeabi-v7a-signed.apk
             app/build/outputs/apk/alpha/release/anywiki-alpha-x86_64-signed.apk
+            app/build/outputs/apk/alpha/release/rev-hash.txt
+
+      - name: Delete latest alpha tag and release
+        continue-on-error: true
+        uses: dev-drprasad/delete-tag-and-release@v1.1
+        with:
+          tag_name: latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+
+      - name: Create latest release
+        uses: ncipollo/release-action@v1.21.0
+        with:
+          name: latest
+          commit: main
+          tag: latest
+          artifacts: "app/build/outputs/apk/alpha/release/anywiki-alpha-arm64-v8a-signed.apk,app/build/outputs/apk/alpha/release/anywiki-alpha-armeabi-v7a-signed.apk,app/build/outputs/apk/alpha/release/anywiki-alpha-x86_64-signed.apk,app/build/outputs/apk/alpha/release/rev-hash.txt"
+          body: |
+            Latest AnyWiki alpha build.
+            Artifacts: arm64-v8a, armeabi-v7a, x86_64.
+            Commit: ${{ github.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}

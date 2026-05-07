@@ -87,12 +87,6 @@
         <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
 
         <activity
-            android:name="org.wikipedia.anywiki.AnyWikiReaderActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme.Splash"
-            android:label="@string/anywiki_app_name"
-            android:exported="false" />
-        <activity
             android:name="org.wikipedia.main.MainActivity"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.Splash"

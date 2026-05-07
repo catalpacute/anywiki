@@ -424,12 +424,12 @@ class MainFragment : Fragment(), BackPressedHandler, MenuProvider, HistoryFragme
         startActivity(FilePageActivity.newIntent(requireActivity(), PageTitle(card.filename(), card.wikiSite())))
     }
 
-    override fun onLoginRequested() {
+    fun onLoginRequested() {
         startActivityForResult(LoginActivity.newIntent(requireContext(), LoginActivity.SOURCE_NAV),
                 Constants.ACTIVITY_REQUEST_LOGIN)
     }
 
-    override fun updateToolbarElevation(elevate: Boolean) {
+    fun updateToolbarElevation(elevate: Boolean) {
         callback()?.updateToolbarElevation(elevate)
     }
 

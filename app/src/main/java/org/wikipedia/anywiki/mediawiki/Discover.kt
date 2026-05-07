@@ -60,7 +60,7 @@ object MediaWikiDiscover {
         }
     }
 
-    fun candidateApiUrls(url: NormalizedWikiUrl): List<String> {
+    internal fun candidateApiUrls(url: NormalizedWikiUrl): List<String> {
         val base = url.baseUrl.trimEnd('/')
         val origin = url.origin.trimEnd('/')
         return listOf(
@@ -71,7 +71,7 @@ object MediaWikiDiscover {
         ).distinct()
     }
 
-    fun normalizeBaseUrl(input: String): NormalizedWikiUrl? {
+    internal fun normalizeBaseUrl(input: String): NormalizedWikiUrl? {
         val trimmed = input.trim()
         if (trimmed.isEmpty()) {
             return null

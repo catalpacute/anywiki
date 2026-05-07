@@ -236,7 +236,7 @@ class SearchResultsViewModel : ViewModel() {
 
                 val result = repository.search(
                     searchTerm = searchTerm,
-                    languageCode = languageCode,
+                    languageCode = languageCode.orEmpty(),
                     invokeSource = invokeSource,
                     continuation = params.key,
                     batchSize = params.loadSize,
